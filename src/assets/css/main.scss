@@ -19,7 +19,7 @@ body {
 div.container--outer-wrapper {
 	background-size: cover !important;
 	// background: no-repeat fixed center;
-	height: 100vh;
+	// height: 100vh;
     background-position-y: -122px;
 
 	background-image: url('../img/background_1.jpg');
@@ -153,4 +153,18 @@ ul {
 
 li {
 	list-style-type: none;
+}
+
+
+
+
+
+
+
+// HOME COMPONENT
+.home-columns {
+	height: 100vh;
+	// background-color: white;
+	margin: 0 auto;
+	padding: 0 10px;
 }
