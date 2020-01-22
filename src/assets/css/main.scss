@@ -18,8 +18,9 @@ body {
 
 div.container--outer-wrapper {
 	background-size: cover !important;
-	background: no-repeat fixed center;
+	// background: no-repeat fixed center;
 	height: 100vh;
+    background-position-y: -122px;
 
 	background-image: url('../img/background_1.jpg');
 }
