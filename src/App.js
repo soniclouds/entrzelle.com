@@ -19,6 +19,11 @@ function App() {
   return (
     <Router>
       <div className="container--outer-wrapper">
+
+        <div className='background--image-wrapper'>
+
+        </div>
+
         <div className="overlay--outer-wrapper">
 
         </div>

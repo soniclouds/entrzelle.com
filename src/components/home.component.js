@@ -36,6 +36,7 @@ export default class Home extends Component {
                                 </blockquote>
                             </div>
                         </div>
+                        
                         <div className="fb-page" data-adapt-container-width="true" data-height="90000" data-hide-cover="true"
                             data-href="https://www.facebook.com/entrzelle/" data-show-facepile="true" data-small-header="false" data-tabs="events"
                             data-width="500">
