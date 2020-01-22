@@ -177,4 +177,96 @@ li {
 	// background-color: white;
 	margin: 0 auto;
 	padding: 0 10px;
+
+	.column--inner-container {
+		background-color: rgba(255,255,255,0.84);
+
+		.column-content {
+			text-align: center;
+		}
+	}
+}
+
+
+.yt-embed {
+	
+	width: 94%;
+	margin: 0 auto;
+
+	iframe {
+		width: 100%;
+	}
+}
+
+
+.social-links {
+	ul {
+		text-align: center;
+		list-style-type: none;
+        padding: .95rem 0 .5rem 0;
+
+		li {
+			width: 36px;
+			height: 36px;
+			margin: 0 3px;
+
+			display: inline-grid;
+			background-color: transparent;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+
+		li.reverbnation .my_site_icon {
+			background-image: url('../img/social/RN.png');
+		}
+		li.youtube .my_site_icon {
+			background-image: url('../img/social/YT.png');
+		}
+		li.facebook .my_site_icon {
+			background-image: url('../img/social/FB.png');
+		}
+		li.itunes .my_site_icon {
+			background-image: url('../img/social/IT.png');
+		}
+		li.soundcloud .my_site_icon {
+			background-image: url('../img/social/SC.png');
+		}
+	}
+}
+
+.subscribe {
+	padding: 10px;
+}
+
+form {
+	font-size: 0.9em;
+	font-family: 'PT Sans',sans-serif;
+	
+	input {
+		border: 1px solid lightgrey;
+		padding: 8px;
+	}
+	.control {
+		div {
+			margin: 0.85em 0.25em .55em;
+		}
+	}
+
+	.actions button {
+		color: rgba(255,255,255,0.8);
+		background-color: #474f5a;
+		border-radius: 4px;
+		padding: 0 20px;
+		font-weight: normal;
+		font-size: 14px;
+		display: inline-block;
+		text-align: center;
+		cursor: pointer;
+		box-sizing: border-box;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		white-space: nowrap;
+		height: 40px;
+		line-height: 38px;
+	}
 }
