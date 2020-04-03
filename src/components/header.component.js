@@ -8,8 +8,11 @@ export default class Header extends Component {
     render() {
         return (
             <header id="page-header">
-                <div className="spacer--header">
-
+                {/* <div className="spacer--header">
+                    
+                </div> */}
+                <div className="header-logo-text">
+                
                 </div>
                 <div className="nav-bar">
                     <div className="site-content-wrap">
