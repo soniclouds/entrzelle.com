@@ -21,12 +21,12 @@ function App() {
       <div className="container--outer-wrapper">
 
         <div className='background--image-wrapper'>
-
+          
         </div>
 
-        <div className="overlay--outer-wrapper">
+{/*         <div className="overlay--outer-wrapper">
 
-        </div>
+        </div> */}
         <div className="container--inner-wrapper">
           {/* refactor as component later */}
           {/*}
