@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import '../assets/css/home.scss';
+
 export default class Home extends Component {
 
 
@@ -21,6 +23,17 @@ export default class Home extends Component {
             <div id='content-wrap'>
                 <div id='content' className='row'>
                     
+                    {/* video column (left) */}
+
+                    <div class="column-feed video-feed">
+
+                        videos here
+
+                    </div>
+
+                    <div class="column-feed audio-feed">
+                        audio here
+                    </div>
                 </div>
 
             </div>

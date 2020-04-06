@@ -5,14 +5,19 @@ import '../assets/css/main.scss';
 
 export default class Header extends Component {
 
+
+    clickContact() {
+
+    }
+
     render() {
         return (
             <header id="page-header">
                 {/* <div className="spacer--header">
                     
                 </div> */}
-                <div className="header-logo-text">
-                
+                <div className="header">
+                    <a class="header-logo" href="/"></a>
                 </div>
                 <div className="nav-bar">
                     <div className="site-content-wrap">
@@ -23,19 +28,19 @@ export default class Header extends Component {
                         </span>
                         <nav id="main-nav" className="desktop">
                             <ul className="">
-                                <li>
+                                {/* <li>
                                     <div>
                                         <a href="/">Home</a>
                                     </div>
-                                </li>
-                                <li>
+                                </li> */}
+                                {/* <li>
                                     <div>
                                         <a href="/info">Info</a>
                                     </div>
-                                </li>
+                                </li> */}
                                 <li>
                                     <div>
-                                        <a href="/discography">Discography</a>
+                                        <a href="/releases">Releases</a>
                                     </div>
                                 </li>
                                 <li>
@@ -43,11 +48,11 @@ export default class Header extends Component {
                                         <a href="/gallery">Gallery</a>
                                     </div>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <div>
                                         <a href="/shop">Shop</a>
                                     </div>
-                                </li>
+                                </li> */}
                                 <li>
                                     <div>
                                         <a href="/review">Reviews</a>
@@ -58,11 +63,14 @@ export default class Header extends Component {
                                         <a href="/lyrics">Lyrics</a>
                                     </div>
                                 </li>
-                                <li>
-                                    <div>
-                                        <a href="/contact">Contact</a>
+                                {/* <li>
+                                    <div class='nav-contact'>
+                                        <a href="javascript:void()">Contact</a>
+                                        <div class="social-icon-links">
+                                            <a href="https://www.facebook.com/entrzelle">FB</a>
+                                        </div>
                                     </div>
-                                </li>
+                                </li> */}
                             </ul>
                         </nav>
                     </div>
