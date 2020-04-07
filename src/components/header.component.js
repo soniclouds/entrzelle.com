@@ -17,7 +17,7 @@ export default class Header extends Component {
                     
                 </div> */}
                 <div className="header">
-                    <a class="header-logo" href="/"></a>
+                    <a className="header-logo" href="/"></a>
                 </div>
                 <div className="nav-bar">
                     <div className="site-content-wrap">
@@ -64,9 +64,9 @@ export default class Header extends Component {
                                     </div>
                                 </li>
                                 {/* <li>
-                                    <div class='nav-contact'>
+                                    <div className='nav-contact'>
                                         <a href="javascript:void()">Contact</a>
-                                        <div class="social-icon-links">
+                                        <div className="social-icon-links">
                                             <a href="https://www.facebook.com/entrzelle">FB</a>
                                         </div>
                                     </div>

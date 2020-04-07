@@ -17,6 +17,18 @@ export default class Home extends Component {
 
     }
 
+    componentDidMount() {
+        this.setSideColumnHeight();
+    }
+
+    setSideColumnHeight() {
+        let contentTop = document.getElementById('content').offsetTop,
+            videoCol = document.getElementById('video-feed-column'),
+            audioCol = document.getElementById('audio-feed-column');
+
+            videoCol.style.height = window.innerHeight - contentTop + 'px';
+            audioCol.style.height = window.innerHeight - contentTop + 'px';
+    }
 
     render() {
         return (
@@ -25,13 +37,27 @@ export default class Home extends Component {
                     
                     {/* video column (left) */}
 
-                    <div class="column-feed video-feed">
+                    <div id="video-feed-column" className="column-feed video-feed">
 
                         videos here
+                        {/* YT EMBED */}
+
+                        <div className='video-container yt-embed column-content'>
+                            <iframe className="youtube-player" src="https://www.youtube.com/embed/lRH7Ztl5QCE?rel=0&amp;amp;wmode=transparent&amp;amp;enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                        </div>
+
+                        <div className='video-container yt-embed column-content'>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/LChrPEfnNfc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+
+                        <div className='video-container yt-embed column-content'>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/FXd1cu6KGV8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        
 
                     </div>
 
-                    <div class="column-feed audio-feed">
+                    <div id="audio-feed-column" className="column-feed audio-feed">
                         audio here
                     </div>
                 </div>
