@@ -1,11 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import logo from './logo.svg';
 import './App.css';
 
 import Header from './components/header.component.js';
 import Home from './components/home.component.js';
+import Media from './components/media.component.js';
 // import Info from './components/info.component.js';
 // import Discography from './components/discography.component.js';
 // import Gallery from './components/gallery.component.js';
@@ -65,7 +66,12 @@ function App() {
           
               <Header />
               <br />
+
+              <Media />
+
               <Route path='/' exact component={Home} />
+
+
               {/*
                 <Route path='/' exact component={Info} />
                 <Route path='/edit/:id' exact component={Discography} />
