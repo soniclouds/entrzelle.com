@@ -1,6 +1,11 @@
-div.audio-feed {
-    position: absolute;
-    right: 20px;
+.yt-embed {
+	
+	// width: 94%;
+	margin: 0 auto;
+
+	iframe {
+		width: 100%;
+	}
 }
 
 iframe.bandcamp-player {
@@ -12,14 +17,23 @@ iframe.bandcamp-player {
 
 div.video-feed {
     position: absolute;
-    left: 20px;
+    // left: 20px;
+    left: 0;
+    border-right: 1px solid silver;
 }
 
+div.audio-feed {
+    position: absolute;
+    // right: 20px;
+    right: 0;
+    border-left: 1px solid silver;
+}
 div.column-feed {
     width: 20%;
     text-align: center;
-    border: 1px solid silver;
-    height: fit-content;
+    // border: 1px solid silver;
+    // height: fit-content;
+    height: 100vh;
     overflow: scroll;
     top: 0;
 }
