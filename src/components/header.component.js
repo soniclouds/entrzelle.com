@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 import '../assets/css/main.scss';
 
@@ -27,6 +27,8 @@ export default class Header extends Component {
                             </a>
                         </span>
                         <nav id="main-nav" className="desktop">
+                                <Link to="/">home!</Link>
+                                <Link to="/releases">releases!</Link>
                             <ul className="">
                                 {/* <li>
                                     <div>
