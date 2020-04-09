@@ -1,13 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 import Header from './components/header.component.js';
 import Media from './components/media.component.js';
-
-import Home from './components/home.component.js';
-import Releases from './components/releases.component.js';
 
 function App() {
   return (
@@ -23,9 +19,6 @@ function App() {
                 <br />
 
                 <Media />
-                  {/* <Route path='/' exact component={Home} />
-                  <Route path='/releases' component={Releases} /> */}
-                  
               
               </div>
             </div>

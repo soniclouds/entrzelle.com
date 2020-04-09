@@ -1,78 +1,57 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import '../assets/css/main.scss';
+import '../assets/css/header.scss';
 
 export default class Header extends Component {
-
-
-    clickContact() {
-
-    }
 
     render() {
         return (
             <header id="page-header">
-                {/* <div className="spacer--header">
-                    
-                </div> */}
                 <div className="header">
-                    <a className="header-logo" href="/"></a>
+                    <Link className="header-logo" to="/"></Link>
                 </div>
                 <div className="nav-bar">
                     <div className="site-content-wrap">
-                        <span id="toggle-mobile-menu" className="toggle-mobile-menu">
-                            <a href="javascript:">
+                        {/* <span id="toggle-mobile-menu" className="toggle-mobile-menu">
+                            <a href="javascript:void()">
                                 <i className="icon-hamburger"></i>
                             </a>
-                        </span>
+                        </span> */}
                         <nav id="main-nav" className="desktop">
-                                <Link to="/">home!</Link>
-                                <Link to="/releases">releases!</Link>
                             <ul className="">
-                                {/* <li>
-                                    <div>
-                                        <a href="/">Home</a>
-                                    </div>
-                                </li> */}
-                                {/* <li>
-                                    <div>
-                                        <a href="/info">Info</a>
-                                    </div>
-                                </li> */}
                                 <li>
                                     <div>
-                                        <a href="/releases">Releases</a>
+                                        <Link to="/news">News</Link>
                                     </div>
                                 </li>
                                 <li>
                                     <div>
-                                        <a href="/gallery">Gallery</a>
-                                    </div>
-                                </li>
-                                {/* <li>
-                                    <div>
-                                        <a href="/shop">Shop</a>
-                                    </div>
-                                </li> */}
-                                <li>
-                                    <div>
-                                        <a href="/review">Reviews</a>
+                                        <Link to="/releases">Releases</Link>
                                     </div>
                                 </li>
                                 <li>
                                     <div>
-                                        <a href="/lyrics">Lyrics</a>
+                                        <Link to="/gallery">Gallery</Link>
                                     </div>
                                 </li>
-                                {/* <li>
-                                    <div className='nav-contact'>
-                                        <a href="javascript:void()">Contact</a>
-                                        <div className="social-icon-links">
-                                            <a href="https://www.facebook.com/entrzelle">FB</a>
-                                        </div>
+                                <li>
+                                    <div>
+                                        <Link to="/reviews">Reviews</Link>
                                     </div>
-                                </li> */}
+                                </li>
+                                <li>
+                                    <div>
+                                        <Link to="/lyrics">Lyrics</Link>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a className="anchor-placeholder">Connect</a>
+                                    </div>
+                                </li>
                             </ul>
                         </nav>
                     </div>

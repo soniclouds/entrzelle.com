@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+// import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Route} from 'react-router-dom';
 
 import Home from './components/home.component.js';
@@ -24,4 +24,4 @@ ReactDOM.render(
 
 // serviceWorker();
 // or maybe
-serviceWorker.register();
+// serviceWorker.register();

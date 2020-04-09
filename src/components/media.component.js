@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 import '../assets/css/media.scss';
 
@@ -29,29 +28,33 @@ embedFacebookTimeline = (d, s, id) => {
 
                 <div id="video-feed-column" className="column-feed video-feed">
 
-                    {/* YT EMBED */}
+                    <div class="column-feed-content">
+                        {/* YT EMBED */}
 
-                    <div className='video-container yt-embed column-content'>
-                        <iframe className="youtube-player" src="https://www.youtube.com/embed/lRH7Ztl5QCE?rel=0&amp;amp;wmode=transparent&amp;amp;enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
-                    </div>
+                        <div className='video-container yt-embed column-content'>
+                            <iframe title="Total Progressive Collapse - album trailer" className="youtube-player" src="https://www.youtube.com/embed/lRH7Ztl5QCE?rel=0&amp;amp;wmode=transparent&amp;amp;enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                        </div>
 
-                    <div className='video-container yt-embed column-content'>
-                        <iframe src="https://www.youtube.com/embed/LChrPEfnNfc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
+                        <div className='video-container yt-embed column-content'>
+                            <iframe title="Set These Walls On Fire - album trailer" src="https://www.youtube.com/embed/LChrPEfnNfc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
 
-                    <div className='video-container yt-embed column-content'>
-                        <iframe src="https://www.youtube.com/embed/FXd1cu6KGV8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
+                        <div className='video-container yt-embed column-content'>
+                            <iframe title="Compatible With My Intoxication - lyrics video" src="https://www.youtube.com/embed/FXd1cu6KGV8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
                     
+                    </div>
 
                 </div>
 
                 <div id="audio-feed-column" className="column-feed audio-feed">
                     
-                    <iframe className='bandcamp-player' src="https://bandcamp.com/EmbeddedPlayer/album=71792589/size=large/bgcol=000000/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="http://alfamatrix.bandcamp.com/album/total-progressive-collapse-bonus-tracks-version">Total Progressive Collapse (Bonus Tracks Version) by ENTRZELLE</a></iframe>
+                    <div class="column-feed-content">
+                        <iframe title="Total Progressive Collapse - audio player" className='bandcamp-player' src="https://bandcamp.com/EmbeddedPlayer/album=71792589/size=large/bgcol=000000/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="http://alfamatrix.bandcamp.com/album/total-progressive-collapse-bonus-tracks-version">Total Progressive Collapse (Bonus Tracks Version) by ENTRZELLE</a></iframe>
 
-                    <iframe className='bandcamp-player' src="https://bandcamp.com/EmbeddedPlayer/album=4162682664/size=large/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="http://alfamatrix.bandcamp.com/album/set-these-walls-on-fire-ep">Set These Walls On Fire EP by ENTRZELLE</a></iframe>
-
+                        <iframe title="Set These Walls On Fire - audio player" className='bandcamp-player' src="https://bandcamp.com/EmbeddedPlayer/album=4162682664/size=large/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="http://alfamatrix.bandcamp.com/album/set-these-walls-on-fire-ep">Set These Walls On Fire EP by ENTRZELLE</a></iframe>
+                    
+                    </div>
                 </div>
 
             </div>
