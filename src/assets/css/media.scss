@@ -16,34 +16,91 @@ iframe.bandcamp-player {
     height: 472px;
 }
 
+.media-sidebar {
+    position: absolute;
+    // width: 25%;
+    height: 100vh;
+    top: 0;
+
+    .outer {
+        // display: inline-block;
+        display: table-cell;
+    }
+    .column-feed {
+        display: none;
+    }
+}
+
+.media-sidebar.left {
+    left: 0;
+    width: 25%;
+}
+.media-sidebar.right {
+    right: 0;
+    width: 25%;
+}
+
+.media-toggle {
+    vertical-align: top;
+    padding-top: 75vh;
+
+    button {
+        background-color: black;
+        opacity: .8;
+        color: white;
+        border-top: none;
+    }
+
+    button:focus {
+        outline: none;
+    }
+}
+
+.media-toggle.video button {
+    transform: rotate(-90deg);
+    transform-origin: center bottom;
+}
+.media-toggle.audio button {
+    transform: rotate(90deg);
+    transform-origin: center bottom;
+}
+
 div.column-feed {
-    width: 20%;
+    position: relative;
+    // width: 20%;
     text-align: center;
     // border: 1px solid silver;
     // height: fit-content;
-    height: 100vh;
+    // height: 100vh;
     // overflow: scroll;
-    top: 0;
+    // top: 0;
 }
 
+
 div.video-feed {
-    position: absolute;
+    // position: absolute;
     // left: 20px;
-    left: 0;
+    // left: 0;
     border-right: 1px solid #444444;
 }
 .column-feed-content {
     overflow: scroll;
+    position: relative;
+    max-height: 100vh;
 }
 
 div.audio-feed {
-    position: absolute;
+    // position: absolute;
     // right: 20px;
-    right: 0;
+    // right: 0;
     border-left: 1px solid #444444;
 }
 
+#audio-sidebar {
+    width: unset;
+}
 
+/*
 .column-feed:after {
     color: white;
     position: absolute;
@@ -51,8 +108,10 @@ div.audio-feed {
     cursor: pointer;
     border: 1px solid silver;
     padding: 5px 10px;
-}
 
+    // temp: testing
+    visibility: hidden;
+}
 
 .column-feed.video-feed:after {
     content: 'video';
@@ -65,3 +124,7 @@ div#audio-feed-column:after {
     left: -48px;
     transform: rotate(90deg);
 }
+
+*/
+
+
