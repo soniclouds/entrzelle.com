@@ -17,46 +17,66 @@ embedFacebookTimeline = (d, s, id) => {
 }
  */
     componentDidMount() {
-        
+        this.setColumnWidths();
+    }
+
+    setColumnWidths() {
+        let mediaSidebarLeft = document.getElementById('media-sidebar-left'),
+            mediaSidebarRight = document.getElementById('audio-sidebar');
+        mediaSidebarLeft.style.width = '0';
+        // mediaSidebarRight.style.width = '0';
     }
 
 
     // NOTE: refactor below 2 methods as 1 method, using identity of clicked element to identify corresponding column
 
     toggleVideoColumn() {
-        let videoColumn = document.getElementById('video-feed-column');
+        // let videoColumn = document.getElementById('video-feed-column');
 
-        if (videoColumn.style.display === '') {
-            videoColumn.style.display = 'table-cell';
-        } else if (videoColumn.style.display !== 'none') {
-            videoColumn.style.display = 'none';
-        } else {
-            videoColumn.style.display = 'table-cell';
-        }
-        
-        // if (videoColumn.style.display !== 'none') {
+        // if (videoColumn.style.display === '') {
+        //     videoColumn.style.display = 'table-cell';
+        // } else if (videoColumn.style.display !== 'none') {
         //     videoColumn.style.display = 'none';
         // } else {
         //     videoColumn.style.display = 'table-cell';
         // }
         
+        // refactoring to target parent width
+
+        let mediaSidebarLeft = document.getElementById('media-sidebar-left');
+
+        if (mediaSidebarLeft.style.width === '0px') {
+            mediaSidebarLeft.style.width = '25%';
+        } else {
+            mediaSidebarLeft.style.width = '0';
+        }
     }
 
     toggleAudioColumn(e) {
-        let audioColumn = document.getElementById('audio-feed-column'),
-            audioSidebar = document.getElementById('audio-sidebar');
 
-        if (audioColumn.style.display === '') {
-            audioColumn.style.display = 'table-cell';
-            audioSidebar.style.width = '25%';
-        } else if (audioColumn.style.display !== 'none') {
-            audioColumn.style.display = 'none';
-            audioSidebar.style.width = 'unset';
-        } else {
-            audioColumn.style.display = 'table-cell';
-            audioSidebar.style.width = '25%';
-        }
+        // let audioColumn = document.getElementById('audio-feed-column'),
+        //     audioSidebar = document.getElementById('audio-sidebar');
+
+        // if (audioColumn.style.display === '') {
+        //     audioColumn.style.display = 'table-cell';
+        //     audioSidebar.style.width = '25%';
+        // } else if (audioColumn.style.display !== 'none') {
+        //     audioColumn.style.display = 'none';
+        //     audioSidebar.style.width = 'unset';
+        // } else {
+        //     audioColumn.style.display = 'table-cell';
+        //     audioSidebar.style.width = '25%';
+        // }
         
+        // refactoring to target parent width
+
+        let mediaSidebarRight = document.getElementById('audio-sidebar');
+
+        if (mediaSidebarRight.style.width === '0px') {
+            mediaSidebarRight.style.width = '25%';
+        } else {
+            mediaSidebarRight.style.width = '0';
+        }
 
     }
 
@@ -66,9 +86,10 @@ embedFacebookTimeline = (d, s, id) => {
                 
                 {/* video column (left) */}
                 
-                <div className="media-sidebar left">
+                <div id="media-sidebar-left" className="media-sidebar left">
                     <div id="video-feed-column" className="column-feed video-feed outer">
                         <div className="column-feed-content">
+                            
                             {/* YT EMBED */}
 
                             <div className='video-container yt-embed column-content'>
