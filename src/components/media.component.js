@@ -17,14 +17,25 @@ embedFacebookTimeline = (d, s, id) => {
 }
  */
     componentDidMount() {
-        this.setColumnWidths();
+        // this.setColumnWidths();
+        this.setColumnViewPosition();
+    }
+
+    setColumnViewPosition() {
+        // video
+        let mediaSidebarLeft = document.getElementById('media-sidebar-left');
+        // mediaSidebarLeft.style.width = '0';
     }
 
     setColumnWidths() {
-        let mediaSidebarLeft = document.getElementById('media-sidebar-left'),
-            mediaSidebarRight = document.getElementById('audio-sidebar');
+        // video
+        let mediaSidebarLeft = document.getElementById('media-sidebar-left');
         mediaSidebarLeft.style.width = '0';
-        // mediaSidebarRight.style.width = '0';
+
+        // audio
+        // let mediaSidebarRight = document.getElementById('audio-sidebar');
+        let audioFeedColumn = document.getElementById('audio-feed-column');
+        // audioFeedColumn.style.maxWidth = '0';
     }
 
 
@@ -70,14 +81,22 @@ embedFacebookTimeline = (d, s, id) => {
         
         // refactoring to target parent width
 
-        let mediaSidebarRight = document.getElementById('audio-sidebar');
+        // let mediaSidebarRight = document.getElementById('audio-sidebar');
 
-        if (mediaSidebarRight.style.width === '0px') {
-            mediaSidebarRight.style.width = '25%';
+        // if (mediaSidebarRight.style.width === '0px') {
+        //     mediaSidebarRight.style.width = '25%';
+        // } else {
+        //     mediaSidebarRight.style.width = '0';
+        // }
+
+        let audioFeedColumn = document.getElementById('audio-feed-column');
+        // audioFeedColumn.style.maxWidth = '0';
+
+        if (audioFeedColumn.style.width === '0px') {
+            audioFeedColumn.style.width = '25%';
         } else {
-            mediaSidebarRight.style.width = '0';
+            audioFeedColumn.style.width = '0';
         }
-
     }
 
     render() {
@@ -87,6 +106,8 @@ embedFacebookTimeline = (d, s, id) => {
                 {/* video column (left) */}
                 
                 <div id="media-sidebar-left" className="media-sidebar left">
+                    
+                    
                     <div id="video-feed-column" className="column-feed video-feed outer">
                         <div className="column-feed-content">
                             
@@ -106,11 +127,16 @@ embedFacebookTimeline = (d, s, id) => {
                         
                         </div>
                     </div>
+                    
                     <div className="media-toggle video outer"><button onClick={this.toggleVideoColumn}>video</button></div>
+
                 </div>
 
                 <div className="media-sidebar right" id="audio-sidebar">
+                    
+
                     <div className="media-toggle audio outer"><button onClick={this.toggleAudioColumn}>audio</button></div>
+                    
                     <div id="audio-feed-column" className="column-feed audio-feed outer">                        
                         <div className="column-feed-content">
                             <iframe title="Total Progressive Collapse - audio player" className='bandcamp-player' src="https://bandcamp.com/EmbeddedPlayer/album=71792589/size=large/bgcol=000000/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="http://alfamatrix.bandcamp.com/album/total-progressive-collapse-bonus-tracks-version">Total Progressive Collapse (Bonus Tracks Version) by ENTRZELLE</a></iframe>
@@ -119,6 +145,8 @@ embedFacebookTimeline = (d, s, id) => {
                         
                         </div>
                     </div>
+
+
                 </div>
 
             </div>
