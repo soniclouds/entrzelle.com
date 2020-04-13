@@ -18,7 +18,7 @@ embedFacebookTimeline = (d, s, id) => {
  */
     componentDidMount() {
         // this.setColumnWidths();
-        this.setColumnViewPosition();
+        // this.setColumnViewPosition();
     }
 
     setColumnViewPosition() {
@@ -42,18 +42,19 @@ embedFacebookTimeline = (d, s, id) => {
     // NOTE: refactor below 2 methods as 1 method, using identity of clicked element to identify corresponding column
 
     toggleVideoColumn() {
-        // let videoColumn = document.getElementById('video-feed-column');
+        let videoColumn = document.getElementById('video-feed-column');
 
-        // if (videoColumn.style.display === '') {
-        //     videoColumn.style.display = 'table-cell';
-        // } else if (videoColumn.style.display !== 'none') {
-        //     videoColumn.style.display = 'none';
-        // } else {
-        //     videoColumn.style.display = 'table-cell';
-        // }
+        if (videoColumn.style.display === '') {
+            videoColumn.style.display = 'table-cell';
+        } else if (videoColumn.style.display !== 'none') {
+            videoColumn.style.display = 'none';
+        } else {
+            videoColumn.style.display = 'table-cell';
+        }
         
         // refactoring to target parent width
-
+        // ABANDON SHIP -- revisit sophisticated toggling later
+        /*
         let mediaSidebarLeft = document.getElementById('media-sidebar-left');
 
         if (mediaSidebarLeft.style.width === '0px') {
@@ -61,26 +62,27 @@ embedFacebookTimeline = (d, s, id) => {
         } else {
             mediaSidebarLeft.style.width = '0';
         }
+        */
     }
 
     toggleAudioColumn(e) {
 
-        // let audioColumn = document.getElementById('audio-feed-column'),
-        //     audioSidebar = document.getElementById('audio-sidebar');
+        let audioColumn = document.getElementById('audio-feed-column'),
+            audioSidebar = document.getElementById('audio-sidebar');
 
-        // if (audioColumn.style.display === '') {
-        //     audioColumn.style.display = 'table-cell';
-        //     audioSidebar.style.width = '25%';
-        // } else if (audioColumn.style.display !== 'none') {
-        //     audioColumn.style.display = 'none';
-        //     audioSidebar.style.width = 'unset';
-        // } else {
-        //     audioColumn.style.display = 'table-cell';
-        //     audioSidebar.style.width = '25%';
-        // }
+        if (audioColumn.style.display === '') {
+            audioColumn.style.display = 'table-cell';
+            audioSidebar.style.width = '25%';
+        } else if (audioColumn.style.display !== 'none') {
+            audioColumn.style.display = 'none';
+            audioSidebar.style.width = 'unset';
+        } else {
+            audioColumn.style.display = 'table-cell';
+            audioSidebar.style.width = '25%';
+        }
         
         // refactoring to target parent width
-
+        /*
         // let mediaSidebarRight = document.getElementById('audio-sidebar');
 
         // if (mediaSidebarRight.style.width === '0px') {
@@ -97,6 +99,7 @@ embedFacebookTimeline = (d, s, id) => {
         } else {
             audioFeedColumn.style.width = '0';
         }
+        */
     }
 
     render() {
