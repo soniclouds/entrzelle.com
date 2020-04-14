@@ -17,91 +17,42 @@ embedFacebookTimeline = (d, s, id) => {
 }
  */
     componentDidMount() {
-        // this.setColumnWidths();
-        // this.setColumnViewPosition();
-    }
-
-    setColumnViewPosition() {
-        // video
-        let mediaSidebarLeft = document.getElementById('media-sidebar-left');
-        // mediaSidebarLeft.style.width = '0';
-    }
-
-    setColumnWidths() {
-        // video
-        let mediaSidebarLeft = document.getElementById('media-sidebar-left');
-        mediaSidebarLeft.style.width = '0';
-
-        // audio
-        // let mediaSidebarRight = document.getElementById('audio-sidebar');
-        let audioFeedColumn = document.getElementById('audio-feed-column');
-        // audioFeedColumn.style.maxWidth = '0';
-    }
-
-
-    // NOTE: refactor below 2 methods as 1 method, using identity of clicked element to identify corresponding column
-
-    toggleVideoColumn() {
-        let videoColumn = document.getElementById('video-feed-column');
-
-        if (videoColumn.style.display === '') {
-            videoColumn.style.display = 'table-cell';
-        } else if (videoColumn.style.display !== 'none') {
-            videoColumn.style.display = 'none';
-        } else {
-            videoColumn.style.display = 'table-cell';
-        }
         
-        // refactoring to target parent width
-        // ABANDON SHIP -- revisit sophisticated toggling later
-        /*
-        let mediaSidebarLeft = document.getElementById('media-sidebar-left');
-
-        if (mediaSidebarLeft.style.width === '0px') {
-            mediaSidebarLeft.style.width = '25%';
-        } else {
-            mediaSidebarLeft.style.width = '0';
-        }
-        */
     }
 
-    toggleAudioColumn(e) {
-
-        let audioColumn = document.getElementById('audio-feed-column'),
+    toggleMediaColumn(e) {
+        
+        let targetId = e.target.id,
+            videoColumn = document.getElementById('video-feed-column'),
+            audioColumn = document.getElementById('audio-feed-column'),
             audioSidebar = document.getElementById('audio-sidebar');
 
-        if (audioColumn.style.display === '') {
-            audioColumn.style.display = 'table-cell';
-            audioSidebar.style.width = '25%';
-        } else if (audioColumn.style.display !== 'none') {
-            audioColumn.style.display = 'none';
-            audioSidebar.style.width = 'unset';
-        } else {
-            audioColumn.style.display = 'table-cell';
-            audioSidebar.style.width = '25%';
+        // video
+        if (targetId === 'video-toggle-btn') {
+            if (videoColumn.style.display === '') {
+                videoColumn.style.display = 'table-cell';
+            } else if (videoColumn.style.display !== 'none') {
+                videoColumn.style.display = 'none';
+            } else {
+                videoColumn.style.display = 'table-cell';
+            }
         }
-        
-        // refactoring to target parent width
-        /*
-        // let mediaSidebarRight = document.getElementById('audio-sidebar');
 
-        // if (mediaSidebarRight.style.width === '0px') {
-        //     mediaSidebarRight.style.width = '25%';
-        // } else {
-        //     mediaSidebarRight.style.width = '0';
-        // }
-
-        let audioFeedColumn = document.getElementById('audio-feed-column');
-        // audioFeedColumn.style.maxWidth = '0';
-
-        if (audioFeedColumn.style.width === '0px') {
-            audioFeedColumn.style.width = '25%';
-        } else {
-            audioFeedColumn.style.width = '0';
-        }
-        */
+        // audio
+        if (targetId === 'audio-toggle-btn') {
+            if (audioColumn.style.display === '') {
+                audioColumn.style.display = 'table-cell';
+                audioSidebar.style.width = '25%';
+            } else if (audioColumn.style.display !== 'none') {
+                audioColumn.style.display = 'none';
+                audioSidebar.style.width = 'unset';
+            } else {
+                audioColumn.style.display = 'table-cell';
+                audioSidebar.style.width = '25%';
+            }
+        }       
     }
-
+ 
     render() {
         return (
             <div className='content-wrap'>
@@ -131,14 +82,14 @@ embedFacebookTimeline = (d, s, id) => {
                         </div>
                     </div>
                     
-                    <div className="media-toggle video outer"><button onClick={this.toggleVideoColumn}>video</button></div>
+                    <div className="media-toggle video outer"><button id="video-toggle-btn" onClick={this.toggleMediaColumn}>video</button></div>
 
                 </div>
 
                 <div className="media-sidebar right" id="audio-sidebar">
                     
 
-                    <div className="media-toggle audio outer"><button onClick={this.toggleAudioColumn}>audio</button></div>
+                    <div className="media-toggle audio outer"><button id="audio-toggle-btn" onClick={this.toggleMediaColumn}>audio</button></div>
                     
                     <div id="audio-feed-column" className="column-feed audio-feed outer">                        
                         <div className="column-feed-content">
