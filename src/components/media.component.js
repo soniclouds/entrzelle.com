@@ -16,8 +16,17 @@ embedFacebookTimeline = (d, s, id) => {
 
 }
  */
+
+    // constructor(props) {
+    //     super(props);
+    // }
+    
+    yt = document.getElementsByClassName('yt-embed');
+    ytArr = Array.from(this.yt);
+
+
     componentDidMount() {
-        
+        // console.log(this.testVar);
     }
 
     toggleMediaColumn(e) {
@@ -53,6 +62,20 @@ embedFacebookTimeline = (d, s, id) => {
         }       
     }
  
+    stopVideo(e) {
+        let iframe = e.querySelector('iframe'),
+            video = e.querySelector('video');
+        // console.log(iframe);
+        // console.log('<br>');
+        // console.log(video);
+        if (iframe) {
+            let iframeSrc = iframe.src;
+            iframe.src = iframeSrc;
+        }
+        if (video) {
+            video.pause();
+        }
+    };
     render() {
         return (
             <div className='content-wrap'>
@@ -68,15 +91,15 @@ embedFacebookTimeline = (d, s, id) => {
                             {/* YT EMBED */}
 
                             <div className='video-container yt-embed column-content'>
-                                <iframe title="Total Progressive Collapse - album trailer" className="youtube-player" src="https://www.youtube.com/embed/lRH7Ztl5QCE?rel=0&amp;amp;wmode=transparent&amp;amp;enablejsapi=1" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                <iframe title="Total Progressive Collapse - album trailer" className="youtube-player" src="https://www.youtube.com/embed/lRH7Ztl5QCE?rel=0&version=3&enablejsapi=1" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                             </div>
 
                             <div className='video-container yt-embed column-content'>
-                                <iframe title="Set These Walls On Fire - album trailer" src="https://www.youtube.com/embed/LChrPEfnNfc" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                <iframe title="Set These Walls On Fire - album trailer" className="youtube-player" src="https://www.youtube.com/embed/LChrPEfnNfc" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                             </div>
 
                             <div className='video-container yt-embed column-content'>
-                                <iframe title="Compatible With My Intoxication - lyrics video" src="https://www.youtube.com/embed/FXd1cu6KGV8" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                <iframe title="Compatible With My Intoxication - lyrics video" className="youtube-player" src="https://www.youtube.com/embed/FXd1cu6KGV8" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                             </div>
                         
                         </div>
