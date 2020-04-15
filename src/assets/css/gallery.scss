@@ -1,0 +1,15 @@
+.gallery-photos {
+    width: 58%;
+    margin: 0 auto;
+
+    img {
+        transition: 1s;
+    }
+
+    img:hover {
+        filter: grayscale(100%);
+        transform: scale(1.1);
+    }
+
+}
+
