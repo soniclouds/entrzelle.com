@@ -16,7 +16,6 @@ function App() {
               <div id="container" className="container">
             
                 <Header />
-                <br />
 
                 <Media />
               
