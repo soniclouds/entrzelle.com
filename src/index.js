@@ -7,12 +7,14 @@ import { BrowserRouter, Route} from 'react-router-dom';
 
 import Home from './components/home.component.js';
 import Releases from './components/releases.component.js';
+import Gallery from './components/gallery.component.js';
 
 ReactDOM.render(
     <BrowserRouter>
         <App />
         <Route path='/' exact component={Home} />
         <Route path='/releases' component={Releases} />
+        <Route path='/gallery' component={Gallery} />
     </BrowserRouter>
     , document.getElementById('root')
 );
