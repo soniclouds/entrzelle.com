@@ -1,11 +1,3 @@
-.component-content-container--outer {
-    width: 55%;
-    // height: 80vh;
-    margin: 0 auto;
-    background: rgba(255,255,255,.84);
-    color: black;
-    overflow: scroll;
-}
 
 .content-title {
     font-family: Raleway, sans-serif;
@@ -86,11 +78,3 @@
 
 }
 
-
-
-// RWD
-@media screen and (max-width: 1280px) {
-    .component-content-container--outer {
-        width: 58%;
-    }
-}

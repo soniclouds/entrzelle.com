@@ -1,9 +1,12 @@
 .gallery-photos {
-    width: 58%;
-    margin: 0 auto;
+    // width: 58%;
+    // margin: 0 auto;
+    padding: 10px;
 
     img {
         transition: 1s;
+        padding: 5px;
+        width: 125px;
     }
 
     img:hover {

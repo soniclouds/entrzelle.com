@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
+
 import 'lightbox2/dist/css/lightbox.min.css';
 import 'lightbox2/dist/js/lightbox-plus-jquery.min.js';
 import lightbox from 'lightbox2/dist/js/lightbox-plus-jquery.min.js';
 
-import closeBtn from 'lightbox2/dist/images/close.png';
-import loadingBtn from 'lightbox2/dist/images/loading.gif';
-import prevBtn from 'lightbox2/dist/images/prev.png';
-import nextBtn from 'lightbox2/dist/images/next.png';
-
 import '../assets/css/gallery.scss';
+import '../assets/css/_content-component.scss';
 
 import _image1_thumb from '../assets/img/photos/gallery/thumbs/200/promo_band_1.jpg';
 import _image2_thumb from '../assets/img/photos/gallery/thumbs/200/promo_band_2.jpg';
@@ -23,6 +20,16 @@ export default class Gallery extends Component {
         lightbox.option({
             'showImageNumberLabel': false
         })
+        this.setSideColumnHeight();
+        window.addEventListener('resize', this.setSideColumnHeight);
+    }
+
+    setSideColumnHeight() {
+        let contentTop = document.getElementById('ccc-outer').offsetTop,
+            contentContainer = document.getElementById('ccc-outer');
+
+        contentContainer.style.height = window.innerHeight - contentTop - '50' + 'px';
+        // audioCol.style.height = window.innerHeight - contentTop + 'px';
     }
 
     photos = [
@@ -50,18 +57,18 @@ export default class Gallery extends Component {
 
     render() {
         return (
-            <div>
-
-                <div className="gallery-photos">
-                    <a href={this.photos[0].src.full} data-lightbox="mygallery"  data-title="photo by Rico JC">
-                        <img src={this.photos[0].src.thumb} alt="test-thumb-1"/>
-                    </a>
-                    <a href={this.photos[1].src.full} data-lightbox="mygallery">
-                        <img src={this.photos[1].src.thumb} alt="test-thumb-2"/>
-                    </a>
-                    {/* {images.map(({ id, src, title }) => <img key={id} src={src} title={title} alt={title} />)} */}
+            <div id="ccc-outer" className="component-content-container--outer">
+                <div className="component-content-container--inner">
+                    <div className="gallery-photos">
+                        <a href={this.photos[0].src.full} data-lightbox="mygallery"  data-title="photo by Rico JC">
+                            <img src={this.photos[0].src.thumb} alt="test-thumb-1"/>
+                        </a>
+                        <a href={this.photos[1].src.full} data-lightbox="mygallery">
+                            <img src={this.photos[1].src.thumb} alt="test-thumb-2"/>
+                        </a>
+                        {/* {images.map(({ id, src, title }) => <img key={id} src={src} title={title} alt={title} />)} */}
+                    </div>
                 </div>
-                
             </div>
         )
     }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../assets/css/releases.scss';
+import '../assets/css/_content-component.scss';
 
 import _coverTPC from '../assets/img/releases/TPC.jpg';
 import _coverSTWOF from '../assets/img/releases/STWOF.jpg';
