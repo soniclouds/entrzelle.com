@@ -1,4 +1,12 @@
 import React, { Component } from 'react';
+import 'lightbox2/dist/css/lightbox.min.css';
+import 'lightbox2/dist/js/lightbox-plus-jquery.min.js';
+import lightbox from 'lightbox2/dist/js/lightbox-plus-jquery.min.js';
+
+import closeBtn from 'lightbox2/dist/images/close.png';
+import loadingBtn from 'lightbox2/dist/images/loading.gif';
+import prevBtn from 'lightbox2/dist/images/prev.png';
+import nextBtn from 'lightbox2/dist/images/next.png';
 
 import '../assets/css/gallery.scss';
 
@@ -10,6 +18,12 @@ import _image2_full from '../assets/img/photos/gallery/full/promo_band_2.jpg';
 
 
 export default class Gallery extends Component {
+
+    componentDidMount() {
+        lightbox.option({
+            'showImageNumberLabel': false
+        })
+    }
 
     photos = [
         {   
@@ -39,10 +53,10 @@ export default class Gallery extends Component {
             <div>
 
                 <div className="gallery-photos">
-                    <a href={this.photos[0].src.full} >
+                    <a href={this.photos[0].src.full} data-lightbox="mygallery"  data-title="photo by Rico JC">
                         <img src={this.photos[0].src.thumb} alt="test-thumb-1"/>
                     </a>
-                    <a href={this.photos[1].src.full}>
+                    <a href={this.photos[1].src.full} data-lightbox="mygallery">
                         <img src={this.photos[1].src.thumb} alt="test-thumb-2"/>
                     </a>
                     {/* {images.map(({ id, src, title }) => <img key={id} src={src} title={title} alt={title} />)} */}
