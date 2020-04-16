@@ -27,19 +27,16 @@ export default class Gallery extends Component {
         contentContainer.style.height = window.innerHeight - contentTop - '50' + 'px';
     }
 
+    lightboxGalleryName = "gallery-photos";
 
     render() {
         return (
             <div id="ccc-outer" className="component-content-container--outer">
                 <div className="component-content-container--inner">
                     <div className="gallery-photos">
-                        <a href={galleryPhotos[0].src.full} data-lightbox="mygallery"  data-title={galleryPhotos[0].caption}>
-                            <img src={galleryPhotos[0].src.thumb} alt={galleryPhotos[0].alt}/>
-                        </a>
-                        <a href={galleryPhotos[1].src.full} data-lightbox="mygallery" data-title={galleryPhotos[1].caption}>
-                            <img src={galleryPhotos[1].src.thumb} alt={galleryPhotos[1].alt}/>
-                        </a>
-                        {/* {images.map(({ id, src, title }) => <img key={id} src={src} title={title} alt={title} />)} */}
+                                            
+                        {galleryPhotos.map(({ id, src, alt, caption }) => <a id={id} href={src.full} data-lightbox={this.lightboxGalleryName} data-title={caption}><img src={src.thumb} title={caption} alt={alt} /> </a>)}
+                    
                     </div>
                 </div>
             </div>
