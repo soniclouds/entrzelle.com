@@ -14,7 +14,7 @@ export default class Gallery extends Component {
 
     componentDidMount() {
         lightbox.option({
-            'showImageNumberLabel': false
+            'showImageNumberLabel': false,
         })
         this.setSideColumnHeight();
         window.addEventListener('resize', this.setSideColumnHeight);
