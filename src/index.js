@@ -8,6 +8,8 @@ import { BrowserRouter, Route} from 'react-router-dom';
 import Home from './components/home.component.js';
 import Releases from './components/releases.component.js';
 import Gallery from './components/gallery.component.js';
+import Reviews from './components/reviews.component.js';
+
 
 ReactDOM.render(
     <BrowserRouter>
@@ -15,6 +17,7 @@ ReactDOM.render(
         <Route path='/' exact component={Home} />
         <Route path='/releases' component={Releases} />
         <Route path='/gallery' component={Gallery} />
+        <Route path='/reviews' component={Reviews} />
     </BrowserRouter>
     , document.getElementById('root')
 );
