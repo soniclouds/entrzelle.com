@@ -1,12 +1,17 @@
 import React from 'react';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 import Header from './components/header.component.js';
 import Media from './components/media.component.js';
 
-function App() {
-  return (
+
+class App extends React.Component {
+
+
+  render() {
+    return (
       <div>
         <div className="container--outer-wrapper">
           <div className='background--image-wrapper'></div>
@@ -25,8 +30,9 @@ function App() {
             
         </div>
       </div>
-    
-          );
-        }
+      
+    );
+  }
+}
         
-        export default App;
+export default App;
