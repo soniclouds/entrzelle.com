@@ -1,0 +1,33 @@
+{
+  "connection": "default",
+  "collectionName": "lyrics",
+  "info": {
+    "name": "lyrics",
+    "description": "Lyrics"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "album": {
+      "type": "string"
+    },
+    "releaseInfo": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "credits": {
+      "type": "string"
+    },
+    "song": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    }
+  }
+}

@@ -46,7 +46,7 @@ export default class News extends Component {
             
             this.setState({ posts: newsPosts.reverse() });           
 
-            // console.log(this.state.posts);
+            console.log(this.state.posts);
 
         }
             catch (err) {

@@ -10,6 +10,7 @@ import News from './components/news.component.js';
 import Releases from './components/releases.component.js';
 import Gallery from './components/gallery.component.js';
 import Reviews from './components/reviews.component.js';
+import Lyrics from './components/lyrics.component.js';
 
 
 ReactDOM.render(
@@ -20,6 +21,7 @@ ReactDOM.render(
         <Route path='/releases' component={Releases} />
         <Route path='/gallery' component={Gallery} />
         <Route path='/reviews' component={Reviews} />
+        <Route path='/lyrics' component={Lyrics} />
     </BrowserRouter>
     , document.getElementById('root')
 );
