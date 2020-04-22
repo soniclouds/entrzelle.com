@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Strapi from 'strapi-sdk-javascript/build/main';
+import DOMPurify from 'dompurify';
 
 import '../assets/css/news.scss';
 import '../assets/css/_content-component.scss';
@@ -10,11 +11,9 @@ export default class News extends Component {
 
     constructor(props) {
         super(props);
-
         this.state = {
             posts: []
         }
-
     }
 
     async componentDidMount() {
@@ -24,10 +23,31 @@ export default class News extends Component {
 
         try {
             const newsPosts = await strapi.getEntries('news');
-            // console.log('checking type of newPosts: ', Array.isArray(newsPosts));
-            this.setState({ posts: newsPosts });
 
-            console.log("checking this.state.posts: ", this.state.posts);
+            // sanitize HTML for security (non-issue for owner-generated content, but best practice in general)
+            newsPosts.forEach(p => {
+                let dirtyTitle = p.title,
+                    cleanTitle = DOMPurify.sanitize(dirtyTitle),
+                    dirtyContent = p.content,
+                    cleanContent = DOMPurify.sanitize(dirtyContent);
+                p.title = cleanTitle;
+                p.content = cleanContent;
+
+                // NOTE: trying to figure out media rendering... commenting out for now
+                // if (p.media[0]) {
+                //     let mediaUrl = "http://localhost:1337/uploads/" + p.media[0].hash + p.media[0].ext;
+                //     console.log('media found: ', mediaUrl);
+                //     p.mediaUrl = mediaUrl;
+                // }
+                // console.log('checking media: ', p.media[0]);
+                // console.log('checking media url: ', p.media[0].url);
+                // }
+            });
+            
+            this.setState({ posts: newsPosts.reverse() });           
+
+            // console.log(this.state.posts);
+
         }
             catch (err) {
             alert(err);
@@ -52,13 +72,22 @@ export default class News extends Component {
                         <div className="news-content">
                         
                             <div className="content-title">
-                                <h1>{post.title}</h1>
-                                <h6>date here</h6>
+                                <h1 dangerouslySetInnerHTML={{ __html: post.title}}></h1>
+                                <h6>{new Date(post.date).toDateString()}</h6>
                             </div>
                             <div className="content-data">
-                                <div className="news-detail">
-                                    {post.content}
+
+                                {/* note: dangerouslySetInnerHTML is safe here because HTML was previously sanitized by DOMPurify */}
+                                <div className="news-detail" dangerouslySetInnerHTML={{ __html: post.content }}></div>
+                                
+                                {/* note: the only way I've figured out how to include external media embeds is with the iframe code, but this will not work in 'content' property due to sanitizing above -- including in separate field 'embedCode' without sanitizing -- this may become a security issue later, so keep an eye on this -- more of a temporary solution for now */}
+                                <div className="_embed" dangerouslySetInnerHTML={{__html: post.embedCode}}></div>
+
+                                {/* note: can't figure out how to render contents of 'media' field -- commenting out for now */}
+                                <div className="_media-upload">
+                                    {/* <img src={post.media[0].url}/> */}
                                 </div>
+
                                 
                             </div>
                             
