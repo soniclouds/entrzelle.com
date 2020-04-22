@@ -1,0 +1,30 @@
+{
+  "connection": "default",
+  "collectionName": "reviews",
+  "info": {
+    "name": "reviews",
+    "description": "Reviews"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "album": {
+      "type": "string"
+    },
+    "publication": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "link": {
+      "type": "text"
+    },
+    "content": {
+      "type": "text"
+    }
+  }
+}
