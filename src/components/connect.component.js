@@ -10,12 +10,12 @@ export default class Connect extends Component {
     }
 
     setContainerHeight() {
-        // let contentTop = document.getElementById('connect--outer').offsetTop,
+        
         let contentTop = document.getElementById('ccc-outer').offsetTop,
-            contentContainer = document.getElementById('connect--outer');
+            contentContainer = document.getElementById('connect-component-container');
 
         contentContainer.style.height = window.innerHeight - contentTop - '50' + 'px';
-        // audioCol.style.height = window.innerHeight - contentTop + 'px';
+        
 
     }
 

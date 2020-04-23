@@ -7,16 +7,19 @@ import '../assets/css/header.scss';
 
 export default class Header extends Component {
 
+    // toggle height + visibility for transition effect
+    toggleConnectModal() {
+        
+        let innerConnectContainer = document.getElementById('connect--outer');
 
-    toggleConnectModal(){
-        console.log('toggling connect modal');
-        let connectContainer = document.getElementById('connect-component-container');
-        // connectContainer.style.display = 'none';
-        if (connectContainer.style.display !== 'none') {
-            connectContainer.style.display = 'none';
+        if (innerConnectContainer.style.height !== '0%') {
+            innerConnectContainer.style.height = '0%'; 
+            innerConnectContainer.style.visibility = 'hidden'; 
         } else {
-            connectContainer.style.display = 'block';
-        }
+            innerConnectContainer.style.height = '100%'; 
+            innerConnectContainer.style.visibility = 'visible';
+        } 
+    
     }
 
     render() {

@@ -2,6 +2,12 @@
     position: fixed;
     width: 100%;
     left: 0;
+    // transition: 0.5s height;
+
+    #connect--outer {
+        height: 100%;
+        transition: 0.5s height, 0.5s visibility;
+    }
 
     .--outer {
         width: 55%;
