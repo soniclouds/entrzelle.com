@@ -7,6 +7,11 @@ import '../assets/css/header.scss';
 
 export default class Header extends Component {
 
+
+    toggleConnectModal(){
+        console.log('toggling connect modal');
+    }
+
     render() {
         return (
             <header id="page-header">
@@ -49,7 +54,7 @@ export default class Header extends Component {
                                 </li>
                                 <li>
                                     <div>
-                                        <a className="anchor-placeholder">Connect</a>
+                                        <a onClick={this.toggleConnectModal} className="anchor-placeholder">Connect</a>
                                     </div>
                                 </li>
                             </ul>
