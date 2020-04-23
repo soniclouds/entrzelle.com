@@ -33,6 +33,12 @@ export default class Connect extends Component {
             <div id="connect-component-container">
                 <div id="connect--outer" className="--outer">
 
+                    <div className="connect-cta-container">
+                        <div className="--inner">
+                            cta here
+                        </div>
+                    </div>
+
                     <div className="component-wrapper--fb">
                         <FB />
                     </div>

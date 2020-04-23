@@ -24,6 +24,42 @@
         width: 58%;
     }
 }
+
+
+
+.connect-cta-container, .component-wrapper--fb {
+    display: inline-block;
+}
+
+
+element.style {
+}
+.connect-cta-container {
+    // height: 100%;
+    /* width: fit-content; */
+    // background: white;
+    // color: black;
+    // width: 40%;
+    /* margin: 0 auto; */
+    /* position: absolute; */
+    // left: 5%;
+    // top: 10%;
+    // vertical-align: middle;
+
+    .--inner {
+        left: 5%;
+        background: white;
+        color: black;
+        vertical-align: middle;
+        position: absolute;
+        /* height: 100%; */
+        /* height: 40px; */
+        top: 40%;
+        width: 40%;
+    }
+}
+
+
 .component-wrapper--fb {
     width:50%;
     position: absolute;
