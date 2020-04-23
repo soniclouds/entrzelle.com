@@ -1,0 +1,20 @@
+#connect-component-container {
+    position: fixed;
+    width: 100%;
+    left: 0;
+
+    .--outer {
+        width: 55%;
+        // height: 80vh;
+        margin: 0 auto;
+        background: rgba(255,255,255,.84);
+        color: black;
+        overflow: scroll;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    #connect-component-container .--outer {
+        width: 58%;
+    }
+}
