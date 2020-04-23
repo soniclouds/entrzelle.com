@@ -2,6 +2,8 @@ import React, { Component } from 'react';
  
 import '../assets/css/connect.scss';
 
+import FB from './connect/fb.js';
+
 export default class Connect extends Component {
  
     componentDidMount(){
@@ -31,9 +33,9 @@ export default class Connect extends Component {
             <div id="connect-component-container">
                 <div id="connect--outer" className="--outer">
 
-                    {/* <div className="component-content-container--inner"> */}
-                        connect component contents here
-                    {/* </div> */}
+                    <div className="component-wrapper--fb">
+                        <FB />
+                    </div>
                 
                 </div>
             </div>

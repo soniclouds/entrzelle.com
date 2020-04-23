@@ -5,18 +5,13 @@
     z-index: -1;
 
     #connect--outer {
-        // height: 100%;
-        // height: 0%;
-        // visibility: 'hidden';
         transition: 0.5s height, 0.5s visibility;
+        position: relative;
     }
 
     .--outer {
         width: 55%;
-        // height: 80vh;
         margin: 0 auto;
-        // background: rgba(255,255,255,.84);
-        // color: black;
         overflow: scroll;
         background: black;
         color: white;
@@ -28,4 +23,17 @@
     #connect-component-container .--outer {
         width: 58%;
     }
+}
+.component-wrapper--fb {
+    width:50%;
+    position: absolute;
+    right: 0;
+}
+#fb-component-container {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+.fb-embed {
+    // css here
 }
