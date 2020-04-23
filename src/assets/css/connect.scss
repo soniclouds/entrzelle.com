@@ -16,7 +16,7 @@
         overflow: scroll;
         background: black;
         color: white;
-        opacity: .9;
+        opacity: .93;
     }
 }
 
@@ -48,6 +48,7 @@ element.style {
     // vertical-align: middle;
 
     .--inner {
+        padding: 10px;
         left: 5%;
         background: white;
         color: black;
