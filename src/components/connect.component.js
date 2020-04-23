@@ -5,10 +5,16 @@ import '../assets/css/connect.scss';
 export default class Connect extends Component {
  
     componentDidMount(){
+        this.initializeCss();
         this.setContainerHeight();
         window.addEventListener('resize', this.setContainerHeight);
     }
 
+    initializeCss() {
+        let innerConnectContainer = document.getElementById('connect--outer');
+        innerConnectContainer.style.height = '0%';
+        innerConnectContainer.style.visibility = 'hidden';
+    }
     setContainerHeight() {
         
         let contentTop = document.getElementById('ccc-outer').offsetTop,
