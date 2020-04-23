@@ -6,6 +6,7 @@ import './App.css';
 
 import Header from './components/header.component.js';
 import Media from './components/media.component.js';
+import Connect from './components/connect.component.js';
 
 
 class App extends React.Component {
@@ -23,6 +24,8 @@ class App extends React.Component {
                 <Header />
 
                 <Media />
+
+                <Connect />
             
               </div>
             </div>
