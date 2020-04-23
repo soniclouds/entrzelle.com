@@ -11,7 +11,12 @@ export default class Header extends Component {
     toggleConnectModal(){
         console.log('toggling connect modal');
         let connectContainer = document.getElementById('connect-component-container');
-        connectContainer.style.display = 'none';
+        // connectContainer.style.display = 'none';
+        if (connectContainer.style.display !== 'none') {
+            connectContainer.style.display = 'none';
+        } else {
+            connectContainer.style.display = 'block';
+        }
     }
 
     render() {
