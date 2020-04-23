@@ -2,7 +2,7 @@
     position: fixed;
     width: 100%;
     left: 0;
-    // transition: 0.5s height;
+    z-index: -1;
 
     #connect--outer {
         // height: 100%;

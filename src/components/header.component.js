@@ -10,14 +10,17 @@ export default class Header extends Component {
     // toggle height + visibility for transition effect
     toggleConnectModal() {
         
-        let innerConnectContainer = document.getElementById('connect--outer');
+        let outerConnectContainer = document.getElementById('connect-component-container'), 
+            innerConnectContainer = document.getElementById('connect--outer');
 
         if (innerConnectContainer.style.height !== '0%') {
             innerConnectContainer.style.height = '0%'; 
             innerConnectContainer.style.visibility = 'hidden'; 
+            setTimeout(function () { outerConnectContainer.style.zIndex = '-1'; }, 500);
         } else {
             innerConnectContainer.style.height = '100%'; 
             innerConnectContainer.style.visibility = 'visible';
+            outerConnectContainer.style.zIndex = '1';
         } 
     
     }
