@@ -33,7 +33,8 @@
 }
 
 .connect-cta-container {
-    // height: 100%;
+    height: 100%;
+    margin-top: 3%;
     /* width: fit-content; */
     // background: white;
     // color: black;
@@ -45,17 +46,29 @@
     // vertical-align: middle;
 
     .--inner {
-        padding: 30px 30px;
-        left: 5%;
-        background: white;
+        // padding: 10px 30px;
+        // left: 5%;
+        right: 52%;
+        // background: white;
+        // background: yellow; //test
         color: black;
         vertical-align: middle;
         position: absolute;
-        max-height: 100%;
+        // max-height: 100%;
+        // height: 100%;
+        height: 75%;
         /* height: 40px; */
         // top: 40%;
-        width: 40%;
-        overflow: scroll;
+        // width: 35%;
+        width: 45%;
+        overflow-y: scroll;
+        box-sizing: content-box;
+
+        .--inner-inner {
+            background: white;
+            // padding: 10px 0;
+            padding: 0 0 5%;
+        }
 
         div.row {
             max-height: 100%;
@@ -68,8 +81,11 @@
 
         .cta-links-header {
 
-            margin-top: 20px;
-            margin-bottom: 5px;
+            // margin-top: 20px;
+            // margin-bottom: 5px;
+            // margin-top: 5%;
+            // margin-bottom: 2%;
+            padding: 5% 0 2%;
 
             span {
                 display: inline-block;
