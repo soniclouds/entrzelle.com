@@ -1,7 +1,9 @@
 /* eslint-disable no-unused-expressions */
 import React from 'react';
 
+import "./assets/fontello/css/fontello.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './App.css';
 
 import Header from './components/header.component.js';

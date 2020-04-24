@@ -67,7 +67,7 @@ export default class Header extends Component {
                                 </li>
                                 <li>
                                     <div>
-                                        <a onClick={this.toggleConnectModal} className="anchor-placeholder">Connect</a>
+                                        <a style={{cursor: 'pointer'}} onClick={this.toggleConnectModal} className="anchor-placeholder">Connect</a>
                                     </div>
                                 </li>
                             </ul>

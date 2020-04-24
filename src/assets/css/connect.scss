@@ -48,13 +48,13 @@ element.style {
     // vertical-align: middle;
 
     .--inner {
-        padding: 10px;
+        padding: 30px 30px;
         left: 5%;
         background: white;
         color: black;
         vertical-align: middle;
         position: absolute;
-        height: 90%;
+        height: 100%;
         /* height: 40px; */
         // top: 40%;
         width: 40%;
@@ -68,11 +68,92 @@ element.style {
             }
         }
 
-        .cta-links-container, .cta-email-container {
+
+        .cta-links-header {
+
+            margin-top: 20px;
+            margin-bottom: 5px;
+
+            span {
+                display: inline-block;
+                font-size: .8em;
+                font-style: italic;
+                text-align: center;
+            }
+        }
+
+        .cta-links-container, .cta-email-container, .cta-label-container {
+            div {
+                span {
+                    float: left;
+                }
+            }
+            div:first-child {
+                span {
+                    float: right;
+                }
+            }
+
             a {
                 color: #3A3A3A;
                 display: block;
+                text-align: center;
+                text-decoration: none;
+                // transition: 0.5s width;
+                span {
+                    display: none;
+                    // visibility: hidden;
+                    padding-top: 5px;
+                    // width: 0px;
+                    // overflow: hidden;
+                    
+                }
+                
             }
+
+            /* a:hover span {
+                display: inline;
+                // visibility: visible;
+                // width: unset;
+                // transition: 0.5s width;
+            } */
+            a:before {
+                font-family: fontello;
+                font-size: 25px;
+            }
+            a.fa-facebook:before {
+                content: '\00FB';
+            }
+            a.fa-twitter:before {
+                content: '\F304';
+            }
+            a.fa-youtube:before {
+                content: '\F166';
+            }
+            a.fa-spotify:before {
+                content: '\F1BC';
+            }
+            a.fa-reverbnation:before {
+                content: '\E80A';
+            }
+            a.fa-soundcloud:before {
+                content: '\F1BE';
+            }
+            a.fa-email:before {
+                content: '\F0E0';
+            }
+            
+            a.fa-label:before {
+                // content: 'alfamatrix';
+            }
+
+            a.fa-label {
+                background: url('../img/label/am-logo-black.png') no-repeat center;
+                background-size: contain;
+                height: 25px;
+                margin-top: 5px;
+            }
+            
         }
 
 
