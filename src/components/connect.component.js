@@ -43,14 +43,14 @@ export default class Connect extends Component {
                                 
                                 <div className="cta-links-container row">
                                     <div className="--social-links col-sm-6">
-                                        <a className='fa-facebook' href="https://www.facebook.com/entrzelle"><span>facebook</span></a>
-                                        <a className='fa-twitter' href="https://www.twitter.com/entrzelle"><span>twitter</span></a>
-                                        <a className='fa-youtube' href="https://www.youtube.com/user/Entrzelle"><span>youtube</span></a>
+                                        <a target='_blank' rel='noopener noreferrer' className='fa-facebook' href="https://www.facebook.com/entrzelle"><span>facebook</span></a>
+                                        <a target='_blank' rel='noopener noreferrer' className='fa-twitter' href="https://www.twitter.com/entrzelle"><span>twitter</span></a>
+                                        <a target='_blank' rel='noopener noreferrer' className='fa-youtube' href="https://www.youtube.com/user/Entrzelle"><span>youtube</span></a>
                                     </div>
                                     <div className="--music-links col-sm-6">
-                                        <a className='fa-spotify' href="https://open.spotify.com/artist/7E07y9odlPu5zJcm8zjhkd"><span>spotify</span></a>
-                                        <a className='fa-reverbnation' href="https://www.reverbnation.com/entrzelle"><span>reverbnation</span></a>
-                                        <a className='fa-soundcloud' href="https://soundcloud.com/entrzelle"><span>soundcloud</span></a>
+                                        <a target='_blank' rel='noopener noreferrer' className='fa-spotify' href="https://open.spotify.com/artist/7E07y9odlPu5zJcm8zjhkd"><span>spotify</span></a>
+                                        <a target='_blank' rel='noopener noreferrer' className='fa-reverbnation' href="https://www.reverbnation.com/entrzelle"><span>reverbnation</span></a>
+                                        <a target='_blank' rel='noopener noreferrer' className='fa-soundcloud' href="https://soundcloud.com/entrzelle"><span>soundcloud</span></a>
                                     </div>
     {/* 
                                     <div className="--label-links col-sm-4">
@@ -77,7 +77,7 @@ export default class Connect extends Component {
                                     
                                 <div className="cta-label-container row">
                                     <div className="--label col-sm-12">
-                                        <a className='fa-label' href="https://alfa-matrix-store.com/"><span style={{display: 'none'}}>label info</span></a>
+                                        <a target='_blank' rel='noopener noreferrer' className='fa-label' href="https://alfa-matrix-store.com/"><span style={{display: 'none'}}>label info</span></a>
                                     </div>
                                 </div>
                             </div>
