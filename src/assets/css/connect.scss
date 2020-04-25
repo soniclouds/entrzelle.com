@@ -134,23 +134,45 @@
                 font-family: fontello;
                 font-size: 25px;
             }
+            a.fa-facebook:hover::before {
+                color: #4268AD;
+            }
             a.fa-facebook:before {
                 content: '\00FB';
+            }
+            a.fa-twitter:hover::before {
+                color: #00A3EC;
             }
             a.fa-twitter:before {
                 content: '\F304';
             }
+            a.fa-youtube:hover::before {
+                color: #FD0016;
+            }
             a.fa-youtube:before {
                 content: '\F166';
+            }
+            a.fa-spotify:hover::before {
+                color: #00D770;
             }
             a.fa-spotify:before {
                 content: '\F1BC';
             }
+            a.fa-reverbnation:hover::before {
+                color: #E03435;
+            }
             a.fa-reverbnation:before {
                 content: '\E80A';
             }
+            a.fa-soundcloud:hover::before {
+                color: #FF6627;
+            }
             a.fa-soundcloud:before {
                 content: '\F1BE';
+            }
+            a.fa-email:hover::before {
+                // color: #00AD60;
+                color: black;
             }
             a.fa-email:before {
                 content: '\F0E0';
