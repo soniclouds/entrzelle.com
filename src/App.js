@@ -10,6 +10,7 @@ import Header from './components/header.component.js';
 import Media from './components/media.component.js';
 import Connect from './components/connect.component.js';
 
+import Footer from './components/footer.component.js';
 
 class App extends React.Component {
 
@@ -29,6 +30,8 @@ class App extends React.Component {
 
                 <Connect />
             
+                <Footer />
+                
               </div>
             </div>
           </div>
