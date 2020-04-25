@@ -18,11 +18,13 @@ export default class Connect extends Component {
         innerConnectContainer.style.visibility = 'hidden';
     }
     setContainerHeight() {
-        
-        let contentTop = document.getElementById('ccc-outer').offsetTop,
-            contentContainer = document.getElementById('connect-component-container');
+        // if (document.getElementById('ccc-outer')) {
 
-        contentContainer.style.height = window.innerHeight - contentTop - '50' + 'px';
+            let contentTop = document.getElementById('ccc-outer').offsetTop,
+            contentContainer = document.getElementById('connect-component-container');
+            
+            contentContainer.style.height = window.innerHeight - contentTop - '50' + 'px';
+        // }
         
 
     }
