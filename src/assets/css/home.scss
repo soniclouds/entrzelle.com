@@ -11,8 +11,8 @@
         position: relative;
         height: 100%;
         // placeholder until slideshow/carousel is implemented
-        background: url('../img/photos/gallery/full/promo_band_3.jpg') no-repeat center;
-        background-size: cover;
+        // background: url('../img/photos/gallery/full/promo_band_3.jpg') no-repeat center;
+        // background-size: cover;
     }
     .component-wrapper--cta {
         // display: inline-block;
@@ -96,4 +96,16 @@
     .gallery-photos {
         padding-top: 0;
     }
+
+
+    // bootstrap carousel
+
+    #home-carousel {
+        img {
+            width: 100%;
+        }
+    }
+
+
 }
+
