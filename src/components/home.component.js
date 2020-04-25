@@ -10,9 +10,16 @@ import '../assets/css/connect.scss';
 import '../assets/css/home.scss';
 import '../assets/css/_content-component.scss';
 
+/* import 'jquery/dist/jquery.min.js';
 import 'popper.js/dist/popper.min.js';
-import 'jquery/dist/jquery.min.js';
-import 'bootstrap/dist/js/bootstrap.min.js';
+import 'bootstrap/dist/js/bootstrap.min.js'; */
+
+
+
+
+// test carousel images
+import testImg1 from '../assets/img/photos/gallery/full/promo_band_2.jpg';
+import testImg2 from '../assets/img/photos/gallery/full/promo_band_3.jpg';
 
 // import 'lightbox2/dist/css/lightbox.min.css';
 // import 'lightbox2/dist/js/lightbox-plus-jquery.min.js';
@@ -26,6 +33,8 @@ export default class Home extends Component {
         // })
         this.setSideColumnHeight();
         window.addEventListener('resize', this.setSideColumnHeight);
+
+        // console.log(testImg1);
     }
 
     setSideColumnHeight() {
@@ -44,20 +53,10 @@ export default class Home extends Component {
             
                 <div id="ccc-outer" className="component-content-container--outer">
                     <div className="component-content-container--inner">
-                        {/* <div id="connect-component-container">
-                            <div id="connect--outer" className="--outer"> */}
-                                <div className="component-wrapper--cta">
-                                    <CTA />
-                                </div>
 
-                                {/* <div className="component-wrapper--fb"> */}
-                                    {/* <FB /> */}
-                                {/* </div> */}
-
-                                {/* <Gallery /> */}
-
-                            {/* </div>
-                        </div> */}
+                        <div className="component-wrapper--cta">
+                            <CTA />
+                        </div>
 
 {/* 
                         <div className="gallery-photos">
@@ -66,6 +65,44 @@ export default class Home extends Component {
 
                         </div>
  */}
+
+
+                    {/* experimenting with carousel */}
+
+                        <div id="demo" className="carousel slide" data-ride="carousel">
+
+                            {/* <!-- Indicators --> */}
+                            <ul className="carousel-indicators">
+                                <li data-target="#demo" data-slide-to="0" className="active"></li>
+                                <li data-target="#demo" data-slide-to="1"></li>
+                                {/* <li data-target="#demo" data-slide-to="2"></li> */}
+                            </ul>
+
+                            {/* <!-- The slideshow --> */}
+                            <div className="carousel-inner">
+                                <div className="carousel-item active">
+                                    <img src={testImg1} alt="test1"/>
+                                </div>
+                                <div className="carousel-item">
+                                    <img src={testImg2} alt="test2"/>
+                                </div>
+                                {/* <div class="carousel-item">
+                                    <img src="ny.jpg" alt="New York"/>
+                                </div> */}
+                            </div>
+
+                            {/* <!-- Left and right controls --> */}
+                            <a className="carousel-control-prev" href="#demo" data-slide="prev">
+                                <span className="carousel-control-prev-icon"></span>
+                            </a>
+                            <a className="carousel-control-next" href="#demo" data-slide="next">
+                                <span className="carousel-control-next-icon"></span>
+                            </a>
+
+                        </div>
+
+
+
                     </div>
                 </div>
 

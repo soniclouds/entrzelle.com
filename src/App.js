@@ -2,7 +2,7 @@
 import React from 'react';
 
 import "./assets/fontello/css/fontello.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css';
 
@@ -31,7 +31,7 @@ class App extends React.Component {
                 <Connect />
             
                 <Footer />
-                
+
               </div>
             </div>
           </div>
