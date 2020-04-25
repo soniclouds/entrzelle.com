@@ -10,6 +10,10 @@ import '../assets/css/connect.scss';
 import '../assets/css/home.scss';
 import '../assets/css/_content-component.scss';
 
+import 'popper.js/dist/popper.min.js';
+import 'jquery/dist/jquery.min.js';
+import 'bootstrap/dist/js/bootstrap.min.js';
+
 // import 'lightbox2/dist/css/lightbox.min.css';
 // import 'lightbox2/dist/js/lightbox-plus-jquery.min.js';
 // import lightbox from 'lightbox2/dist/js/lightbox-plus-jquery.min.js';
