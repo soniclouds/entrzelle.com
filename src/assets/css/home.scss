@@ -1,15 +1,18 @@
 #home-component {
 
     #ccc-outer {
-        // background: black;
+        background: black;
         // opacity: 1;
-        background: none;
+        // background: none;
     }
 
     .component-content-container--inner {
         overflow: hidden;
         position: relative;
         height: 100%;
+        // placeholder until slideshow/carousel is implemented
+        background: url('../img/photos/gallery/full/promo_band_3.jpg') no-repeat center;
+        background-size: cover;
     }
     .component-wrapper--cta {
         // display: inline-block;
@@ -68,7 +71,7 @@
     
                             a {
                                 display: inline;
-                                padding: 5%;
+                                padding: 0 5%;
                             }
                         }
                     }
@@ -88,5 +91,9 @@
         #fb-root {
             display: inline;
         }
+    }
+
+    .gallery-photos {
+        padding-top: 0;
     }
 }
