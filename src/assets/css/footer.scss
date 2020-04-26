@@ -1,8 +1,31 @@
-div#footer-component {
+#footer-component {
     position: fixed;
     bottom: 0;
     width: 100%;
     left: 0;
     background: black;
     height: 50px;
+
+    .copyright:hover {
+        color: #8C8C8C;
+        a {
+            color: #8C8C8C;
+        }
+    }
+    .copyright {
+    text-align: center;
+    line-height: 50px;
+    font-size: 0.4em;
+    color: #6D6D6D;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+        a {
+            color: #6D6D6D;
+            text-decoration: none;
+        }
+        a:hover {
+            color: white;
+        }
+    }
 }
