@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import CTA from './connect/cta.js';
 // import FB from './connect/fb.js';
 // import Gallery from './gallery.component.js';
-// import galleryPhotos from './gallery/images.js';
+import galleryPhotos from './gallery/images.js';
 
 import '../assets/css/gallery.scss';
 import '../assets/css/connect.scss';
@@ -21,28 +21,32 @@ import 'bootstrap/dist/js/bootstrap.min.js'; */
 import testImg1 from '../assets/img/photos/gallery/full/promo_band_2.jpg';
 import testImg2 from '../assets/img/photos/gallery/full/promo_band_3.jpg';
 
-// import 'lightbox2/dist/css/lightbox.min.css';
-// import 'lightbox2/dist/js/lightbox-plus-jquery.min.js';
-// import lightbox from 'lightbox2/dist/js/lightbox-plus-jquery.min.js';
-
 export default class Home extends Component {
 
     componentDidMount() {
-        // lightbox.option({
-        //     'showImageNumberLabel': false,
-        // })
+
         this.setSideColumnHeight();
+        // this.setCarouselNavHeight();
         window.addEventListener('resize', this.setSideColumnHeight);
+        // window.addEventListener('resize', this.setCarouselNavHeight);
 
-        // console.log(testImg1);
     }
+/* 
+    setCarouselNavHeight() {
 
+        if (document.getElementsByClassName('carousel-nav')){
+            // var carouselImages = [...document.getElementsByClassName('carousel-img')];
+            // carouselImages.map(img => img.style.height = window.innerHeight - '200' + 'px');
+            // console.log('adjusted carousel image height');
+        }
+    }
+ */
     setSideColumnHeight() {
-        let contentTop = document.getElementById('ccc-outer').offsetTop,
+        var contentTop = document.getElementById('ccc-outer').offsetTop,
             contentContainer = document.getElementById('ccc-outer');
 
         contentContainer.style.height = window.innerHeight - contentTop - '50' + 'px';
-        // audioCol.style.height = window.innerHeight - contentTop + 'px';
+
     }
 
     // lightboxGalleryName = "home-slideshow";
@@ -72,29 +76,29 @@ export default class Home extends Component {
                         <div id="home-carousel" className="carousel slide" data-ride="carousel">
 
                             {/* <!-- Indicators --> */}
-                            <ul className="carousel-indicators">
+                            {/* <ul className="carousel-indicators">
                                 <li data-target="#home-carousel" data-slide-to="0" className="active"></li>
                                 <li data-target="#home-carousel" data-slide-to="1"></li>
-                                {/* <li data-target="#demo" data-slide-to="2"></li> */}
-                            </ul>
+                            
+                            </ul> */}
 
                             {/* <!-- The slideshow --> */}
                             <div className="carousel-inner">
                                 <div className="carousel-item active">
-                                    <img src={testImg1} alt="test1"/>
+                                    <img className='carousel-img' src={testImg1} alt="test1"/>
                                 </div>
                                 <div className="carousel-item">
-                                    <img src={testImg2} alt="test2"/>
+                                    <img className='carousel-img' src={testImg2} alt="test2"/>
                                 </div>
 
                             </div>
 
                             {/* <!-- Left and right controls --> */}
-                            <a className="carousel-control-prev" href="#home-carousel" data-slide="prev">
-                                <span className="carousel-control-prev-icon"></span>
+                            <a className="carousel-control carousel-control-prev" href="#home-carousel" data-slide="prev">
+                                <span id="carousel-nav-prev" className="carousel-nav carousel-control-prev-icon"></span>
                             </a>
-                            <a className="carousel-control-next" href="#home-carousel" data-slide="next">
-                                <span className="carousel-control-next-icon"></span>
+                            <a className="carousel-control carousel-control-next" href="#home-carousel" data-slide="next">
+                                <span id="carousel-nav-next" className="carousel-nav carousel-control-next-icon"></span>
                             </a>
 
                         </div>
