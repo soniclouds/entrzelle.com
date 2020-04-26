@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Strapi from 'strapi-sdk-javascript/build/main';
 import DOMPurify from 'dompurify';
 
+import albumInfo from './_data/lyrics.js';
+
 import { setContentContainerHeight } from '../assets/js/components/Content.js';
 
 import '../assets/css/ContentComponent.scss';
@@ -21,27 +23,27 @@ export default class Lyrics extends Component {
         }
     }
 
-    albumInfo = {
-            tpc: {
-                albumTitle: 'Total Progressive Collapse',
-                releaseInfo: '(2016)  -  LP / 2CD Box',
-                label: 'Alfa Matrix',
-                credits: 'All lyrics by David Chamberlin'
-            },
-            stwof: {
-                albumTitle: 'Set These Walls On Fire',
-                releaseInfo: '(2015)   -   EP',
-                label: 'Alfa Matrix',
-                credits: 'All lyrics by David Chamberlin'
-            },
-            potm: {
-                albumTitle: 'Part Of The Movement - Bonus Tracks Version',
-                releaseInfo: '(2015)   -   LP',
-                label: 'Alfa Matrix',
-                credits: 'All lyrics by David Chamberlin'
-            }
+    // albumInfo = {
+    //         tpc: {
+    //             albumTitle: 'Total Progressive Collapse',
+    //             releaseInfo: '(2016)  -  LP / 2CD Box',
+    //             label: 'Alfa Matrix',
+    //             credits: 'All lyrics by David Chamberlin'
+    //         },
+    //         stwof: {
+    //             albumTitle: 'Set These Walls On Fire',
+    //             releaseInfo: '(2015)   -   EP',
+    //             label: 'Alfa Matrix',
+    //             credits: 'All lyrics by David Chamberlin'
+    //         },
+    //         potm: {
+    //             albumTitle: 'Part Of The Movement - Bonus Tracks Version',
+    //             releaseInfo: '(2015)   -   LP',
+    //             label: 'Alfa Matrix',
+    //             credits: 'All lyrics by David Chamberlin'
+    //         }
             
-        };
+    //     };
 
     async componentDidMount() {
 
@@ -64,31 +66,31 @@ export default class Lyrics extends Component {
                   _lyricsPOTM = [];
 
             for (var i = 0; i < lyricsPosts.length; i++) {
-                if (lyricsPosts[i].album === this.albumInfo.tpc.albumTitle) {
+                if (lyricsPosts[i].album === albumInfo.tpc.albumTitle) {
                     _lyricsTPC.push(lyricsPosts[i]);
                 }
-                if (lyricsPosts[i].album === this.albumInfo.stwof.albumTitle) {
+                if (lyricsPosts[i].album === albumInfo.stwof.albumTitle) {
                     _lyricsSTWOF.push(lyricsPosts[i]);
                 }
-                if (lyricsPosts[i].album === this.albumInfo.potm.albumTitle) {
+                if (lyricsPosts[i].album === albumInfo.potm.albumTitle) {
                     _lyricsPOTM.push(lyricsPosts[i]);
                 }
             }
             
             // set album info in class object variable
-            // this.albumInfo.tpc = {
+            // albumInfo.tpc = {
             //     'albumTitle': _lyricsTPC[0].album,
             //     'releaseInfo': _lyricsTPC[0].releaseInfo,
             //     'label': _lyricsTPC[0].label,
             //     'credits': _lyricsTPC[0].credits
             // };
-            // this.albumInfo.stwof = {
+            // albumInfo.stwof = {
             //     'albumTitle': _lyricsSTWOF[0].album,
             //     'releaseInfo': _lyricsSTWOF[0].releaseInfo,
             //     'label': _lyricsSTWOF[0].label,
             //     'credits': _lyricsSTWOF[0].credits
             // };
-            // this.albumInfo.potm = {
+            // albumInfo.potm = {
             //     'albumTitle': _lyricsPOTM[0].album,
             //     'releaseInfo': _lyricsPOTM[0].releaseInfo,
             //     'label': _lyricsPOTM[0].label,
@@ -105,7 +107,7 @@ export default class Lyrics extends Component {
             // console.log(Array.isArray(this.state.lyrics));
             // console.log(Array.isArray(this.state.lyricsPOTM));
             // console.log(this.state.lyricsPOTM[0].album);
-            console.log(this.albumInfo);
+            console.log(albumInfo);
 
         }
         catch (err) {
@@ -127,10 +129,10 @@ export default class Lyrics extends Component {
                             {/* album info */}
 
                             <div className="content-title">
-                                <h1>{this.albumInfo.tpc.albumTitle}</h1>
+                                <h1>{albumInfo.tpc.albumTitle}</h1>
                                 <div>
-                                    <h6>{this.albumInfo.tpc.releaseInfo}</h6>
-                                    <h6>{this.albumInfo.tpc.label}</h6>
+                                    <h6>{albumInfo.tpc.releaseInfo}</h6>
+                                    <h6>{albumInfo.tpc.label}</h6>
                                 </div>
                             </div>
 
@@ -160,10 +162,10 @@ export default class Lyrics extends Component {
                             {/* album info */}
 
                             <div className="content-title">
-                                <h1>{this.albumInfo.stwof.albumTitle}</h1>
+                                <h1>{albumInfo.stwof.albumTitle}</h1>
                                 <div>
-                                    <h6>{this.albumInfo.stwof.releaseInfo}</h6>
-                                    <h6>{this.albumInfo.stwof.label}</h6>
+                                    <h6>{albumInfo.stwof.releaseInfo}</h6>
+                                    <h6>{albumInfo.stwof.label}</h6>
                                 </div>
                             </div>
 
@@ -221,10 +223,10 @@ export default class Lyrics extends Component {
                             {/* album info */}
                             
                             <div className="content-title">
-                                <h1>{this.albumInfo.potm.albumTitle}</h1>
+                                <h1>{albumInfo.potm.albumTitle}</h1>
                                 <div>
-                                    <h6>{this.albumInfo.potm.releaseInfo}</h6>
-                                    <h6>{this.albumInfo.potm.label}</h6>
+                                    <h6>{albumInfo.potm.releaseInfo}</h6>
+                                    <h6>{albumInfo.potm.label}</h6>
                                 </div>
                             </div>
                             
