@@ -51,13 +51,13 @@ embedFacebookTimeline = (d, s, id) => {
         if (targetId === 'audio-toggle-btn') {
             if (audioColumn.style.display === '') {
                 audioColumn.style.display = 'table-cell';
-                audioSidebar.style.width = '25%';
+                audioSidebar.style.width = '23%';
             } else if (audioColumn.style.display !== 'none') {
                 audioColumn.style.display = 'none';
                 audioSidebar.style.width = 'unset';
             } else {
                 audioColumn.style.display = 'table-cell';
-                audioSidebar.style.width = '25%';
+                audioSidebar.style.width = '23%';
             }
         }       
     }
