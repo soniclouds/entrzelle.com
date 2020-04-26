@@ -4,7 +4,7 @@ import { setContentContainerHeight } from '../assets/js/components/Content.js';
 
 // import releaseData from './_data/releases.js';
 
-import releaseData from './_data/_releases.js';
+import releaseData from './_data/releases.js';
 
 import '../assets/css/ContentComponent.scss';
 import '../assets/css/releases.scss';

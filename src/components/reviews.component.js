@@ -4,7 +4,7 @@ import DOMPurify from 'dompurify';
 
 // import releaseData.studio from './_data/reviews.js';
 
-import releaseData from './_data/_releases.js';
+import releaseData from './_data/releases.js';
 
 import { setContentContainerHeight } from '../assets/js/components/Content.js';
 
