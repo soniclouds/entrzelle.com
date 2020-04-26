@@ -10,7 +10,7 @@ import '../assets/css/ContentComponent.scss';
 
 import '../assets/css/gallery.scss';
 
-import galleryPhotos from './gallery/images';
+import galleryPhotos from './_data/gallery/images';
 
 
 export default class Gallery extends Component {

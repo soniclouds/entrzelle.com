@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import CTA from './connect/cta.js';
-import galleryPhotos from './gallery/images.js';
+import galleryPhotos from './_data/gallery/images.js';
 
 import { setContentContainerHeight} from '../assets/js/components/Content.js';
 

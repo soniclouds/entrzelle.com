@@ -1,51 +1,51 @@
 // FULL SIZE
 
 // promo
-import promo_band_1 from '../../assets/img/photos/gallery/full/promo_band_1.jpg';
-import promo_band_2 from '../../assets/img/photos/gallery/full/promo_band_2.jpg';
-import promo_band_3 from '../../assets/img/photos/gallery/full/promo_band_3.jpg';
+import promo_band_1 from '../../../assets/img/photos/gallery/full/promo_band_1.jpg';
+import promo_band_2 from '../../../assets/img/photos/gallery/full/promo_band_2.jpg';
+import promo_band_3 from '../../../assets/img/photos/gallery/full/promo_band_3.jpg';
 
-import promo_self_1 from '../../assets/img/photos/gallery/full/promo_self_1.jpg';
-import promo_self_2 from '../../assets/img/photos/gallery/full/promo_self_2.jpg';
-import promo_self_3 from '../../assets/img/photos/gallery/full/promo_self_3.jpg';
+import promo_self_1 from '../../../assets/img/photos/gallery/full/promo_self_1.jpg';
+import promo_self_2 from '../../../assets/img/photos/gallery/full/promo_self_2.jpg';
+import promo_self_3 from '../../../assets/img/photos/gallery/full/promo_self_3.jpg';
 
 // live
-import live_chamber_1 from '../../assets/img/photos/gallery/full/live_chamber_1.jpg';
-// import live_chamber_2 from '../../assets/img/photos/gallery/full/live_chamber_2.jpg';
-// import live_chamber_3 from '../../assets/img/photos/gallery/full/live_chamber_3.jpg';
-// import live_chamber_4 from '../../assets/img/photos/gallery/full/live_chamber_4.jpg';
-import live_complex_3 from '../../assets/img/photos/gallery/full/live_complex_3.jpg';
-// import live_chamber_5 from '../../assets/img/photos/gallery/full/live_chamber_5.jpg';
-import live_chamber_6 from '../../assets/img/photos/gallery/full/live_chamber_6.jpg';
-// import live_chamber_7 from '../../assets/img/photos/gallery/full/live_chamber_7.jpg';
-import live_chamber_8 from '../../assets/img/photos/gallery/full/live_chamber_8.jpg';
-import live_complex_1 from '../../assets/img/photos/gallery/full/live_complex_1.jpg';
-import live_complex_2 from '../../assets/img/photos/gallery/full/live_complex_2.jpg';
+import live_chamber_1 from '../../../assets/img/photos/gallery/full/live_chamber_1.jpg';
+// import live_chamber_2 from '../../../assets/img/photos/gallery/full/live_chamber_2.jpg';
+// import live_chamber_3 from '../../../assets/img/photos/gallery/full/live_chamber_3.jpg';
+// import live_chamber_4 from '../../../assets/img/photos/gallery/full/live_chamber_4.jpg';
+import live_complex_3 from '../../../assets/img/photos/gallery/full/live_complex_3.jpg';
+// import live_chamber_5 from '../../../assets/img/photos/gallery/full/live_chamber_5.jpg';
+import live_chamber_6 from '../../../assets/img/photos/gallery/full/live_chamber_6.jpg';
+// import live_chamber_7 from '../../../assets/img/photos/gallery/full/live_chamber_7.jpg';
+import live_chamber_8 from '../../../assets/img/photos/gallery/full/live_chamber_8.jpg';
+import live_complex_1 from '../../../assets/img/photos/gallery/full/live_complex_1.jpg';
+import live_complex_2 from '../../../assets/img/photos/gallery/full/live_complex_2.jpg';
 
 
 // THUMBNAILS (200px)
 
 // promo
-import _promo_band_1 from '../../assets/img/photos/gallery/thumbs/200/promo_band_1.jpg';
-import _promo_band_2 from '../../assets/img/photos/gallery/thumbs/200/promo_band_2.jpg';
-import _promo_band_3 from '../../assets/img/photos/gallery/thumbs/200/promo_band_3.jpg';
+import _promo_band_1 from '../../../assets/img/photos/gallery/thumbs/200/promo_band_1.jpg';
+import _promo_band_2 from '../../../assets/img/photos/gallery/thumbs/200/promo_band_2.jpg';
+import _promo_band_3 from '../../../assets/img/photos/gallery/thumbs/200/promo_band_3.jpg';
 
-import _promo_self_1 from '../../assets/img/photos/gallery/thumbs/200/promo_self_1.jpg';
-import _promo_self_2 from '../../assets/img/photos/gallery/thumbs/200/promo_self_2.jpg';
-import _promo_self_3 from '../../assets/img/photos/gallery/thumbs/200/promo_self_3.jpg';
+import _promo_self_1 from '../../../assets/img/photos/gallery/thumbs/200/promo_self_1.jpg';
+import _promo_self_2 from '../../../assets/img/photos/gallery/thumbs/200/promo_self_2.jpg';
+import _promo_self_3 from '../../../assets/img/photos/gallery/thumbs/200/promo_self_3.jpg';
 
 // live
-import _live_chamber_1 from '../../assets/img/photos/gallery/thumbs/200/live_chamber_1.jpg';
-// import _live_chamber_2 from '../../assets/img/photos/gallery/thumbs/200/live_chamber_2.jpg';
-// import _live_chamber_3 from '../../assets/img/photos/gallery/thumbs/200/live_chamber_3.jpg';
-// import _live_chamber_4 from '../../assets/img/photos/gallery/thumbs/200/live_chamber_4.jpg';
-import _live_complex_3 from '../../assets/img/photos/gallery/thumbs/200/live_complex_3.jpg';
-// import _live_chamber_5 from '../../assets/img/photos/gallery/thumbs/200/live_chamber_5.jpg';
-import _live_chamber_6 from '../../assets/img/photos/gallery/thumbs/200/live_chamber_6.jpg';
-// import _live_chamber_7 from '../../assets/img/photos/gallery/thumbs/200/live_chamber_7.jpg';
-import _live_chamber_8 from '../../assets/img/photos/gallery/thumbs/200/live_chamber_8.jpg';
-import _live_complex_1 from '../../assets/img/photos/gallery/thumbs/200/live_complex_1.jpg';
-import _live_complex_2 from '../../assets/img/photos/gallery/thumbs/200/live_complex_2.jpg';
+import _live_chamber_1 from '../../../assets/img/photos/gallery/thumbs/200/live_chamber_1.jpg';
+// import _live_chamber_2 from '../../../assets/img/photos/gallery/thumbs/200/live_chamber_2.jpg';
+// import _live_chamber_3 from '../../../assets/img/photos/gallery/thumbs/200/live_chamber_3.jpg';
+// import _live_chamber_4 from '../../../assets/img/photos/gallery/thumbs/200/live_chamber_4.jpg';
+import _live_complex_3 from '../../../assets/img/photos/gallery/thumbs/200/live_complex_3.jpg';
+// import _live_chamber_5 from '../../../assets/img/photos/gallery/thumbs/200/live_chamber_5.jpg';
+import _live_chamber_6 from '../../../assets/img/photos/gallery/thumbs/200/live_chamber_6.jpg';
+// import _live_chamber_7 from '../../../assets/img/photos/gallery/thumbs/200/live_chamber_7.jpg';
+import _live_chamber_8 from '../../../assets/img/photos/gallery/thumbs/200/live_chamber_8.jpg';
+import _live_complex_1 from '../../../assets/img/photos/gallery/thumbs/200/live_complex_1.jpg';
+import _live_complex_2 from '../../../assets/img/photos/gallery/thumbs/200/live_complex_2.jpg';
 
 
 const galleryPhotos = [
