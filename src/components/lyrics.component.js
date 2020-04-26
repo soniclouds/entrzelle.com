@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Strapi from 'strapi-sdk-javascript/build/main';
 import DOMPurify from 'dompurify';
 
-// import releaseData.studio from './_data/lyrics.js';
-
 import releaseData from './_data/releases.js';
 
 import { setContentContainerHeight } from '../assets/js/components/Content.js';
@@ -25,27 +23,6 @@ export default class Lyrics extends Component {
         }
     }
 
-    // releaseData.studio = {
-    //         tpc: {
-    //             title.short: 'Total Progressive Collapse',
-    //             releaseInfo: '(2016)  -  LP / 2CD Box',
-    //             label: 'Alfa Matrix',
-    //             credits: 'All lyrics by David Chamberlin'
-    //         },
-    //         stwof: {
-    //             title.short: 'Set These Walls On Fire',
-    //             releaseInfo: '(2015)   -   EP',
-    //             label: 'Alfa Matrix',
-    //             credits: 'All lyrics by David Chamberlin'
-    //         },
-    //         potm: {
-    //             title.short: 'Part Of The Movement - Bonus Tracks Version',
-    //             releaseInfo: '(2015)   -   LP',
-    //             label: 'Alfa Matrix',
-    //             credits: 'All lyrics by David Chamberlin'
-    //         }
-            
-    //     };
 
     async componentDidMount() {
 

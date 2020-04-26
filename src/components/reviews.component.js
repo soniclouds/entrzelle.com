@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Strapi from 'strapi-sdk-javascript/build/main';
 import DOMPurify from 'dompurify';
 
-// import releaseData.studio from './_data/reviews.js';
-
 import releaseData from './_data/releases.js';
 
 import { setContentContainerHeight } from '../assets/js/components/Content.js';
