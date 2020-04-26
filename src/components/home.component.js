@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import CTA from './connect/cta.js';
 import galleryPhotos from './gallery/images.js';
 
-import { setContentContainerHeight} from '../assets/js/components/content.js';
+import { setContentContainerHeight} from '../assets/js/components/_content.js';
 
 
 import '../assets/css/gallery.scss';

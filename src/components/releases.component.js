@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { setContentContainerHeight } from '../assets/js/components/content.js';
+import { setContentContainerHeight } from '../assets/js/components/_content.js';
 
 import '../assets/css/releases.scss';
 import '../assets/css/_content-component.scss';
