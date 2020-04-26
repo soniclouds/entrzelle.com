@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 
 import { setContentContainerHeight } from '../assets/js/components/Content.js';
 
-import releaseData from './_data/releases.js';
+// import releaseData from './_data/releases.js';
+
+import releaseData from './_data/_releases.js';
 
 import '../assets/css/ContentComponent.scss';
 import '../assets/css/releases.scss';
@@ -38,12 +40,12 @@ export default class Releases extends Component {
                                     </a>
                                 </div>
                                 <div className="album-credits">
-                                    <p className="album-title"><em>{releaseData.studio.tpc.credits.title}</em></p>
-                                    <p className="album-label">{releaseData.studio.tpc.credits.label}</p>
+                                    <p className="album-title"><em>{releaseData.studio.tpc.title.long}</em></p>
+                                    <p className="album-label">{releaseData.studio.tpc.label}</p>
                                     <br />
-                                    <p className="additional-credits"><em>{releaseData.studio.tpc.credits.additional_1}</em></p>
-                                    <p className="additional-credits"><em>{releaseData.studio.tpc.credits.additional_2}</em></p>
-                                    <p className="additional-credits"><em>{releaseData.studio.tpc.credits.additional_3}</em></p>
+                                    <p className="additional-credits"><em>{releaseData.studio.tpc.credits.production[0]}</em></p>
+                                    <p className="additional-credits"><em>{releaseData.studio.tpc.credits.production[1]}</em></p>
+                                    <p className="additional-credits"><em>{releaseData.studio.tpc.credits.production[2]}</em></p>
                                 </div>
 
                                 <div className="album-cta">
@@ -64,10 +66,10 @@ export default class Releases extends Component {
                                     </a>
                                 </div>
                                 <div className="album-credits">
-                                    <p className="album-title"><em>{releaseData.studio.stwof.credits.title}</em></p>
-                                    <p className="album-label">{releaseData.studio.stwof.credits.label}</p>
+                                    <p className="album-title"><em>{releaseData.studio.stwof.title.long}</em></p>
+                                    <p className="album-label">{releaseData.studio.stwof.label}</p>
                                     <br />
-                                    <p className="additional-credits"><em>{releaseData.studio.stwof.credits.additional_1}</em></p>
+                                    <p className="additional-credits"><em>{releaseData.studio.stwof.credits.production[0]}</em></p>
                                 </div>
 
                                 <div className="album-cta">
@@ -88,10 +90,10 @@ export default class Releases extends Component {
                                     </a>
                                 </div>
                                 <div className="album-credits">
-                                    <p className="album-title"><em>{releaseData.studio.potm.credits.title}</em></p>
-                                    <p className="album-label">{releaseData.studio.potm.credits.label}</p>
+                                    <p className="album-title"><em>{releaseData.studio.potm.title.long}</em></p>
+                                    <p className="album-label">{releaseData.studio.potm.label}</p>
                                     <br />
-                                    <p className="additional-credits"><em>{releaseData.studio.potm.credits.additional_1}</em></p>
+                                    <p className="additional-credits"><em>{releaseData.studio.potm.credits.production[0]}</em></p>
                                 </div>
 
                                 <div className="album-cta">
@@ -112,10 +114,10 @@ export default class Releases extends Component {
                                     </a>
                                 </div>
                                 <div className="album-credits">
-                                    <p className="album-title"><em>{releaseData.studio.bs.credits.title}</em></p>
-                                    <p className="album-label">{releaseData.studio.bs.credits.label}</p>
+                                    <p className="album-title"><em>{releaseData.studio.bs.title.long}</em></p>
+                                    <p className="album-label">{releaseData.studio.bs.label}</p>
                                     <br />
-                                    <p className="additional-credits"><em>{releaseData.studio.bs.credits.additional_1}</em></p>
+                                    <p className="additional-credits"><em>{releaseData.studio.bs.credits.production[0]}</em></p>
                                 </div>
 
                             </div>
@@ -129,10 +131,10 @@ export default class Releases extends Component {
                                     </a>
                                 </div>
                                 <div className="album-credits">
-                                    <p className="album-title"><em>{releaseData.studio.potm_v1.credits.title}</em></p>
-                                    <p className="album-label">{releaseData.studio.potm_v1.credits.label}</p>
+                                    <p className="album-title"><em>{releaseData.studio.potm_v1.title.long}</em></p>
+                                    <p className="album-label">{releaseData.studio.potm_v1.label}</p>
                                     <br />
-                                    <p className="additional-credits"><em>{releaseData.studio.potm_v1.credits.additional_1}</em></p>
+                                    <p className="additional-credits"><em>{releaseData.studio.potm_v1.credits.production[0]}</em></p>
                                 </div>
 
                             </div>
@@ -164,10 +166,10 @@ export default class Releases extends Component {
                                     </a>
                                 </div>
                                 <div className="album-credits">
-                                    <p className="album-title"><em>{releaseData.compilations.md5.credits.title}</em></p>
-                                    <p className="album-label">{releaseData.compilations.md5.credits.label}</p>
+                                    <p className="album-title"><em>{releaseData.compilations.md5.title.long}</em></p>
+                                    <p className="album-label">{releaseData.compilations.md5.label}</p>
                                     <br />
-                                    <p className="additional-credits"><em>{releaseData.compilations.md5.credits.featured_song}</em></p>
+                                    <p className="additional-credits"><em>{releaseData.compilations.md5.featured_song}</em></p>
                                 </div>
 
                                 <div className="album-cta">
@@ -188,10 +190,10 @@ export default class Releases extends Component {
                                     </a>
                                 </div>
                                 <div className="album-credits">
-                                    <p className="album-title"><em>{releaseData.compilations.md4.credits.title}</em></p>
-                                    <p className="album-label">{releaseData.compilations.md4.credits.label}</p>
+                                    <p className="album-title"><em>{releaseData.compilations.md4.title.long}</em></p>
+                                    <p className="album-label">{releaseData.compilations.md4.label}</p>
                                     <br />
-                                    <p className="additional-credits"><em>{releaseData.compilations.md4.credits.featured_song}</em></p>
+                                    <p className="additional-credits"><em>{releaseData.compilations.md4.featured_song}</em></p>
                                 </div>
 
                                 <div className="album-cta">
@@ -212,10 +214,10 @@ export default class Releases extends Component {
                                     </a>
                                 </div>
                                 <div className="album-credits">
-                                    <p className="album-title"><em>{releaseData.compilations.ftb3.credits.title}</em></p>
-                                    <p className="album-label">{releaseData.compilations.ftb3.credits.label}</p>
+                                    <p className="album-title"><em>{releaseData.compilations.ftb3.title.long}</em></p>
+                                    <p className="album-label">{releaseData.compilations.ftb3.label}</p>
                                     <br />
-                                    <p className="additional-credits"><em>{releaseData.compilations.ftb3.credits.featured_song}</em></p>
+                                    <p className="additional-credits"><em>{releaseData.compilations.ftb3.featured_song}</em></p>
                                 </div>
 
                                 <div className="album-cta">
@@ -236,10 +238,10 @@ export default class Releases extends Component {
                                     </a>
                                 </div>
                                 <div className="album-credits">
-                                    <p className="album-title"><em>{releaseData.compilations.ftb2.credits.title}</em></p>
-                                    <p className="album-label">{releaseData.compilations.ftb2.credits.label}</p>
+                                    <p className="album-title"><em>{releaseData.compilations.ftb2.title.long}</em></p>
+                                    <p className="album-label">{releaseData.compilations.ftb2.label}</p>
                                     <br />
-                                    <p className="additional-credits"><em>{releaseData.compilations.ftb2.credits.featured_song}</em></p>
+                                    <p className="additional-credits"><em>{releaseData.compilations.ftb2.featured_song}</em></p>
                                 </div>
 
                                 <div className="album-cta">
@@ -260,10 +262,10 @@ export default class Releases extends Component {
                                     </a>
                                 </div>
                                 <div className="album-credits">
-                                    <p className="album-title"><em>{releaseData.compilations.eb7.credits.title}</em></p>
-                                    <p className="album-label">{releaseData.compilations.eb7.credits.label}</p>
+                                    <p className="album-title"><em>{releaseData.compilations.eb7.title.long}</em></p>
+                                    <p className="album-label">{releaseData.compilations.eb7.label}</p>
                                     <br />
-                                    <p className="additional-credits"><em>{releaseData.compilations.eb7.credits.featured_song}</em></p>
+                                    <p className="additional-credits"><em>{releaseData.compilations.eb7.featured_song}</em></p>
                                 </div>
 
                                 <div className="album-cta">
@@ -283,10 +285,10 @@ export default class Releases extends Component {
                                     </a>
                                 </div>
                                 <div className="album-credits">
-                                    <p className="album-title"><em>{releaseData.compilations.sftm16.credits.title}</em></p>
-                                    <p className="album-label">{releaseData.compilations.sftm16.credits.label}</p>
+                                    <p className="album-title"><em>{releaseData.compilations.sftm16.title.long}</em></p>
+                                    <p className="album-label">{releaseData.compilations.sftm16.label}</p>
                                     <br />
-                                    <p className="additional-credits"><em>{releaseData.compilations.sftm16.credits.featured_song}</em></p>
+                                    <p className="additional-credits"><em>{releaseData.compilations.sftm16.featured_song}</em></p>
                                 </div>
 
                                 <div className="album-cta">
@@ -307,10 +309,10 @@ export default class Releases extends Component {
                                     </a>
                                 </div>
                                 <div className="album-credits">
-                                    <p className="album-title"><em>{releaseData.compilations.hic2.credits.title}</em></p>
-                                    <p className="album-label">{releaseData.compilations.hic2.credits.label}</p>
+                                    <p className="album-title"><em>{releaseData.compilations.hic2.title.long}</em></p>
+                                    <p className="album-label">{releaseData.compilations.hic2.label}</p>
                                     <br />
-                                    <p className="additional-credits"><em>{releaseData.compilations.hic2.credits.featured_song}</em></p>
+                                    <p className="additional-credits"><em>{releaseData.compilations.hic2.featured_song}</em></p>
                                 </div>
 
                                 <div className="album-cta">
@@ -330,10 +332,10 @@ export default class Releases extends Component {
                                     </a>
                                 </div>
                                 <div className="album-credits">
-                                    <p className="album-title"><em>{releaseData.compilations.hic1.credits.title}</em></p>
-                                    <p className="album-label">{releaseData.compilations.hic1.credits.label}</p>
+                                    <p className="album-title"><em>{releaseData.compilations.hic1.title.long}</em></p>
+                                    <p className="album-label">{releaseData.compilations.hic1.label}</p>
                                     <br />
-                                    <p className="additional-credits"><em>{releaseData.compilations.hic1.credits.featured_song}</em></p>
+                                    <p className="additional-credits"><em>{releaseData.compilations.hic1.featured_song}</em></p>
                                 </div>
 
                                 <div className="album-cta">
@@ -368,11 +370,11 @@ export default class Releases extends Component {
                                     </a>
                                 </div>
                                 <div className="album-credits">
-                                    <p className="additional-credits"><em>{releaseData.remixesBy.sod.credits.featured_song}</em></p>
-                                    <p className="additional-credits"><em>{releaseData.remixesBy.sod.credits.original_artist}</em></p>
+                                    <p className="additional-credits"><em>{releaseData.remixesBy.sod.featured_song}</em></p>
+                                    <p className="additional-credits"><em>{releaseData.remixesBy.sod.original_artist}</em></p>
                                     <br />
-                                    <p className="album-title"><em>{releaseData.remixesBy.sod.credits.title}</em></p>
-                                    <p className="album-label">{releaseData.remixesBy.sod.credits.label}</p>
+                                    <p className="album-title"><em>{releaseData.remixesBy.sod.title.long}</em></p>
+                                    <p className="album-label">{releaseData.remixesBy.sod.label}</p>
                                     
                                     
                                 </div>
@@ -395,11 +397,11 @@ export default class Releases extends Component {
                                     </a>
                                 </div>
                                 <div className="album-credits">
-                                    <p className="additional-credits"><em>{releaseData.remixesBy.gtl.credits.featured_song}</em></p>
-                                    <p className="additional-credits"><em>{releaseData.remixesBy.gtl.credits.original_artist}</em></p>
+                                    <p className="additional-credits"><em>{releaseData.remixesBy.gtl.featured_song}</em></p>
+                                    <p className="additional-credits"><em>{releaseData.remixesBy.gtl.original_artist}</em></p>
                                     <br />
-                                    <p className="album-title"><em>{releaseData.remixesBy.gtl.credits.title}</em></p>
-                                    <p className="album-label">{releaseData.remixesBy.gtl.credits.label}</p>
+                                    <p className="album-title"><em>{releaseData.remixesBy.gtl.title.long}</em></p>
+                                    <p className="album-label">{releaseData.remixesBy.gtl.label}</p>
 
 
                                 </div>
@@ -438,11 +440,11 @@ export default class Releases extends Component {
                                     </a>
                                 </div>
                                 <div className="album-credits">
-                                    <p className="additional-credits"><em>{releaseData.remixesOf.pressure.credits.featured_song}</em></p>
-                                    <p className="additional-credits"><em>{releaseData.remixesOf.pressure.credits.remix_artist}</em></p>
+                                    <p className="additional-credits"><em>{releaseData.remixesOf.pressure.featured_song}</em></p>
+                                    <p className="additional-credits"><em>{releaseData.remixesOf.pressure.remix_artist}</em></p>
                                     <br />
-                                    <p className="album-title"><em>{releaseData.remixesOf.pressure.credits.title}</em></p>
-                                    <p className="album-label">{releaseData.remixesOf.pressure.credits.label}</p>
+                                    <p className="album-title"><em>{releaseData.remixesOf.pressure.title.long}</em></p>
+                                    <p className="album-label">{releaseData.remixesOf.pressure.label}</p>
 
 
                                 </div>
@@ -465,11 +467,11 @@ export default class Releases extends Component {
                                     </a>
                                 </div>
                                 <div className="album-credits">
-                                    <p className="additional-credits"><em>{releaseData.remixesOf.ror.credits.featured_song}</em></p>
-                                    <p className="additional-credits"><em>{releaseData.remixesOf.ror.credits.remix_artist}</em></p>
+                                    <p className="additional-credits"><em>{releaseData.remixesOf.ror.featured_song}</em></p>
+                                    <p className="additional-credits"><em>{releaseData.remixesOf.ror.remix_artist}</em></p>
                                     <br />
-                                    <p className="album-title"><em>{releaseData.remixesOf.ror.credits.title}</em></p>
-                                    <p className="album-label">{releaseData.remixesOf.ror.credits.label}</p>
+                                    <p className="album-title"><em>{releaseData.remixesOf.ror.title.long}</em></p>
+                                    <p className="album-label">{releaseData.remixesOf.ror.label}</p>
 
 
                                 </div>
