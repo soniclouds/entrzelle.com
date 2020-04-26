@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 
 import CTA from './connect/cta.js';
-// import FB from './connect/fb.js';
-// import Gallery from './gallery.component.js';
 import galleryPhotos from './gallery/images.js';
 
 import '../assets/css/gallery.scss';
@@ -10,37 +8,42 @@ import '../assets/css/connect.scss';
 import '../assets/css/home.scss';
 import '../assets/css/_content-component.scss';
 
-/* import 'jquery/dist/jquery.min.js';
-import 'popper.js/dist/popper.min.js';
-import 'bootstrap/dist/js/bootstrap.min.js'; */
-
-
-
-
-// test carousel images
-import testImg1 from '../assets/img/photos/gallery/full/promo_band_2.jpg';
-import testImg2 from '../assets/img/photos/gallery/full/promo_band_3.jpg';
 
 export default class Home extends Component {
 
     componentDidMount() {
 
+        this.renderCarouselImages();
+
         this.setSideColumnHeight();
-        // this.setCarouselNavHeight();
         window.addEventListener('resize', this.setSideColumnHeight);
-        // window.addEventListener('resize', this.setCarouselNavHeight);
 
+        console.log(galleryPhotos);
     }
-/* 
-    setCarouselNavHeight() {
 
-        if (document.getElementsByClassName('carousel-nav')){
-            // var carouselImages = [...document.getElementsByClassName('carousel-img')];
-            // carouselImages.map(img => img.style.height = window.innerHeight - '200' + 'px');
-            // console.log('adjusted carousel image height');
+    renderCarouselImages() {
+        
+        let carouselContainer = document.getElementById('carousel-inner');
+
+        let html = '';
+
+        // generate html using galleryPhotos
+        for (let i = 0; i < galleryPhotos.length; i++) {
+            // note: excluding live photos (current preference -- subject to change)
+            if (galleryPhotos[i].id.includes('promo')) {
+                // set active for first photo
+                if (i === 0) {
+                    html += '<div class="carousel-item active"><a href="/gallery"><img class="carousel-img" src=' + galleryPhotos[i].src.full + ' alt='+ galleryPhotos[i].alt +'/></a></div>'
+                } else {
+                    html += '<div class="carousel-item"><a href="/gallery"><img class="carousel-img" src=' + galleryPhotos[i].src.full + ' alt=' + galleryPhotos[i].alt +'/></a></div>'
+                }
+            }
         }
+
+        carouselContainer.innerHTML = html;
+
     }
- */
+
     setSideColumnHeight() {
         var contentTop = document.getElementById('ccc-outer').offsetTop,
             contentContainer = document.getElementById('ccc-outer');
@@ -48,8 +51,6 @@ export default class Home extends Component {
         contentContainer.style.height = window.innerHeight - contentTop - '50' + 'px';
 
     }
-
-    // lightboxGalleryName = "home-slideshow";
 
     render() {
         return (
@@ -62,20 +63,11 @@ export default class Home extends Component {
                             <CTA />
                         </div>
 
-{/* 
-                        <div className="gallery-photos">
-
-                            {galleryPhotos.map(({ id, src, alt, caption }) => <a id={id} rel='lightshow' href={src.full} data-lightbox={this.lightboxGalleryName} data-title={caption}><img src={src.thumb} title={caption} alt={alt} /> </a>)}
-
-                        </div>
- */}
-
-
-                    {/* experimenting with carousel */}
 
                         <div id="home-carousel" className="carousel slide" data-ride="carousel">
 
                             {/* <!-- Indicators --> */}
+                            {/* note: disabling due to design preference -- leaving for future reference */}
                             {/* <ul className="carousel-indicators">
                                 <li data-target="#home-carousel" data-slide-to="0" className="active"></li>
                                 <li data-target="#home-carousel" data-slide-to="1"></li>
@@ -83,14 +75,8 @@ export default class Home extends Component {
                             </ul> */}
 
                             {/* <!-- The slideshow --> */}
-                            <div className="carousel-inner">
-                                <div className="carousel-item active">
-                                    <img className='carousel-img' src={testImg1} alt="test1"/>
-                                </div>
-                                <div className="carousel-item">
-                                    <img className='carousel-img' src={testImg2} alt="test2"/>
-                                </div>
-
+                            <div id="carousel-inner" className="carousel-inner">
+                                {/* note: images rendered dynamically on load by renderCarouselImages() */}
                             </div>
 
                             {/* <!-- Left and right controls --> */}
