@@ -8,20 +8,30 @@ import '../assets/css/header.scss';
 export default class Header extends Component {
 
     // toggle height + visibility for transition effect
-    toggleConnectModal() {
-        
+    toggleConnectModal(e) {
+
         let outerConnectContainer = document.getElementById('connect-component-container'), 
             innerConnectContainer = document.getElementById('connect--outer');
 
-        if (innerConnectContainer.style.height !== '0%') {
-            innerConnectContainer.style.height = '0%'; 
-            innerConnectContainer.style.visibility = 'hidden'; 
-            setTimeout(function () { outerConnectContainer.style.zIndex = '-1'; }, 500);
+        // when 'connect' nav link is clicked, toggle normally
+        if (e.target.className === 'connect-toggle') {
+            if (innerConnectContainer.style.height !== '0%') {
+                innerConnectContainer.style.height = '0%'; 
+                innerConnectContainer.style.visibility = 'hidden'; 
+                setTimeout(function () { outerConnectContainer.style.zIndex = '-1'; }, 500);
+            } else {
+                innerConnectContainer.style.height = '100%'; 
+                innerConnectContainer.style.visibility = 'visible';
+                outerConnectContainer.style.zIndex = '1';
+            } 
         } else {
-            innerConnectContainer.style.height = '100%'; 
-            innerConnectContainer.style.visibility = 'visible';
-            outerConnectContainer.style.zIndex = '1';
-        } 
+            // for all other links, toggle modal off
+            if (innerConnectContainer.style.height !== '0%') {
+                innerConnectContainer.style.height = '0%';
+                innerConnectContainer.style.visibility = 'hidden';
+                setTimeout(function () { outerConnectContainer.style.zIndex = '-1'; }, 500);
+            }
+        }
     
     }
 
@@ -29,7 +39,7 @@ export default class Header extends Component {
         return (
             <header id="page-header">
                 <div className="header">
-                    <Link className="header-logo" to="/"></Link>
+                    <Link className="header-logo" onClick={this.toggleConnectModal}to="/"></Link>
                 </div>
                 <div className="nav-bar">
                     <div className="site-content-wrap">
@@ -42,32 +52,32 @@ export default class Header extends Component {
                             <ul className="">
                                 <li>
                                     <div>
-                                        <Link to="/news">News</Link>
+                                        <Link to="/news" onClick={this.toggleConnectModal}>News</Link>
                                     </div>
                                 </li>
                                 <li>
                                     <div>
-                                        <Link to="/releases">Releases</Link>
+                                        <Link to="/releases" onClick={this.toggleConnectModal}>Releases</Link>
                                     </div>
                                 </li>
                                 <li>
                                     <div>
-                                        <Link to="/gallery">Gallery</Link>
+                                        <Link to="/gallery" onClick={this.toggleConnectModal}>Gallery</Link>
                                     </div>
                                 </li>
                                 <li>
                                     <div>
-                                        <Link to="/reviews">Reviews</Link>
+                                        <Link to="/reviews" onClick={this.toggleConnectModal}>Reviews</Link>
                                     </div>
                                 </li>
                                 <li>
                                     <div>
-                                        <Link to="/lyrics">Lyrics</Link>
+                                        <Link to="/lyrics" onClick={this.toggleConnectModal}>Lyrics</Link>
                                     </div>
                                 </li>
                                 <li>
                                     <div>
-                                        <a style={{cursor: 'pointer'}} onClick={this.toggleConnectModal} className="anchor-placeholder">Connect</a>
+                                        <a style={{cursor: 'pointer'}} onClick={this.toggleConnectModal} className="connect-toggle">Connect</a>
                                     </div>
                                 </li>
                             </ul>
