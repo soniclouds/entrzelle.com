@@ -2,15 +2,13 @@ import React, { Component } from 'react';
 import Strapi from 'strapi-sdk-javascript/build/main';
 import DOMPurify from 'dompurify';
 
+import albumInfo from './_data/reviews.js';
+
 import { setContentContainerHeight } from '../assets/js/components/Content.js';
 
 import '../assets/css/ContentComponent.scss';
 
 import '../assets/css/reviews.scss';
-
-import _coverTPC from '../assets/img/releases/TPC.jpg';
-import _coverPOTM from '../assets/img/releases/POTM.jpg';
-import _coverSTWOF from '../assets/img/releases/STWOF.jpg';
 
 const strapi = new Strapi('http://localhost:1337');
 
@@ -45,13 +43,13 @@ export default class Reviews extends Component {
                   _reviewsSTWOF = [];
 
             for (var i = 0; i < reviewsPosts.length; i++) {
-                if (reviewsPosts[i].album === this.albumInfo.tpc.albumTitle) {
+                if (reviewsPosts[i].album === albumInfo.tpc.albumTitle) {
                     _reviewsTPC.push(reviewsPosts[i]);
                 }
-                if (reviewsPosts[i].album === this.albumInfo.potm.albumTitle) {
+                if (reviewsPosts[i].album === albumInfo.potm.albumTitle) {
                     _reviewsPOTM.push(reviewsPosts[i]);
                 }
-                if (reviewsPosts[i].album === this.albumInfo.stwof.albumTitle) {
+                if (reviewsPosts[i].album === albumInfo.stwof.albumTitle) {
                     _reviewsSTWOF.push(reviewsPosts[i]);
                 }
             }
@@ -69,31 +67,6 @@ export default class Reviews extends Component {
     }
 
 
-    albumInfo = {
-        tpc: {
-            albumTitle: "Total Progressive Collapse",
-            alt: "Total Progressive Collapse - album reviews",
-            img: _coverTPC,
-            label: "Alfa Matrix",
-            releaseInfo: "released April 15, 2016 - 2CD LP",
-        },
-        potm: {
-            albumTitle: "Part Of The Movement (Bonus Tracks Version)",
-            alt: "Part Of The Movement - album reviews",
-            img: _coverPOTM,
-            label: "Alfa Matrix",
-            releaseInfo: "released June 19, 2015 - digital LP",
-        },
-        stwof: {
-            albumTitle: "Set These Walls On Fire",
-            alt: "Set These Walls On Fire - album reviews",
-            img: _coverSTWOF,
-            label: "Alfa Matrix",
-            releaseInfo: "released June 19, 2015 - digital EP",
-        },
-
-    };
-
     render() {
         return (
             <div id="ccc-outer" className="component-content-container--outer">
@@ -105,11 +78,11 @@ export default class Reviews extends Component {
                         {/* TPC */}
 
                         <div className="content-title">
-                            <img src={this.albumInfo.tpc.img} alt={this.albumInfo.tpc.alt}/>
+                            <img src={albumInfo.tpc.img} alt={albumInfo.tpc.alt}/>
                             <div className="title-description">
-                                <h1>{this.albumInfo.tpc.albumTitle}</h1>
-                                <p>{this.albumInfo.tpc.releaseInfo}</p>
-                                <p>{this.albumInfo.tpc.label}</p>
+                                <h1>{albumInfo.tpc.albumTitle}</h1>
+                                <p>{albumInfo.tpc.releaseInfo}</p>
+                                <p>{albumInfo.tpc.label}</p>
                             </div>
                         </div>
 
@@ -143,11 +116,11 @@ export default class Reviews extends Component {
                         {/* POTM */}
 
                         <div className="content-title">
-                            <img src={this.albumInfo.potm.img} alt={this.albumInfo.potm.alt} />
+                            <img src={albumInfo.potm.img} alt={albumInfo.potm.alt} />
                             <div className="title-description">
-                                <h1>{this.albumInfo.potm.albumTitle}</h1>
-                                <p>{this.albumInfo.potm.releaseInfo}</p>
-                                <p>{this.albumInfo.potm.label}</p>
+                                <h1>{albumInfo.potm.albumTitle}</h1>
+                                <p>{albumInfo.potm.releaseInfo}</p>
+                                <p>{albumInfo.potm.label}</p>
                             </div>
                         </div>
 
@@ -181,11 +154,11 @@ export default class Reviews extends Component {
                         {/* STWOF */}
 
                         <div className="content-title">
-                            <img src={this.albumInfo.stwof.img} alt={this.albumInfo.stwof.alt} />
+                            <img src={albumInfo.stwof.img} alt={albumInfo.stwof.alt} />
                             <div className="title-description">
-                                <h1>{this.albumInfo.stwof.albumTitle}</h1>
-                                <p>{this.albumInfo.stwof.releaseInfo}</p>
-                                <p>{this.albumInfo.stwof.label}</p>
+                                <h1>{albumInfo.stwof.albumTitle}</h1>
+                                <p>{albumInfo.stwof.releaseInfo}</p>
+                                <p>{albumInfo.stwof.label}</p>
                             </div>
                         </div>
 
