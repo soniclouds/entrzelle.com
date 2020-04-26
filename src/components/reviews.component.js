@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import Strapi from 'strapi-sdk-javascript/build/main';
 import DOMPurify from 'dompurify';
 
-import albumInfo from './_data/reviews.js';
+// import releaseData.studio from './_data/reviews.js';
+
+import releaseData from './_data/_releases.js';
 
 import { setContentContainerHeight } from '../assets/js/components/Content.js';
 
@@ -43,13 +45,13 @@ export default class Reviews extends Component {
                   _reviewsSTWOF = [];
 
             for (var i = 0; i < reviewsPosts.length; i++) {
-                if (reviewsPosts[i].album === albumInfo.tpc.albumTitle) {
+                if (reviewsPosts[i].album === releaseData.studio.tpc.title.short) {
                     _reviewsTPC.push(reviewsPosts[i]);
                 }
-                if (reviewsPosts[i].album === albumInfo.potm.albumTitle) {
+                if (reviewsPosts[i].album === releaseData.studio.potm.title.short) {
                     _reviewsPOTM.push(reviewsPosts[i]);
                 }
-                if (reviewsPosts[i].album === albumInfo.stwof.albumTitle) {
+                if (reviewsPosts[i].album === releaseData.studio.stwof.title.short) {
                     _reviewsSTWOF.push(reviewsPosts[i]);
                 }
             }
@@ -78,11 +80,11 @@ export default class Reviews extends Component {
                         {/* TPC */}
 
                         <div className="content-title">
-                            <img src={albumInfo.tpc.img} alt={albumInfo.tpc.alt}/>
+                            <img src={releaseData.studio.tpc.cover} alt={releaseData.studio.tpc.alt}/>
                             <div className="title-description">
-                                <h1>{albumInfo.tpc.albumTitle}</h1>
-                                <p>{albumInfo.tpc.releaseInfo}</p>
-                                <p>{albumInfo.tpc.label}</p>
+                                <h1>{releaseData.studio.tpc.title.short}</h1>
+                                <p>{releaseData.studio.tpc.date.long}</p>
+                                <p>{releaseData.studio.tpc.label}</p>
                             </div>
                         </div>
 
@@ -116,11 +118,11 @@ export default class Reviews extends Component {
                         {/* POTM */}
 
                         <div className="content-title">
-                            <img src={albumInfo.potm.img} alt={albumInfo.potm.alt} />
+                            <img src={releaseData.studio.potm.cover} alt={releaseData.studio.potm.alt} />
                             <div className="title-description">
-                                <h1>{albumInfo.potm.albumTitle}</h1>
-                                <p>{albumInfo.potm.releaseInfo}</p>
-                                <p>{albumInfo.potm.label}</p>
+                                <h1>{releaseData.studio.potm.title.short}</h1>
+                                <p>{releaseData.studio.potm.date.long}</p>
+                                <p>{releaseData.studio.potm.label}</p>
                             </div>
                         </div>
 
@@ -154,11 +156,11 @@ export default class Reviews extends Component {
                         {/* STWOF */}
 
                         <div className="content-title">
-                            <img src={albumInfo.stwof.img} alt={albumInfo.stwof.alt} />
+                            <img src={releaseData.studio.stwof.cover} alt={releaseData.studio.stwof.alt} />
                             <div className="title-description">
-                                <h1>{albumInfo.stwof.albumTitle}</h1>
-                                <p>{albumInfo.stwof.releaseInfo}</p>
-                                <p>{albumInfo.stwof.label}</p>
+                                <h1>{releaseData.studio.stwof.title.short}</h1>
+                                <p>{releaseData.studio.stwof.date.long}</p>
+                                <p>{releaseData.studio.stwof.label}</p>
                             </div>
                         </div>
 
