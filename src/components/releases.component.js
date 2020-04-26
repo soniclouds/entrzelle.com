@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+
+import { setContentContainerHeight } from '../assets/js/components/content.js';
+
 import '../assets/css/releases.scss';
 import '../assets/css/_content-component.scss';
 
@@ -23,8 +26,8 @@ import _coverBC13_CK from '../assets/img/releases/BC13_CK.jpg';
 export default class Releases extends Component {
 
     componentDidMount() {
-        this.setSideColumnHeight();
-        window.addEventListener('resize', this.setSideColumnHeight);
+        setContentContainerHeight();
+        window.addEventListener('resize', setContentContainerHeight);
     }
 
     // global non-updating class variables
@@ -227,13 +230,6 @@ export default class Releases extends Component {
         
     }
 
-    setSideColumnHeight() {
-        let contentTop = document.getElementById('ccc-outer').offsetTop,
-            contentContainer = document.getElementById('ccc-outer');
-
-        contentContainer.style.height = window.innerHeight - contentTop - '50' + 'px';
-        // audioCol.style.height = window.innerHeight - contentTop + 'px';
-    }
 
     render() {
         return (

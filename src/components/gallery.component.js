@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { setContentContainerHeight } from '../assets/js/components/content.js';
+
 import 'lightbox2/dist/css/lightbox.min.css';
 import 'lightbox2/dist/js/lightbox-plus-jquery.min.js';
 import lightbox from 'lightbox2/dist/js/lightbox-plus-jquery.min.js';
@@ -16,16 +18,11 @@ export default class Gallery extends Component {
         lightbox.option({
             'showImageNumberLabel': false,
         })
-        this.setSideColumnHeight();
-        window.addEventListener('resize', this.setSideColumnHeight);
+        setContentContainerHeight();
+        window.addEventListener('resize', setContentContainerHeight);
     }
 
-    setSideColumnHeight() {
-        let contentTop = document.getElementById('ccc-outer').offsetTop,
-            contentContainer = document.getElementById('ccc-outer');
 
-        contentContainer.style.height = window.innerHeight - contentTop - '50' + 'px';
-    }
 
     lightboxGalleryName = "gallery-photos";
 

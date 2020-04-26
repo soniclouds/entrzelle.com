@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Strapi from 'strapi-sdk-javascript/build/main';
 import DOMPurify from 'dompurify';
 
+import { setContentContainerHeight } from '../assets/js/components/content.js';
+
 import '../assets/css/reviews.scss';
 import '../assets/css/_content-component.scss';
 
@@ -23,8 +25,8 @@ export default class Reviews extends Component {
     }
 
     async componentDidMount() {
-        this.setSideColumnHeight();
-        window.addEventListener('resize', this.setSideColumnHeight);
+        setContentContainerHeight();
+        window.addEventListener('resize', setContentContainerHeight);
 
         try {
             // fetch reviews and sanitize content field
@@ -65,12 +67,6 @@ export default class Reviews extends Component {
         }
     }
 
-    setSideColumnHeight() {
-        let contentTop = document.getElementById('ccc-outer').offsetTop,
-            contentContainer = document.getElementById('ccc-outer');
-
-        contentContainer.style.height = window.innerHeight - contentTop - '50' + 'px';
-    }
 
     albumInfo = {
         tpc: {

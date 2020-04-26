@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 import CTA from './connect/cta.js';
 import galleryPhotos from './gallery/images.js';
 
+import { setContentContainerHeight} from '../assets/js/components/content.js';
+
+
 import '../assets/css/gallery.scss';
 import '../assets/css/connect.scss';
 import '../assets/css/home.scss';
@@ -15,8 +18,8 @@ export default class Home extends Component {
 
         this.renderCarouselImages();
 
-        this.setSideColumnHeight();
-        window.addEventListener('resize', this.setSideColumnHeight);
+        setContentContainerHeight();
+        window.addEventListener('resize', setContentContainerHeight);
 
         console.log(galleryPhotos);
     }
@@ -41,14 +44,6 @@ export default class Home extends Component {
         }
 
         carouselContainer.innerHTML = html;
-
-    }
-
-    setSideColumnHeight() {
-        var contentTop = document.getElementById('ccc-outer').offsetTop,
-            contentContainer = document.getElementById('ccc-outer');
-
-        contentContainer.style.height = window.innerHeight - contentTop - '50' + 'px';
 
     }
 

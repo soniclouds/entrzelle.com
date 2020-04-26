@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Strapi from 'strapi-sdk-javascript/build/main';
 import DOMPurify from 'dompurify';
 
+import { setContentContainerHeight } from '../assets/js/components/content.js';
+
 import '../assets/css/lyrics.scss';
 import '../assets/css/_content-component.scss';
 
@@ -42,8 +44,8 @@ export default class Lyrics extends Component {
 
     async componentDidMount() {
 
-        this.setSideColumnHeight();
-        window.addEventListener('resize', this.setSideColumnHeight);
+        setContentContainerHeight();
+        window.addEventListener('resize', setContentContainerHeight);
 
         try {
             // fetch lyrics and sanitize content field
@@ -109,14 +111,6 @@ export default class Lyrics extends Component {
             alert(err);
         }
     }
-
-    setSideColumnHeight() {
-        let contentTop = document.getElementById('ccc-outer').offsetTop,
-            contentContainer = document.getElementById('ccc-outer');
-
-        contentContainer.style.height = window.innerHeight - contentTop - '50' + 'px';
-    }
-
 
     render() {
         return (
