@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 
-import { setContentContainerHeight } from '../assets/js/components/_content.js';
+import { setContentContainerHeight } from '../assets/js/components/Content.js';
 
 import 'lightbox2/dist/css/lightbox.min.css';
 import 'lightbox2/dist/js/lightbox-plus-jquery.min.js';
 import lightbox from 'lightbox2/dist/js/lightbox-plus-jquery.min.js';
 
+import '../assets/css/ContentComponent.scss';
+
 import '../assets/css/gallery.scss';
-import '../assets/css/_content-component.scss';
 
 import galleryPhotos from './gallery/images';
 

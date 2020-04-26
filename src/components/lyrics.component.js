@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import Strapi from 'strapi-sdk-javascript/build/main';
 import DOMPurify from 'dompurify';
 
-import { setContentContainerHeight } from '../assets/js/components/_content.js';
+import { setContentContainerHeight } from '../assets/js/components/Content.js';
+
+import '../assets/css/ContentComponent.scss';
 
 import '../assets/css/lyrics.scss';
-import '../assets/css/_content-component.scss';
 
 const strapi = new Strapi('http://localhost:1337');
 

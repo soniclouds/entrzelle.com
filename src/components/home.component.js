@@ -3,13 +3,15 @@ import React, { Component } from 'react';
 import CTA from './connect/cta.js';
 import galleryPhotos from './gallery/images.js';
 
-import { setContentContainerHeight} from '../assets/js/components/_content.js';
+import { setContentContainerHeight} from '../assets/js/components/Content.js';
+
+
+import '../assets/css/ContentComponent.scss';
 
 
 import '../assets/css/gallery.scss';
 import '../assets/css/connect.scss';
 import '../assets/css/home.scss';
-import '../assets/css/_content-component.scss';
 
 
 export default class Home extends Component {

@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import Strapi from 'strapi-sdk-javascript/build/main';
 import DOMPurify from 'dompurify';
 
-import { setContentContainerHeight } from '../assets/js/components/_content.js';
+import { setContentContainerHeight } from '../assets/js/components/Content.js';
+
+import '../assets/css/ContentComponent.scss';
 
 import '../assets/css/reviews.scss';
-import '../assets/css/_content-component.scss';
 
 import _coverTPC from '../assets/img/releases/TPC.jpg';
 import _coverPOTM from '../assets/img/releases/POTM.jpg';
