@@ -44,7 +44,38 @@ iframe.bandcamp-player {
     // width: 25%;
 }
 
-.media-toggle {
+.media-toggle-header {
+    display: none; // adjust for RWD
+    position: absolute;
+    top: 0; // adjust for RWD
+
+    button {
+        background-color: black;
+        opacity: .8;
+        color: white;
+        border-top: none;
+    }
+
+    button:focus {
+        outline: none;
+    }
+}
+.media-toggle-header.video {
+    left: 0;
+    button {
+        transform: rotate(-90deg);
+        transform-origin: center bottom;
+    }
+}
+.media-toggle-header.audio {
+    right: 0;
+    button {
+        transform: rotate(90deg);
+        transform-origin: center bottom;
+    }
+}
+
+.media-toggle-column {
     vertical-align: top;
     padding-top: 75vh;
 
@@ -60,11 +91,11 @@ iframe.bandcamp-player {
     }
 }
 
-.media-toggle.video button {
+.media-toggle-column.video button {
     transform: rotate(-90deg);
     transform-origin: center bottom;
 }
-.media-toggle.audio button {
+.media-toggle-column.audio button {
     transform: rotate(90deg);
     transform-origin: center bottom;
 }
@@ -100,7 +131,7 @@ div.audio-feed {
     border-left: 1px solid #444444;
 }
 
-#audio-sidebar {
+#video-sidebar, #audio-sidebar {
     width: unset;
 }
 
@@ -133,3 +164,32 @@ div#audio-feed-column:after {
 */
 
 
+
+// media sidebar RWD
+// - resize height (top) to below header
+// - move toggle buttons to header
+// - resize width to at least 50vw
+@media screen and (max-width: 1024px) { // iPad
+
+    .media-sidebar {
+        top: 10vh;
+        z-index: 10;
+    }
+    .media-toggle-column {
+        // padding-top: 3vh;
+        // position: fixed;
+        display: none !important;
+        
+    }
+    .media-toggle-column.video {
+        // left: 0;
+    }
+    .media-toggle-column.audio {
+        // right: 0;
+    }
+
+    .media-toggle-header {
+        display: block;
+    }
+
+}

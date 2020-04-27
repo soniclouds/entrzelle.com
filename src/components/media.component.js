@@ -13,22 +13,28 @@ export default class Media extends Component {
         
         let targetId = e.target.id,
         videoColumn = document.getElementById('video-feed-column'),
+        videoSidebar = document.getElementById('video-sidebar'),
         audioColumn = document.getElementById('audio-feed-column'),
         audioSidebar = document.getElementById('audio-sidebar');
         
+        // COLUMN TOGGLE =============================================
+
         // video
-        if (targetId === 'video-toggle-btn') {
+        if (targetId === 'video-toggle-btn--column') {
             if (videoColumn.style.display === '') {
                 videoColumn.style.display = 'table-cell';
+                videoSidebar.style.width = '23%';
             } else if (videoColumn.style.display !== 'none') {
                 videoColumn.style.display = 'none';
+                videoSidebar.style.width = 'unset';
             } else {
                 videoColumn.style.display = 'table-cell';
+                videoSidebar.style.width = '23%';
             }
         }
         
         // audio
-        if (targetId === 'audio-toggle-btn') {
+        if (targetId === 'audio-toggle-btn--column') {
             if (audioColumn.style.display === '') {
                 audioColumn.style.display = 'table-cell';
                 audioSidebar.style.width = '23%';
@@ -39,7 +45,38 @@ export default class Media extends Component {
                 audioColumn.style.display = 'table-cell';
                 audioSidebar.style.width = '23%';
             }
-        }       
+        }    
+
+        // HEADER TOGGLE =============================================
+
+        // video
+        if (targetId === 'video-toggle-btn--header') {
+            if (videoColumn.style.display === '') {
+                videoColumn.style.display = 'table-cell';
+                videoSidebar.style.width = '50%';
+            } else if (videoColumn.style.display !== 'none') {
+                videoColumn.style.display = 'none';
+                videoSidebar.style.width = 'unset';
+            } else {
+                videoColumn.style.display = 'table-cell';
+                videoSidebar.style.width = '50%';
+            }
+        }
+
+        // audio
+        if (targetId === 'audio-toggle-btn--header') {
+            if (audioColumn.style.display === '') {
+                audioColumn.style.display = 'table-cell';
+                audioSidebar.style.width = '50%';
+            } else if (audioColumn.style.display !== 'none') {
+                audioColumn.style.display = 'none';
+                audioSidebar.style.width = 'unset';
+            } else {
+                audioColumn.style.display = 'table-cell';
+                audioSidebar.style.width = '50%';
+            }
+        }    
+
     }
  
     stopVideo(e) {
@@ -59,10 +96,13 @@ export default class Media extends Component {
     render() {
         return (
             <div className='content-wrap'>
+
+                <div className="media-toggle-header video"><button id="video-toggle-btn--header" onClick={this.toggleMediaColumn}>video</button></div>
+                <div className="media-toggle-header audio outer"><button id="audio-toggle-btn--header" onClick={this.toggleMediaColumn}>audio</button></div>
                 
                 {/* video column (left) */}
                 
-                <div id="media-sidebar-left" className="media-sidebar left">
+                <div id="video-sidebar" className="media-sidebar left">
                     
                     <div id="video-feed-column" className="column-feed video-feed outer">
                         <div className="column-feed-content">
@@ -84,13 +124,13 @@ export default class Media extends Component {
                         </div>
                     </div>
                     
-                    <div className="media-toggle video outer"><button id="video-toggle-btn" onClick={this.toggleMediaColumn}>video</button></div>
+                    <div className="media-toggle-column video outer"><button id="video-toggle-btn--column" onClick={this.toggleMediaColumn}>video</button></div>
 
                 </div>
 
                 <div className="media-sidebar right" id="audio-sidebar">
 
-                    <div className="media-toggle audio outer"><button id="audio-toggle-btn" onClick={this.toggleMediaColumn}>audio</button></div>
+                    <div className="media-toggle-column audio outer"><button id="audio-toggle-btn--column" onClick={this.toggleMediaColumn}>audio</button></div>
                     
                     <div id="audio-feed-column" className="column-feed audio-feed outer">                        
                         <div className="column-feed-content">
