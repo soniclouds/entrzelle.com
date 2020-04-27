@@ -7,11 +7,9 @@ import 'lightbox2/dist/js/lightbox-plus-jquery.min.js';
 import lightbox from 'lightbox2/dist/js/lightbox-plus-jquery.min.js';
 
 import '../assets/css/ContentComponent.scss';
-
 import '../assets/css/gallery.scss';
 
 import galleryPhotos from './_data/gallery/images';
-
 
 export default class Gallery extends Component {
 
@@ -22,8 +20,6 @@ export default class Gallery extends Component {
         setContentContainerHeight();
         window.addEventListener('resize', setContentContainerHeight);
     }
-
-
 
     lightboxGalleryName = "gallery-photos";
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Strapi from 'strapi-sdk-javascript/build/main';
 import DOMPurify from 'dompurify';
+
 import { setContentContainerHeight } from '../assets/js/components/Content.js';
 
 import '../assets/css/ContentComponent.scss';

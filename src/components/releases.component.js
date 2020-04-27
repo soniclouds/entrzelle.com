@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import { setContentContainerHeight } from '../assets/js/components/Content.js';
 import releaseData from './_data/releases.js';
 

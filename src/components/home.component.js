@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
 
 import CTA from './connect/cta.js';
+import { setContentContainerHeight} from '../assets/js/components/Content.js';
 import galleryPhotos from './_data/gallery/images.js';
 
-import { setContentContainerHeight} from '../assets/js/components/Content.js';
-
-
 import '../assets/css/ContentComponent.scss';
-
-
 import '../assets/css/gallery.scss';
 import '../assets/css/connect.scss';
 import '../assets/css/home.scss';
-
 
 export default class Home extends Component {
 
@@ -85,8 +80,6 @@ export default class Home extends Component {
                             </a>
 
                         </div>
-
-
 
                     </div>
                 </div>

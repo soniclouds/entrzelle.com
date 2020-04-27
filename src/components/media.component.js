@@ -3,39 +3,19 @@ import React, { Component } from 'react';
 import '../assets/css/media.scss';
 
 export default class Media extends Component {
-
-/* 
-embedFacebookTimeline = (d, s, id) => {
-    console.log('facebook timeline here');
-
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5&appId=744521848981682";
-    fjs.parentNode.insertBefore(js, fjs);
-
-}
- */
-
-    // constructor(props) {
-    //     super(props);
-    // }
     
-    yt = document.getElementsByClassName('yt-embed');
-    ytArr = Array.from(this.yt);
-
-
     componentDidMount() {
-        // console.log(this.testVar);
+        this.yt = document.getElementsByClassName('yt-embed');
+        this.ytArr = Array.from(this.yt);
     }
-
+    
     toggleMediaColumn(e) {
         
         let targetId = e.target.id,
-            videoColumn = document.getElementById('video-feed-column'),
-            audioColumn = document.getElementById('audio-feed-column'),
-            audioSidebar = document.getElementById('audio-sidebar');
-
+        videoColumn = document.getElementById('video-feed-column'),
+        audioColumn = document.getElementById('audio-feed-column'),
+        audioSidebar = document.getElementById('audio-sidebar');
+        
         // video
         if (targetId === 'video-toggle-btn') {
             if (videoColumn.style.display === '') {
@@ -46,7 +26,7 @@ embedFacebookTimeline = (d, s, id) => {
                 videoColumn.style.display = 'table-cell';
             }
         }
-
+        
         // audio
         if (targetId === 'audio-toggle-btn') {
             if (audioColumn.style.display === '') {
@@ -84,7 +64,6 @@ embedFacebookTimeline = (d, s, id) => {
                 
                 <div id="media-sidebar-left" className="media-sidebar left">
                     
-                    
                     <div id="video-feed-column" className="column-feed video-feed outer">
                         <div className="column-feed-content">
                             
@@ -110,7 +89,6 @@ embedFacebookTimeline = (d, s, id) => {
                 </div>
 
                 <div className="media-sidebar right" id="audio-sidebar">
-                    
 
                     <div className="media-toggle audio outer"><button id="audio-toggle-btn" onClick={this.toggleMediaColumn}>audio</button></div>
                     
@@ -122,7 +100,6 @@ embedFacebookTimeline = (d, s, id) => {
                         
                         </div>
                     </div>
-
 
                 </div>
 
