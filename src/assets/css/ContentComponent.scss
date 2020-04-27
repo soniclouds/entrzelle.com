@@ -7,8 +7,25 @@
     overflow: scroll;
 }
 
+
 @media screen and (max-width: 1280px) {
     .component-content-container--outer {
         width: 58%;
     }
 }
+@media screen and (max-width: 1024px) { // iPad
+    .component-content-container--outer {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 812px) { // iPhone X
+    .component-content-container--outer {
+        width: 88%;
+    }
+}
+@media screen and (max-width: 736px) { // iPhone 6/7/8 Plus
+    .component-content-container--outer {
+        width: 100%;
+    }
+}
+
