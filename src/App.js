@@ -22,7 +22,8 @@ class App extends React.Component {
           
           <div className="container--inner-wrapper">
             <div className="main-content">
-              <div id="container" className="container">
+              {/* <div id="container" className="container"> */}
+              <div id="container" className="">
             
                 <Header />
 
