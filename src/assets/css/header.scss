@@ -28,7 +28,7 @@ div.header {
     // width: 100vw;
     // position: fixed;
 	z-index: -10;
-	background-size: 300px 100px;
+	// background-size: 300px 100px;
 	// background-size: cover;
 }
 
@@ -83,6 +83,38 @@ nav#main-nav.desktop {
 		}
 	}
 
+
+}
+
+@media screen and (max-width: 823px) { // Pixel 2 XL
+
+	.header {
+
+		height: 86px !important;
+
+		.header-logo {
+			transform: scale(0.7);
+			margin-top: -15px;
+	
+		}
+		
+	}
+
+}
+
+@media screen and (max-width: 667px) { // iPhone 6/7/8 
+
+	.header {
+
+		height: 75px !important;
+
+		.header-logo {
+			transform: scale(0.5);
+			margin-top: -25px;
+	
+		}
+		
+	}
 
 }
 
