@@ -20,13 +20,13 @@ export default class Reviews extends Component {
         }
     }
 
-    async componentDidMount() {
-        this.handleApiData();
+    componentDidMount() {
+        this.handleReviewsApiData();
         setContentContainerHeight();
         window.addEventListener('resize', setContentContainerHeight);
     }
 
-    async handleApiData() {
+    async handleReviewsApiData() {
         try {
             // fetch reviews and sanitize content field
             const reviewsPosts = await strapi.getEntries('reviews');

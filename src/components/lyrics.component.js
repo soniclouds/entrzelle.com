@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import Strapi from 'strapi-sdk-javascript/build/main';
 import DOMPurify from 'dompurify';
-
 import releaseData from './_data/releases.js';
-
 import { setContentContainerHeight } from '../assets/js/components/Content.js';
 
 import '../assets/css/ContentComponent.scss';
-
 import '../assets/css/lyrics.scss';
 
 const strapi = new Strapi('http://localhost:1337');
@@ -23,12 +20,13 @@ export default class Lyrics extends Component {
         }
     }
 
-
-    async componentDidMount() {
-
+    componentDidMount() {
+        this.handleLyricsApiData();
         setContentContainerHeight();
         window.addEventListener('resize', setContentContainerHeight);
+    }
 
+    async handleLyricsApiData() {
         try {
             // fetch lyrics and sanitize content field
             const lyricsPosts = await strapi.getEntries('lyrics');
@@ -39,10 +37,10 @@ export default class Lyrics extends Component {
 
             });
             // then, parse lyrics based on album
-            // NOTE: this should be refactored
+            // NOTE: this should be refactored at a later time
             const _lyricsTPC = [],
-                  _lyricsSTWOF = [],
-                  _lyricsPOTM = [];
+                _lyricsSTWOF = [],
+                _lyricsPOTM = [];
 
             for (var i = 0; i < lyricsPosts.length; i++) {
                 if (lyricsPosts[i].album === releaseData.studio.tpc.title.short) {
@@ -55,38 +53,12 @@ export default class Lyrics extends Component {
                     _lyricsPOTM.push(lyricsPosts[i]);
                 }
             }
-            
-            // set album info in class object variable
-            // releaseData.studio.tpc = {
-            //     'title.short': _lyricsTPC[0].album,
-            //     'releaseInfo': _lyricsTPC[0].releaseInfo,
-            //     'label': _lyricsTPC[0].label,
-            //     'credits': _lyricsTPC[0].credits
-            // };
-            // releaseData.studio.stwof = {
-            //     'title.short': _lyricsSTWOF[0].album,
-            //     'releaseInfo': _lyricsSTWOF[0].releaseInfo,
-            //     'label': _lyricsSTWOF[0].label,
-            //     'credits': _lyricsSTWOF[0].credits
-            // };
-            // releaseData.studio.potm = {
-            //     'title.short': _lyricsPOTM[0].album,
-            //     'releaseInfo': _lyricsPOTM[0].releaseInfo,
-            //     'label': _lyricsPOTM[0].label,
-            //     'credits': _lyricsPOTM[0].credits
-            // };
 
-            this.setState({ 
-                // lyrics: lyricsPosts,
+            this.setState({
                 lyricsTPC: _lyricsTPC,
                 lyricsSTWOF: _lyricsSTWOF,
                 lyricsPOTM: _lyricsPOTM
             });
-
-            // console.log(Array.isArray(this.state.lyrics));
-            // console.log(Array.isArray(this.state.lyricsPOTM));
-            // console.log(this.state.lyricsPOTM[0].album);
-            console.log(releaseData.studio);
 
         }
         catch (err) {
@@ -101,7 +73,6 @@ export default class Lyrics extends Component {
                 <div className="component-content-container--inner">
 
                         <div className="lyrics-content">
-
 
                             {/* TPC */}
 
@@ -119,22 +90,20 @@ export default class Lyrics extends Component {
 
                             {this.state.lyricsTPC.map(post =>
 
-                                <div className="content-data">
+                            <div className="content-data">
 
-                                    {/* note: dangerouslySetInnerHTML is safe here because HTML was previously sanitized by DOMPurify */}
+                                {/* note: dangerouslySetInnerHTML is safe here because HTML was previously sanitized by DOMPurify */}
 
-                                    <div className="lyrics-detail" >
-                                        <div className="lyrics-song">
-                                            <h6>{post.song}</h6>
-                                        </div>
-                                        <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
+                                <div className="lyrics-detail" >
+                                    <div className="lyrics-song">
+                                        <h6>{post.song}</h6>
                                     </div>
-
-
-
+                                    <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
                                 </div>
-                            )} {/* tpc */}
 
+                            </div>
+
+                            )} {/* tpc */}
 
                             {/* STWOF */}
 
@@ -152,50 +121,49 @@ export default class Lyrics extends Component {
 
                             {this.state.lyricsSTWOF.map(post =>
 
-                                <div className="content-data">
+                            <div className="content-data">
 
-                                    {/* note: dangerouslySetInnerHTML is safe here because HTML was previously sanitized by DOMPurify */}
+                                {/* note: dangerouslySetInnerHTML is safe here because HTML was previously sanitized by DOMPurify */}
 
-                                    <div className="lyrics-detail" >
-                                        <div className="lyrics-song">
-                                            <h6>{post.song}</h6>
-                                        </div>
-                                        <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
+                                <div className="lyrics-detail" >
+                                    <div className="lyrics-song">
+                                        <h6>{post.song}</h6>
                                     </div>
-
+                                    <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
                                 </div>
+
+                            </div>
+
                             )} 
-                                <div className="content-data">
-                                    <div className="lyrics-detail" >
-                                        <div>
-                                            <div className="_content">
-                                                <p><em>Lyrics to the following songs can be found in 'Total Progressive Collapse':</em></p>
-                                            </div>
+                            <div className="content-data">
+                                <div className="lyrics-detail" >
+                                    <div>
+                                        <div className="_content">
+                                            <p><em>Lyrics to the following songs can be found in 'Total Progressive Collapse':</em></p>
                                         </div>
-                                        <div className="lyrics-song">
-                                            <ul>
-                                                <li><strong>Compatible With My Intoxication [sober]</strong></li>
-                                                <li><strong>Bloodborn [utero]</strong></li>
-                                            </ul>
-                                        </div>
-                                        <div>
-                                            <div className="_content">
-                                                <p><em>Lyrics to the following songs can be found in 'Part Of The Movement':</em></p>
-                                            </div>
-                                        </div>
-                                        <div className="lyrics-song">
-                                            <ul>
-                                                <li><strong>Liar For Profit [arson]</strong></li>
-                                                <li><strong>Pressure (Psy'Aviah)</strong></li>
-                                                <li><strong>Fraud [burn]</strong></li>
-                                                <li><strong>Rites Of Romance (Avarice In Audio)</strong></li>
-                                            </ul>
-                                        </div>
-                                        
                                     </div>
-                                </div> {/* stwof */}
-
-
+                                    <div className="lyrics-song">
+                                        <ul>
+                                            <li><strong>Compatible With My Intoxication [sober]</strong></li>
+                                            <li><strong>Bloodborn [utero]</strong></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <div className="_content">
+                                            <p><em>Lyrics to the following songs can be found in 'Part Of The Movement':</em></p>
+                                        </div>
+                                    </div>
+                                    <div className="lyrics-song">
+                                        <ul>
+                                            <li><strong>Liar For Profit [arson]</strong></li>
+                                            <li><strong>Pressure (Psy'Aviah)</strong></li>
+                                            <li><strong>Fraud [burn]</strong></li>
+                                            <li><strong>Rites Of Romance (Avarice In Audio)</strong></li>
+                                        </ul>
+                                    </div>
+                                    
+                                </div>
+                            </div> {/* stwof */}
 
                             {/* POTM */}
                             
@@ -213,34 +181,24 @@ export default class Lyrics extends Component {
 
                             {this.state.lyricsPOTM.map(post =>
                             
-                                <div className="content-data">
+                            <div className="content-data">
 
-                                    {/* note: dangerouslySetInnerHTML is safe here because HTML was previously sanitized by DOMPurify */}
-                                    
-                                    <div className="lyrics-detail" >
-                                        <div className="lyrics-song">
-                                            <h6>{post.song}</h6>
-                                        </div>
-                                        <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
+                                {/* note: dangerouslySetInnerHTML is safe here because HTML was previously sanitized by DOMPurify */}
+                                
+                                <div className="lyrics-detail" >
+                                    <div className="lyrics-song">
+                                        <h6>{post.song}</h6>
                                     </div>
-
-
-
+                                    <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
                                 </div>
+
+
+
+                            </div>
+
                             )} {/* potm */}
-
-
-
-                        
                         
                         </div> 
-                    
-
-
-
-
-
-
 
                 </div>
 
