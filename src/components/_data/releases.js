@@ -23,6 +23,7 @@ const releaseData = {
 
     studio: {
         tpc: {
+            id: 'tpc',
             cover: _coverTPC,
             title: {
                 short: "Total Progressive Collapse",
@@ -49,6 +50,7 @@ const releaseData = {
             }
         },
         stwof: {
+            id: 'stwof',
             cover: _coverSTWOF,
             title: {
                 short: "Set These Walls On Fire",
@@ -73,6 +75,7 @@ const releaseData = {
             }
         },
         potm: {
+            id: 'potm',
             cover: _coverPOTM,
             title: {
                 short: "Part Of The Movement (Bonus Tracks Version)",
@@ -97,6 +100,7 @@ const releaseData = {
             }
         },
         potm_v1: {
+            id: 'potm_v1',
             cover: _coverPOTM_v1,
             title: {
                 short: "Part Of The Movement (original)",
@@ -119,6 +123,7 @@ const releaseData = {
             }
         },
         bs: {
+            id: 'bs',
             cover: _coverBS,
             title: {
                 short: "Biotic Shift",
@@ -143,6 +148,7 @@ const releaseData = {
     },
     compilations: {
         md5: {
+            id: 'md5',
             cover: _coverMD5,
             title: {
                 short: "Matrix Downloaded 005",
@@ -160,6 +166,7 @@ const releaseData = {
             featured_song: '"Liar For Profit [arson]"'
         },
         md4: {
+            id: 'md4',
             cover: _coverMD4,
             title: {
                 short: "Matrix Downloaded 004",
@@ -178,6 +185,7 @@ const releaseData = {
             
         },
         ftb3: {
+            id: 'ftb3',
             cover: _coverFTB3,
             title: {
                 short: "Face The Beat 3",
@@ -195,6 +203,7 @@ const releaseData = {
             featured_song: '"Liar For Profit [arson]"'
         },
         ftb2: {
+            id: 'ftb2',
             cover: _coverFTB2,
             title: {
                 short: "Face The Beat 2",
@@ -212,6 +221,7 @@ const releaseData = {
             featured_song: '"Compatible With My Intoxication [radio edit]"'
         },
         eb7: {
+            id: 'eb7',
             cover: _coverEB7,
             title: {
                 short: "Endzeit Bunkertracks 7",
@@ -229,6 +239,7 @@ const releaseData = {
             featured_song: '"Power Play [assault]"'
         },
         sftm16: {
+            id: 'sftm16',
             cover: _coverSFTM16,
             title: {
                 short: "Sounds From The Matrix 16",
@@ -246,6 +257,7 @@ const releaseData = {
             featured_song: '"Compatible With My Intoxication [radio edit]"'
         },
         hic2: {
+            id: 'hic2',
             cover: _coverHIC2,
             title: {
                 short: "Hell, It's Christmas...Again",
@@ -263,6 +275,7 @@ const releaseData = {
             featured_song: '"White Christmas"'
         },
         hic1: {
+            id: 'hic1',
             cover: _coverHIC1,
             title: {
                 short: "Hell...It's Christmas",
@@ -282,6 +295,7 @@ const releaseData = {
     },
     remixesBy: {
         sod: {
+            id: 'sod',
             cover: _coverMD4,
             title: {
                 short: "Matrix Downloaded 004",
@@ -300,6 +314,7 @@ const releaseData = {
             original_artist: "Mondträume"
         },
         gtl: {
+            id: 'gtl',
             cover: _coverBC13_CK,
             title: {
                 short: "Cyberkraft",
@@ -320,6 +335,7 @@ const releaseData = {
     },
     remixesOf: {
         pressure: {
+            id: 'pressure',
             cover: _coverSTWOF,
             title: {
                 short: "Set These Walls On Fire",
@@ -338,6 +354,7 @@ const releaseData = {
             remix_artist: "Psy'Aviah"
         },
         ror: {
+            id: 'ror',
             cover: _coverSTWOF,
             title: {
                 short: "Set These Walls On Fire",
