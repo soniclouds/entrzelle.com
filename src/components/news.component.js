@@ -63,7 +63,8 @@ export default class News extends Component {
                 <div className="component-content-container--inner">
 
                     {this.state.posts.map(post =>
-                        <div className="news-content">
+
+                        <div key={post.id} className="news-content">
                         
                             <div className="content-title">
                                 <h1 dangerouslySetInnerHTML={{ __html: post.title}}></h1>

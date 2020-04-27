@@ -29,7 +29,7 @@ export default class Gallery extends Component {
                 <div className="component-content-container--inner">
                     <div className="gallery-photos">
                                             
-                        {galleryPhotos.map(({ id, src, alt, caption }) => <a id={id} href={src.full} data-lightbox={this.lightboxGalleryName} data-title={caption}><img src={src.thumb} title={caption} alt={alt} /> </a>)}
+                        {galleryPhotos.map(({ id, src, alt, caption }) => <a key={id} id={id} href={src.full} data-lightbox={this.lightboxGalleryName} data-title={caption}><img src={src.thumb} title={caption} alt={alt} /> </a>)}
                     
                     </div>
                 </div>

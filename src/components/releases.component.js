@@ -53,7 +53,7 @@ export default class Releases extends Component {
 
                             release[1].url ?
 
-                            (<div id={release[1].id} className='album-detail'>
+                            (<div key={release[1].id} id={release[1].id} className='album-detail'>
                                 <div className="album-cover">
                                     <a href={release[1].url} target="_blank" rel="noopener noreferrer">
                                         <img src={release[1].cover} alt={release[1].alt} />
@@ -85,7 +85,7 @@ export default class Releases extends Component {
                                 </div>
                             </div>)
                             :
-                            (<div id={release[1].id} className='album-detail'>
+                            (<div key={release[1].id} id={release[1].id} className='album-detail'>
                                 <div className="album-cover">
                                     <a href={release[1].url} target="_blank" rel="noopener noreferrer">
                                         <img src={release[1].cover} alt={release[1].alt} />
@@ -131,7 +131,7 @@ export default class Releases extends Component {
                                 
                             release[1]._shareUrl ?
                             
-                            (<div id={release[1].id} className="album-detail">
+                            (<div key={release[1].id} id={release[1].id} className="album-detail">
                                 <div className="album-cover">
                                     <a href={release[1].url} target="_blank" rel="noopener noreferrer">
                                         <img src={release[1].cover} alt={release[1].alt} />
@@ -153,7 +153,7 @@ export default class Releases extends Component {
 
                             </div>) 
                             : 
-                            (<div id={release[1].id} className="album-detail">
+                            (<div key={release[1].id} id={release[1].id} className="album-detail">
                                 <div className="album-cover">
                                     <a href={release[1].url} target="_blank" rel="noopener noreferrer">
                                         <img src={release[1].cover} alt={release[1].alt} />
@@ -194,7 +194,7 @@ export default class Releases extends Component {
                             
                             release[1]._shareUrl ?
 
-                            (<div id={release[1].id} className="album-detail">
+                            (<div key={release[1].id} id={release[1].id} className="album-detail">
                                 <div className="album-cover">
                                     <a href={release[1].url} target="_blank" rel="noopener noreferrer">
                                         <img src={release[1].cover} alt={release[1].alt} />
@@ -217,7 +217,7 @@ export default class Releases extends Component {
 
                             </div>)
                             :
-                            (<div id={release[1].id} className="album-detail">
+                            (<div key={release[1].id} id={release[1].id} className="album-detail">
                                 <div className="album-cover">
                                     <a href={release[1].url} target="_blank" rel="noopener noreferrer">
                                         <img src={release[1].cover} alt={release[1].alt} />
@@ -257,7 +257,7 @@ export default class Releases extends Component {
 
                             {this.state.remixesOf.map(release =>
 
-                            <div id={release[1].id} className="album-detail">
+                            <div key={release[1].id} id={release[1].id} className="album-detail">
                                 <div className="album-cover">
                                     <a href={release[1].url} target="_blank" rel="noopener noreferrer">
                                         <img src={release[1].cover} alt={release[1].alt} />

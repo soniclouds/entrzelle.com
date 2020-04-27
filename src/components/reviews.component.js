@@ -88,7 +88,7 @@ export default class Reviews extends Component {
 
                     {this.state.reviewsTPC.map(post =>
 
-                        <div className="content-data">
+                        <div key={post.id} className="content-data">
 
                             <div className="review-detail">
                                 <div className="">
@@ -126,7 +126,7 @@ export default class Reviews extends Component {
 
                     {this.state.reviewsPOTM.map(post =>
 
-                        <div className="content-data">
+                        <div key={post.id} className="content-data">
 
                             <div className="review-detail">
                                 <div className="">
@@ -164,7 +164,7 @@ export default class Reviews extends Component {
 
                     {this.state.reviewsSTWOF.map(post =>
 
-                        <div className="content-data">
+                        <div key={post.id} className="content-data">
 
                             <div className="review-detail">
                                 <div className="">

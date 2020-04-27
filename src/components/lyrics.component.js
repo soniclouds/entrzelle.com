@@ -91,7 +91,7 @@ export default class Lyrics extends Component {
 
                             {this.state.lyricsTPC.map(post =>
 
-                            <div className="content-data">
+                            <div key={post.id} className="content-data">
 
                                 {/* note: dangerouslySetInnerHTML is safe here because HTML was previously sanitized by DOMPurify */}
 
@@ -122,7 +122,7 @@ export default class Lyrics extends Component {
 
                             {this.state.lyricsSTWOF.map(post =>
 
-                            <div className="content-data">
+                            <div key={post.id} className="content-data">
 
                                 {/* note: dangerouslySetInnerHTML is safe here because HTML was previously sanitized by DOMPurify */}
 
@@ -182,7 +182,7 @@ export default class Lyrics extends Component {
 
                             {this.state.lyricsPOTM.map(post =>
                             
-                            <div className="content-data">
+                            <div key={post.id} className="content-data">
 
                                 {/* note: dangerouslySetInnerHTML is safe here because HTML was previously sanitized by DOMPurify */}
                                 
