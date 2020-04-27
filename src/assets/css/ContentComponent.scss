@@ -5,6 +5,14 @@
     background: rgba(255,255,255,.84);
     color: black;
     overflow: scroll;
+
+    .component-content-container--inner {
+        ._embed {
+            iframe {
+                width: 100%;
+            }
+        }
+    }
 }
 
 
