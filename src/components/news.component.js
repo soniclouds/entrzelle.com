@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import Strapi from 'strapi-sdk-javascript/build/main';
 import DOMPurify from 'dompurify';
-
 import { setContentContainerHeight } from '../assets/js/components/Content.js';
 
 import '../assets/css/ContentComponent.scss';
-
 import '../assets/css/news.scss';
 
 const strapi = new Strapi('http://localhost:1337');
@@ -19,11 +17,13 @@ export default class News extends Component {
         }
     }
 
-    async componentDidMount() {
-        
+    componentDidMount() {
+        this.handleNewsApiData();   
         setContentContainerHeight();
         window.addEventListener('resize', setContentContainerHeight);
+    }
 
+    async handleNewsApiData() {
         try {
             const newsPosts = await strapi.getEntries('news');
 
@@ -36,7 +36,7 @@ export default class News extends Component {
                 p.title = cleanTitle;
                 p.content = cleanContent;
 
-                // NOTE: trying to figure out media rendering... commenting out for now
+                // NOTE: trying to figure out media rendering... commenting out for now (leaving for reference)
                 // if (p.media[0]) {
                 //     let mediaUrl = "http://localhost:1337/uploads/" + p.media[0].hash + p.media[0].ext;
                 //     console.log('media found: ', mediaUrl);
@@ -46,17 +46,14 @@ export default class News extends Component {
                 // console.log('checking media url: ', p.media[0].url);
                 // }
             });
-            
-            this.setState({ posts: newsPosts.reverse() });           
 
-            console.log(this.state.posts);
+            this.setState({ posts: newsPosts.reverse() });
 
         }
-            catch (err) {
+        catch (err) {
             alert(err);
         }
     }
-
 
     render() {
         return (
@@ -83,18 +80,11 @@ export default class News extends Component {
                                 <div className="_media-upload">
                                     {/* <img src={post.media[0].url}/> */}
                                 </div>
-
                                 
                             </div>
                             
                         </div> // news content
                     )}
-
-                    
-
-                        
-                       
-
                         
                 </div>
 
