@@ -18,7 +18,6 @@ export default class Home extends Component {
         setContentContainerHeight();
         window.addEventListener('resize', setContentContainerHeight);
 
-        console.log(galleryPhotos);
     }
 
     renderCarouselImages() {

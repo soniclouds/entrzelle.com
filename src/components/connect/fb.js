@@ -3,8 +3,7 @@ import React, { Component } from 'react';
 export default class FB extends Component {
 
     embedFacebookTimeline = (d, s, id) => {
-        console.log('facebook timeline here');
-
+        
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
