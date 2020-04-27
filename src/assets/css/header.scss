@@ -108,7 +108,20 @@ nav#main-nav.desktop {
 @media screen and (max-width: 503px) {
 	nav#main-nav.desktop {
 		font-size: 0.8em;
+	}
+}
+@media screen and (max-width: 451px) {
+	nav#main-nav.desktop {
+		font-size: .7em;
 
-
+	}
+}
+@media screen and (max-width: 380px) {
+	nav#main-nav.desktop {
+		ul {
+			li {
+				margin: 0;
+			}
+		}
 	}
 }
