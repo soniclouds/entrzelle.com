@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import Strapi from 'strapi-sdk-javascript/build/main';
 import DOMPurify from 'dompurify';
-
 import releaseData from './_data/releases.js';
-
 import { setContentContainerHeight } from '../assets/js/components/Content.js';
 
 import '../assets/css/ContentComponent.scss';
-
 import '../assets/css/reviews.scss';
 
 const strapi = new Strapi('http://localhost:1337');
@@ -24,9 +21,12 @@ export default class Reviews extends Component {
     }
 
     async componentDidMount() {
+        this.handleApiData();
         setContentContainerHeight();
         window.addEventListener('resize', setContentContainerHeight);
+    }
 
+    async handleApiData() {
         try {
             // fetch reviews and sanitize content field
             const reviewsPosts = await strapi.getEntries('reviews');
@@ -37,10 +37,10 @@ export default class Reviews extends Component {
 
             });
             // then, parse reviews based on album
-            // NOTE: this should be refactored
+            // NOTE: this should be refactored at a later time
             const _reviewsTPC = [],
-                  _reviewsPOTM = [],
-                  _reviewsSTWOF = [];
+                _reviewsPOTM = [],
+                _reviewsSTWOF = [];
 
             for (var i = 0; i < reviewsPosts.length; i++) {
                 if (reviewsPosts[i].album === releaseData.studio.tpc.title.short) {
@@ -65,7 +65,6 @@ export default class Reviews extends Component {
             alert(err);
         }
     }
-
 
     render() {
         return (

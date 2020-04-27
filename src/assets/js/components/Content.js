@@ -6,5 +6,4 @@ function setContentContainerHeight() {
 
 }
 
-// export default setSideColumnHeight;
 export {setContentContainerHeight};
