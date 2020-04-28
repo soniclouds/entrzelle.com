@@ -8,10 +8,14 @@ function toggleConnectModal(e) {
         if (innerConnectContainer.style.height !== '0%') {
             innerConnectContainer.style.height = '0%';
             innerConnectContainer.style.visibility = 'hidden';
+            // outerConnectContainer.style.opacity = '0';
+            setTimeout(function () { outerConnectContainer.style.opacity = '0'; }, 250);
             setTimeout(function () { outerConnectContainer.style.zIndex = '-1'; }, 500);
         } else {
             innerConnectContainer.style.height = '100%';
             innerConnectContainer.style.visibility = 'visible';
+            outerConnectContainer.style.opacity = '0.93';
+            // setTimeout(function () { outerConnectContainer.style.opacity = '0.93'; }, 500);
             outerConnectContainer.style.zIndex = '1';
         }
     } else {
@@ -19,7 +23,8 @@ function toggleConnectModal(e) {
         if (innerConnectContainer.style.height !== '0%') {
             innerConnectContainer.style.height = '0%';
             innerConnectContainer.style.visibility = 'hidden';
-            setTimeout(function () { outerConnectContainer.style.zIndex = '-1'; }, 500);
+            outerConnectContainer.style.opacity = '0';
+            setTimeout(function () { outerConnectContainer.style.zIndex = '-1'; }, 750);
         }
     }
 
