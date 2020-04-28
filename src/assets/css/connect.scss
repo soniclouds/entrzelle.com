@@ -249,11 +249,15 @@
 @media screen and (max-width: 575px) {
     .connect-cta-container, .component-wrapper--fb {
         display: block;
+        position: relative;
     }
     .connect-cta-container {
+        height: fit-content;
         .--inner {
             right: 0;
             width: 100%;
+            height: fit-content;
+            position: relative;
 
             div.row {
                 width: 100%;
@@ -299,5 +303,9 @@
                 }
             }
         }
+    }
+    .component-wrapper--fb {
+        width: 100%;
+        right: unset;
     }
 }
