@@ -5,7 +5,16 @@ import { Link } from 'react-router-dom';
 import { toggleConnectModal } from '../assets/js/components/connect.js';
 
 export default class Navigation extends Component {
- 
+
+    componentDidMount(){
+        Array.from(document.getElementsByClassName('nav-link')).map(a => a.addEventListener('click', this.indicateSelectedLink));
+    }
+
+    indicateSelectedLink(e) {
+        Array.from(document.getElementsByClassName('nav-link')).map(a => a.style.textDecoration = 'none');
+        e.target.style.textDecoration = 'underline';
+    }
+
     render() {
         return (
             <div className="nav-bar">
@@ -19,27 +28,27 @@ export default class Navigation extends Component {
                         <ul className="">
                             <li>
                                 <div>
-                                    <Link to="/news" onClick={toggleConnectModal}>News</Link>
+                                    <Link to="/news" className='nav-link' onClick={toggleConnectModal}>News</Link>
                                 </div>
                             </li>
                             <li>
                                 <div>
-                                    <Link to="/releases" onClick={toggleConnectModal}>Releases</Link>
+                                    <Link to="/releases" className='nav-link' onClick={toggleConnectModal}>Releases</Link>
                                 </div>
                             </li>
                             <li>
                                 <div>
-                                    <Link to="/gallery" onClick={toggleConnectModal}>Gallery</Link>
+                                    <Link to="/gallery" className='nav-link' onClick={toggleConnectModal}>Gallery</Link>
                                 </div>
                             </li>
                             <li>
                                 <div>
-                                    <Link to="/reviews" onClick={toggleConnectModal}>Reviews</Link>
+                                    <Link to="/reviews" className='nav-link' onClick={toggleConnectModal}>Reviews</Link>
                                 </div>
                             </li>
                             <li>
                                 <div>
-                                    <Link to="/lyrics" onClick={toggleConnectModal}>Lyrics</Link>
+                                    <Link to="/lyrics" className='nav-link' onClick={toggleConnectModal}>Lyrics</Link>
                                 </div>
                             </li>
                             <li>

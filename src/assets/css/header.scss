@@ -59,6 +59,12 @@ nav#main-nav.desktop {
 				// font-family: Mukta, sans-serif;
 				z-index: 20;
 			}
+			a.nav-link:hover {
+				text-decoration: underline !important;
+			}
+			a.connect-toggle:hover {
+				color: white !important;
+			}
 		}
 	}
 }
