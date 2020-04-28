@@ -23,7 +23,8 @@ iframe.bandcamp-player {
     height: 100vh;
     top: 0;
     z-index: 10;
-
+    overflow: scroll;
+    opacity: .99;
     .outer {
         // display: inline-block;
         display: table-cell;
@@ -47,7 +48,9 @@ iframe.bandcamp-player {
 
 .media-toggle-header {
     display: none; // adjust for RWD
-    position: absolute;
+    // position: absolute; // problematic when sidebar extends beyond viewport
+    position: fixed;
+    z-index: 30;
     top: 0; // adjust for RWD
 
     button {
@@ -174,8 +177,10 @@ div#audio-feed-column:after {
 @media screen and (max-width: 1024px) { // iPad
 
     .media-sidebar {
-        top: 10vh;
-        z-index: 10;
+        // top: 14vh; // problematic on portrait screens (vertical mobile)
+        top: 102px; 
+        // height: 80vh;
+        z-index: 20;
     }
     .media-toggle-column {
         // padding-top: 3vh;
@@ -198,12 +203,20 @@ div#audio-feed-column:after {
 }
 
 @media screen and (max-width: 823px) {
+    .media-sidebar {
+        // top: 11vh;
+        top: 73px;
+    }
     .media-toggle-header {
         top: 10px;
     }
 }
 
 @media screen and (max-width: 667px) {
+    .media-sidebar {
+        // top: 8vh;
+        top: 52px;
+    }
     .media-toggle-header { 
         top: 0;
         font-size: 0.9em;

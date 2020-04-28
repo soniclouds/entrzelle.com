@@ -49,17 +49,33 @@ export default class Media extends Component {
 
         // HEADER TOGGLE =============================================
 
+        // on phones (<= 414) toggle off other sidebar so only 1 is open at a time
+        if (window.innerWidth <= '414') {
+            if (targetId === 'video-toggle-btn--header') {
+                if (audioColumn.style.display !== 'none') {
+                    audioColumn.style.display = 'none';
+                    audioSidebar.style.width = 'unset';
+                }
+            }
+            if (targetId === 'audio-toggle-btn--header') {
+                if (videoColumn.style.display !== 'none') {
+                    videoColumn.style.display = 'none';
+                    videoSidebar.style.width = 'unset';
+                }
+            } 
+        }
+
         // video
         if (targetId === 'video-toggle-btn--header') {
             if (videoColumn.style.display === '') {
                 videoColumn.style.display = 'table-cell';
-                videoSidebar.style.width = '50%';
+                videoSidebar.style.width = 'fit-content';
             } else if (videoColumn.style.display !== 'none') {
                 videoColumn.style.display = 'none';
                 videoSidebar.style.width = 'unset';
             } else {
                 videoColumn.style.display = 'table-cell';
-                videoSidebar.style.width = '50%';
+                videoSidebar.style.width = 'fit-content';
             }
         }
 
@@ -67,12 +83,17 @@ export default class Media extends Component {
         if (targetId === 'audio-toggle-btn--header') {
             if (audioColumn.style.display === '') {
                 audioColumn.style.display = 'table-cell';
+                // address RWD width for phones (<= 414px)
+                window.innerWidth <= '414' ? 
+                audioSidebar.style.width = '100%' :
                 audioSidebar.style.width = '50%';
             } else if (audioColumn.style.display !== 'none') {
                 audioColumn.style.display = 'none';
                 audioSidebar.style.width = 'unset';
             } else {
                 audioColumn.style.display = 'table-cell';
+                window.innerWidth <= '414' ? 
+                audioSidebar.style.width = '100%' :
                 audioSidebar.style.width = '50%';
             }
         }    
