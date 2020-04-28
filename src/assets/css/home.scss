@@ -45,11 +45,19 @@
                             color: white;
                         }
                     }
+                    .label-info-container {
+                        display: none !important;
+                    }
                     div.cta-label-container {
                         display: none;
                     }
                     .email-info-container {
                         display: none !important;
+                    }
+                    .cta-links-container {
+                        a:before {
+                            font-size: 25px;
+                        }
                     }
                     div.cta-links-container, div.cta-email-container {
                         display: inline !important;
@@ -131,3 +139,59 @@
 
 }
 
+
+@media screen and (max-width: 503px) {
+    #home-component {
+        .connect-cta-container {
+            .--inner {
+                .cta-links-container, .cta-email-container {
+                    a:before {
+                        font-size: 20px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 451px) {
+    #home-component {
+        .connect-cta-container {
+            .--inner {
+                .cta-links-container, .cta-email-container {
+                    a {
+                        padding: 0 4% !important;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 380px) {
+    #home-component {
+        .connect-cta-container {
+            .--inner {
+                .cta-links-container, .cta-email-container {
+                    a {
+                        padding: 0 3% !important;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 240px) {
+    #home-component {
+        .connect-cta-container {
+            .--inner {
+                .cta-links-container, .cta-email-container {
+                    a {
+                        padding: 0 2% !important;
+                    }
+                    a:before {
+                        font-size: 15px !important;
+                    }
+                }
+            }
+        }
+    }
+}
