@@ -26,13 +26,6 @@
     }
 }
 
-@media screen and (max-width: 1280px) {
-    #connect-component-container .--outer {
-        width: 58%;
-    }
-}
-
-
 
 .connect-cta-container, .component-wrapper--fb {
     display: inline-block;
@@ -66,7 +59,8 @@
         /* height: 40px; */
         // top: 40%;
         // width: 35%;
-        width: 45%;
+        // width: 45%;
+        width: 25%;
         overflow-y: scroll;
         box-sizing: content-box;
 
@@ -233,10 +227,30 @@
     // css here
 }
 
-
+@media screen and (max-width: 1280px) {
+    #connect-component-container .--outer {
+        // width: 58%;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .connect-cta-container {
+        .--inner {
+            width: 30%;
+        }
+    }
+}
+@media screen and (max-width: 902px) {
+    .connect-cta-container {
+        .--inner {
+            width: 35%;
+        }
+    }
+}
 @media screen and (max-width: 796px) {
     .connect-cta-container {
         .--inner {
+            width: 45%;
             .cta-links-header {
                 span {
                     font-size: 0.7em;
@@ -246,7 +260,15 @@
         }
     }
 }
+@media screen and (max-width: 736px) {
+    #connect-component-container .--outer {
+        width: 100%;
+    }
+}
 @media screen and (max-width: 575px) {
+    #connect-component-container .--outer {
+        width: 58%;
+    }
     .connect-cta-container, .component-wrapper--fb {
         display: block;
         position: relative;
@@ -307,5 +329,40 @@
     .component-wrapper--fb {
         width: 100%;
         right: unset;
+    }
+}
+
+// addressing label header text positioning
+@media screen and (max-width: 515px) {
+    .connect-cta-container {
+        .--inner {
+            .cta-links-container {
+                a:before {
+                    font-size: 20px;
+                }
+            }
+            .cta-links-header {
+                span {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 340px) {
+    #connect-component-container .--outer {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 308px) {
+    .connect-cta-container {
+        .--inner {
+            
+            .cta-links-header {
+                span {
+                    // font-size: 0.6em;
+                }
+            }
+        }
     }
 }
