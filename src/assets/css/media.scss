@@ -22,6 +22,7 @@ iframe.bandcamp-player {
     width: 23%;
     height: 100vh;
     top: 0;
+    z-index: 10;
 
     .outer {
         // display: inline-block;
@@ -169,6 +170,7 @@ div#audio-feed-column:after {
 // - resize height (top) to below header
 // - move toggle buttons to header
 // - resize width to at least 50vw
+
 @media screen and (max-width: 1024px) { // iPad
 
     .media-sidebar {
@@ -190,6 +192,22 @@ div#audio-feed-column:after {
 
     .media-toggle-header {
         display: block;
+        top: 25px;
     }
 
 }
+
+@media screen and (max-width: 823px) {
+    .media-toggle-header {
+        top: 10px;
+    }
+}
+
+@media screen and (max-width: 667px) {
+    .media-toggle-header { 
+        top: 0;
+        font-size: 0.9em;
+    }
+}
+
+
