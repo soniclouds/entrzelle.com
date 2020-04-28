@@ -10,9 +10,6 @@
         overflow: hidden;
         position: relative;
         height: 100%;
-        // placeholder until slideshow/carousel is implemented
-        // background: url('../img/photos/gallery/full/promo_band_3.jpg') no-repeat center;
-        // background-size: cover;
     }
     .component-wrapper--cta {
         // display: inline-block;
@@ -118,14 +115,6 @@
             object-fit: cover;
         }
 
-        // .carousel-control-prev span, .carousel-control-next span {
-        //     height: 100vh;
-        //     position: absolute;
-        //     top: 0;
-        //     // top: 25vh;
-        //     // top: 50%;
-        // }
-
         .carousel-nav {
             // height: 100vh;
             position: absolute;
@@ -135,8 +124,6 @@
             // top: 50%;
         }
     }
-
-
 }
 
 

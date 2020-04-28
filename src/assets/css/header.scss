@@ -1,4 +1,3 @@
-
 div.spacer--header {
 	padding: 65px 0;
 }
@@ -9,27 +8,8 @@ div.spacer--header {
 }
 
 div.header {
-
-	// cursor: pointer;
-
-	// background-image: url('../img/header__logo_text_white.jpg');
-	// background: url('../img/textured_logo_gold_text__black_1.jpg') no-repeat center;
-
-	// background: url('../img/banner_logo_text__1.jpg') no-repeat center;
-	
-	// background: url('../img/textured_banner_logo_gold_text__1.jpg') no-repeat center;
-
-	// background: url('../img/textured_logo_silver_text__black_1.jpg') no-repeat center;
-	
-	// background-size: cover !important;
-    // background-position-y: -122px;
-    // background-image: url('../img/background_1.jpg');
     height: 100px;
-    // width: 100vw;
-    // position: fixed;
 	z-index: -10;
-	// background-size: 300px 100px;
-	// background-size: cover;
 }
 
 .header-logo {
@@ -49,7 +29,6 @@ nav#main-nav.desktop {
 	font-size: 0.94em;
     border-top: 1px solid #444444;
 
-	// font-family: sans-serif;
 	ul {
 		margin: 0;
 		padding: 0;
@@ -65,7 +44,6 @@ nav#main-nav.desktop {
 			// margin: 0 5px;
 			margin: 0 0.1em;
 
-			
 			a {
 				display: inline-block;
 				height: 100%;
@@ -83,8 +61,6 @@ nav#main-nav.desktop {
 			}
 		}
 	}
-
-
 }
 
 @media screen and (max-width: 823px) { // Pixel 2 XL
@@ -142,10 +118,7 @@ nav#main-nav.desktop {
 	}
 }
 @media screen and (max-width: 562px) {
-	nav#main-nav.desktop {
-		// font-size: 0.84em;
-		
-	}
+
 }
 @media screen and (max-width: 503px) {
 	nav#main-nav.desktop {

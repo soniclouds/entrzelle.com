@@ -1,8 +1,6 @@
 .yt-embed {
-	
 	// width: 94%;
 	margin: 0 auto;
-
 	iframe {
         width: 100%;
         height: 33vh;
@@ -140,35 +138,6 @@ div.audio-feed {
 }
 
 
-/*
-.column-feed:after {
-    color: white;
-    position: absolute;
-    top: 50%;
-    cursor: pointer;
-    border: 1px solid silver;
-    padding: 5px 10px;
-
-    // temp: testing
-    visibility: hidden;
-}
-
-.column-feed.video-feed:after {
-    content: 'video';
-    right: -48px;
-    transform: rotate(-90deg);
-}
-
-div#audio-feed-column:after {
-    content: 'audio';
-    left: -48px;
-    transform: rotate(90deg);
-}
-
-*/
-
-
-
 // media sidebar RWD
 // - resize height (top) to below header
 // - move toggle buttons to header
@@ -187,12 +156,6 @@ div#audio-feed-column:after {
         // position: fixed;
         display: none !important;
         
-    }
-    .media-toggle-column.video {
-        // left: 0;
-    }
-    .media-toggle-column.audio {
-        // right: 0;
     }
 
     .media-toggle-header {
@@ -222,5 +185,3 @@ div#audio-feed-column:after {
         font-size: 0.9em;
     }
 }
-
-

@@ -9,7 +9,6 @@
     transition: 0.2s opacity;
     // transition: 1s opacity ease-out;
     
-
     #connect--outer {
         transition: 0.5s height, 0.5s visibility;
         position: relative;
@@ -25,7 +24,6 @@
         // opacity: .93;
     }
 }
-
 
 .connect-cta-container, .component-wrapper--fb {
     display: inline-block;
@@ -81,7 +79,6 @@
 
         }
 
-
         div.row {
             max-height: 100%;
 
@@ -89,7 +86,6 @@
                 height: fit-content;
             }
         }
-
 
         .cta-links-header {
 
@@ -131,17 +127,9 @@
                     padding-top: 5px;
                     // width: 0px;
                     // overflow: hidden;
-                    
                 }
-                
             }
 
-            /* a:hover span {
-                display: inline;
-                // visibility: visible;
-                // width: unset;
-                // transition: 0.5s width;
-            } */
             a:before {
                 font-family: fontello;
                 font-size: 25px;
@@ -202,9 +190,6 @@
             }
             
         }
-
-
-
     }
 }
 
@@ -256,7 +241,6 @@
                     font-size: 0.7em;
                 }
             }
-            
         }
     }
 }
