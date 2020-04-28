@@ -220,3 +220,66 @@
 .fb-embed {
     // css here
 }
+
+
+@media screen and (max-width: 796px) {
+    .connect-cta-container {
+        .--inner {
+            .cta-links-header {
+                span {
+                    font-size: 0.7em;
+                }
+            }
+            
+        }
+    }
+}
+@media screen and (max-width: 575px) {
+    .connect-cta-container, .component-wrapper--fb {
+        display: block;
+    }
+    .connect-cta-container {
+        .--inner {
+            right: 0;
+            width: 100%;
+
+            div.row {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            // .cta-links-header:first-child {
+            .cta-links-header {
+                span {
+                    width: 50%;
+                }
+            }
+            .cta-links-header.email-header, .cta-links-header.label-header {
+                display: inline;
+            }
+            .cta-email-container .--email-directly, .cta-label-container .--label {
+                // display: inline;
+                a {
+                    display: inline-block;
+                    // width: 50%;
+                    width: 100%;
+                }
+            }
+            .cta-email-container.row.email-content, .cta-label-container.row {
+                width: 50% !important;
+                margin-left: 0 !important;
+                text-align: center;
+                // display: inline-block;
+            }
+            .--social-links, .--music-links {
+                width: 50%;
+                text-align: center;
+                padding: 0;
+                a {
+                    display: unset;
+                    padding: 5%;
+                }
+            }
+        }
+    }
+}

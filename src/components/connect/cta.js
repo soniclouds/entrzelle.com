@@ -34,23 +34,27 @@ export default class CTA extends Component {
                                     */}
                         </div>
 
-                        <div className='cta-links-header row'>
-                            <span className='col-sm-12'>email me</span>
-                        </div>
+                        <div className="email-info-container">
+                            <div className='cta-links-header row email-header'>
+                                <span className='col-sm-12'>email me</span>
+                            </div>
 
-                        <div className="cta-email-container row">
-                            <div className="--email-directly col-sm-12">
-                                <a className='fa-email' href="mailto:entrzelle@gmail.com"><span style={{ display: 'none' }}>email me</span></a>
+                            <div className="cta-email-container row email-content">
+                                <div className="--email-directly col-sm-12">
+                                    <a className='fa-email' href="mailto:entrzelle@gmail.com"><span style={{ display: 'none' }}>email me</span></a>
+                                </div>
                             </div>
                         </div>
+                        <div className="label-info-container">
 
-                        <div className='cta-links-header row'>
-                            <span className='col-sm-12'>label info</span>
-                        </div>
+                            <div className='cta-links-header row label-header'>
+                                <span className='col-sm-12'>label info</span>
+                            </div>
 
-                        <div className="cta-label-container row">
-                            <div className="--label col-sm-12">
-                                <a target='_blank' rel='noopener noreferrer' className='fa-label' href="https://alfa-matrix-store.com/"><span style={{ display: 'none' }}>label info</span></a>
+                            <div className="cta-label-container row label-content">
+                                <div className="--label col-sm-12">
+                                    <a target='_blank' rel='noopener noreferrer' className='fa-label' href="https://alfa-matrix-store.com/"><span style={{ display: 'none' }}>label info</span></a>
+                                </div>
                             </div>
                         </div>
                     </div>
