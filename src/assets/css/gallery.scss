@@ -10,11 +10,28 @@
         // width: 125px;
         // height: 125px;
         width: 24%;
+        
     }
 
     img:hover {
         filter: grayscale(100%);
         transform: scale(1.1);
+    }
+
+    @media screen and (max-width: 736px) {
+        img {
+            width: 32%;
+        }       
+    }
+    @media screen and (max-width: 414px) {
+        img {
+            width: 48%;
+        }
+    }
+    @media screen and (max-width: 180px) {
+        img {
+            width: 100%;
+        }
     }
 
 }
