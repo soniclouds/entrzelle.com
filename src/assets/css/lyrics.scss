@@ -139,7 +139,22 @@
     ._embed {
         text-align: center;
     }
-}
 
-
+    // dev note: JUST realized that I can place media queries inside of a css selector (at least with sass)
+    @media screen and (max-width: 414px) {
+        .content-title {
+            div {
+                display: block;
+                float: unset;
+                position: unset;
+                font-size: .9em;
+                h6 {
+                    margin-bottom: 5px;
+                }
+                
+            }
+        }
+    
+    }
+} // / .lyrics-content
 
