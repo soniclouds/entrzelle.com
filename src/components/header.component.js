@@ -7,7 +7,14 @@ import { toggleConnectModal } from '../assets/js/components/connect.js';
 import '../assets/css/main.scss';
 import '../assets/css/header.scss';
 
+import { indicateSelectedLink } from '../assets/js/components/navigation.js';
+
+
 export default class Header extends Component {
+
+    componentDidMount() {
+        Array.from(document.getElementsByClassName('header-logo')).map(h => h.addEventListener('click', indicateSelectedLink));
+    }
 
     render() {
         return (

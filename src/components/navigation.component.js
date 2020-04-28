@@ -3,16 +3,12 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
  
 import { toggleConnectModal } from '../assets/js/components/connect.js';
+import { indicateSelectedLink } from '../assets/js/components/navigation.js';
 
 export default class Navigation extends Component {
 
     componentDidMount(){
-        Array.from(document.getElementsByClassName('nav-link')).map(a => a.addEventListener('click', this.indicateSelectedLink));
-    }
-
-    indicateSelectedLink(e) {
-        Array.from(document.getElementsByClassName('nav-link')).map(a => a.style.textDecoration = 'none');
-        e.target.style.textDecoration = 'underline';
+        Array.from(document.getElementsByClassName('nav-link')).map(a => a.addEventListener('click', indicateSelectedLink));
     }
 
     render() {
