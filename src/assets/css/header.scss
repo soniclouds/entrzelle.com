@@ -114,7 +114,16 @@ nav#main-nav.desktop {
 			margin-top: -25px;
 	
 		}
-		
+	}
+	nav#main-nav.desktop {
+		font-size: 0.85em;
+		ul {
+			li {
+				a {
+					line-height: 30px;
+				}
+			}
+		}
 	}
 
 }
@@ -134,7 +143,7 @@ nav#main-nav.desktop {
 }
 @media screen and (max-width: 562px) {
 	nav#main-nav.desktop {
-		font-size: 0.84em;
+		// font-size: 0.84em;
 		
 	}
 }
@@ -158,9 +167,32 @@ nav#main-nav.desktop {
 		}
 	}
 }
-@media screen and (max-width: 320px) { //iPhone 5/SE
+@media screen and (max-width: 338px) { //iPhone 5/SE
 	nav#main-nav.desktop {
 		font-size: .6em;
-
+	}
+}
+@media screen and (max-width: 290px) { //iPhone 5/SE
+	nav#main-nav.desktop {
+		font-size: .3em;
+		ul {
+			li {
+				a {
+					padding: 0 0.4em;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 240px) {
+	nav#main-nav.desktop {
+		ul {
+			li {
+				margin: 0 3em;
+				a {
+					line-height: 20px;
+				}
+			}
+		}
 	}
 }
