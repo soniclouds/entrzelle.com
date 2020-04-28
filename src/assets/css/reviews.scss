@@ -136,107 +136,99 @@
 // }
 
 @media screen and (max-width: 626px) {
-    .album-detail {
-        height: fit-content !important;
-        .album-cover {
-            height: 125px !important;
-        }
-    }
-    .album-cta {
-        float: unset !important;
-        display: block !important;
-        .cta-buttons {
-            a {
-                display: inline !important;
-                margin: 2px !important;
-            }
-        }
-    }   
+
 }
 @media screen and (max-width: 575px) {
-    .album-detail {
-        .album-cover {
-            height: 100px !important;
-        }
-        p.album-label {
-            margin-bottom: 5px;
-        }
-        br {
-            display: none;
-        }
-    }
+
 }
 @media screen and (max-width: 515px) {
-    .album-detail {
-        .album-cover {
-            // height: 60px !important;
+    .reviews-content {
+        h1, h2 {
+            font-size: .9em !important;
+            font-weight: bold;
         }
-        // p.additional-credits {
-        //     // font-size: .7em;
-        //     width: 250px;
-        // }
-        p {
-            max-width: 275px;
+        .content-title {
+            p {
+                font-size: .7em !important;
+                margin-bottom: 0;
+            }
         }
-
     }
 }
 @media screen and (max-width: 414px) { // iPhone
-    .album-detail {
-        p {
-            max-width: 200px;
+    .reviews-content {
+        h1 {
+            margin-bottom: 3px;
         }
-        p.album-title, p.album-label {
-            // font-size: .7em;
+        .content-title {
+            text-align: center;
+            img {
+                display: block;
+                margin: 0 auto;
+                width: 100px;
+                margin-bottom: 5px;
+            }
         }
-        p.album-title {
-            font-weight: bold;
+        .content-data {
+            .review-publication, .review-date, .review-link {
+                // text-align: center;
+            }
+            .review-date {
+                float: left;
+            }
+            .review-link {
+                float: right;
+            }
+            .review-content {
+                clear: both;
+                padding-top: 1em;
+            }
+            
         }
-
     }
 }
 @media screen and (max-width: 340px) {
-    .album-detail {
-        p.additional-credits {
-            font-size: .7em;
-            // width: 250px;
-        }
-        .album-cover {
-            height: 75px !important;
-        }
-    }
+ 
 }
 @media screen and (max-width: 308px) {
-    .album-detail {
-        p {
-            max-width: 150px;
-        }
-        p {
-            font-size: .7em !important;
-            // width: 250px;
-        }
-        .album-cover {
-            height: 75px !important;
-        }
-    }
+
 }
 @media screen and (max-width: 260px) {
-
-    .album-detail {
-        text-align: center;
-        .album-cover {
-            margin-bottom: 5px;
-        }
-        p {
-            // font-size: 0.8em !important;
-            max-width: 100%;
-        }
-        // p.additional-credits {
-        //     font-size: .7em;
-        //     // width: 250px;
+.reviews-content {
+        // h1 {
+        //     margin-bottom: 3px;
         // }
-        // .album-cover {
-        //     height: 75px !important;
+        // .content-title {
+        //     text-align: center;
+        //     img {
+        //         display: block;
+        //         margin: 0 auto;
+        //         width: 100px;
+        //         margin-bottom: 5px;
+        //     }
         // }
+        .content-data {
+            h2 {
+                font-size: 0.8em !important;
+            }
+            .review-publication, .review-date, .review-link {
+                text-align: center;
+            }
+            .review-date {
+                float: unset;
+                font-size: 0.7em !important;
+            }
+            .review-link {
+                float: unset;
+                a {
+                    font-size: 0.7rem !important;
+                }
+            }
+            .review-content {
+                // clear: both;
+                padding-top: unset;
+            }
+            
+        }
     }
 }

@@ -78,3 +78,108 @@
 
 }
 
+@media screen and (max-width: 626px) {
+    .album-detail {
+        height: fit-content !important;
+        .album-cover {
+            height: 125px !important;
+        }
+    }
+    .album-cta {
+        float: unset !important;
+        display: block !important;
+        .cta-buttons {
+            a {
+                display: inline !important;
+                margin: 2px !important;
+            }
+        }
+    }   
+}
+@media screen and (max-width: 575px) {
+    .album-detail {
+        .album-cover {
+            height: 100px !important;
+        }
+        p.album-label {
+            margin-bottom: 5px;
+        }
+        br {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 515px) {
+    .album-detail {
+        .album-cover {
+            // height: 60px !important;
+        }
+        // p.additional-credits {
+        //     // font-size: .7em;
+        //     width: 250px;
+        // }
+        p {
+            max-width: 275px;
+        }
+
+    }
+}
+@media screen and (max-width: 414px) { // iPhone
+    .album-detail {
+        p {
+            max-width: 200px;
+        }
+        p.album-title, p.album-label {
+            // font-size: .7em;
+        }
+        p.album-title {
+            font-weight: bold;
+        }
+
+    }
+}
+@media screen and (max-width: 340px) {
+    .album-detail {
+        p.additional-credits {
+            font-size: .7em;
+            // width: 250px;
+        }
+        .album-cover {
+            height: 75px !important;
+        }
+    }
+}
+@media screen and (max-width: 308px) {
+    .album-detail {
+        p {
+            max-width: 150px;
+        }
+        p {
+            font-size: .7em !important;
+            // width: 250px;
+        }
+        .album-cover {
+            height: 75px !important;
+        }
+    }
+}
+@media screen and (max-width: 260px) {
+
+    .album-detail {
+        text-align: center;
+        .album-cover {
+            margin-bottom: 5px;
+        }
+        p {
+            // font-size: 0.8em !important;
+            max-width: 100%;
+        }
+        // p.additional-credits {
+        //     font-size: .7em;
+        //     // width: 250px;
+        // }
+        // .album-cover {
+        //     height: 75px !important;
+        // }
+    }
+}
