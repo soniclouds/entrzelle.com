@@ -74,7 +74,19 @@
             background: white;
             // padding: 10px 0;
             padding: 0 0 5%;
+
+            .email-info-container, .label-info-container {
+                display: inline;
+                // display: inline-block;
+                // width: 50%;
+                // text-align: center;
+            }
+            .alt-header-link {
+                display: none;
+            }
+
         }
+
 
         div.row {
             max-height: 100%;
@@ -254,6 +266,12 @@
                     width: 50%;
                 }
             }
+            .email-info-container, .label-info-container {
+                // display: inline;
+                display: inline-block !important;
+                width: 50%;
+                text-align: center;
+            }
             .cta-links-header.email-header, .cta-links-header.label-header {
                 display: inline;
             }
@@ -266,8 +284,8 @@
                 }
             }
             .cta-email-container.row.email-content, .cta-label-container.row {
-                width: 50% !important;
-                margin-left: 0 !important;
+                // width: 50% !important;
+                // margin-left: 0 !important;
                 text-align: center;
                 // display: inline-block;
             }

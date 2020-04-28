@@ -34,6 +34,12 @@ export default class CTA extends Component {
                                     */}
                         </div>
 
+                        <div className="cta-email-container alt-header-link row email-content">
+                            <div className="--email-directly col-sm-12">
+                                <a className='fa-email' href="mailto:entrzelle@gmail.com"><span style={{ display: 'none' }}>email me</span></a>
+                            </div>
+                        </div>
+
                         <div className="email-info-container">
                             <div className='cta-links-header row email-header'>
                                 <span className='col-sm-12'>email me</span>
