@@ -1,6 +1,6 @@
 {
-  "host": "development.entrzelle.com",
-  "port": "${process.env.PORT || 1337}",
+  "host": "64.225.40.59",
+  "port": 1337,
   "production": true,
   "proxy": {
     "enabled": false
