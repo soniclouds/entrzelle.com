@@ -13,6 +13,9 @@ const   app     = express(),
 app.use(cors());
 app.use(express.json());
 
+// deployment
+app.use(express.static(`${__dirname}/../build`));
+
 // DATABASE
 const uri = process.env.ATLAS_URI;
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
