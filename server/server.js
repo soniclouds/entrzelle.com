@@ -1,7 +1,7 @@
 // DEPENDENCIES
 const   express     = require('express'),
-        cors        = require('cors'),
-        mongoose    = require('mongoose');
+        cors        = require('cors');
+        // mongoose    = require('mongoose');
 
 require('dotenv').config();
 
