@@ -32,6 +32,11 @@ connection.once('open', () => {
 // app.use('/exercises', exerciseRouter);
 // app.use('/users', userRouter);
 
+// deployment
+const path = require('path');
+app.get('*', (req, res) => { res.sendFile(path.join(__dirname, '../build/index.html')); });
+
+
 
 // SERVER START
 app.listen(port, () => {
