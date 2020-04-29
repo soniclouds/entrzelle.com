@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { setContentContainerHeight } from '../assets/js/components/Content.js';
+import { setContentContainerHeight, setPageTitle } from '../assets/js/components/Content.js';
 import releaseData from './_data/releases.js';
 
 import '../assets/css/ContentComponent.scss';
@@ -29,6 +29,8 @@ export default class Releases extends Component {
 
     componentDidMount() {
 
+        setPageTitle('Releases');
+        
         setContentContainerHeight();
         window.addEventListener('resize', setContentContainerHeight);
 

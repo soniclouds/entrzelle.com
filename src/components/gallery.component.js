@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { setContentContainerHeight } from '../assets/js/components/Content.js';
+import { setContentContainerHeight, setPageTitle } from '../assets/js/components/Content.js';
 
 import 'lightbox2/dist/css/lightbox.min.css';
 import 'lightbox2/dist/js/lightbox-plus-jquery.min.js';
@@ -14,6 +14,9 @@ import galleryPhotos from './_data/gallery/images';
 export default class Gallery extends Component {
 
     componentDidMount() {
+
+        setPageTitle('Gallery');
+
         lightbox.option({
             'showImageNumberLabel': false,
         })

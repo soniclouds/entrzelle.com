@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import CTA from './connect/cta.js';
-import { setContentContainerHeight} from '../assets/js/components/Content.js';
+import { setContentContainerHeight, setPageTitle } from '../assets/js/components/Content.js';
 import galleryPhotos from './_data/gallery/images.js';
 
 import '../assets/css/ContentComponent.scss';
@@ -12,6 +12,8 @@ import '../assets/css/home.scss';
 export default class Home extends Component {
 
     componentDidMount() {
+
+        setPageTitle('Home');
 
         this.renderCarouselImages();
 

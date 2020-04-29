@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Strapi from 'strapi-sdk-javascript/build/main';
 import DOMPurify from 'dompurify';
 
-import { setContentContainerHeight } from '../assets/js/components/Content.js';
+import { setContentContainerHeight, setPageTitle } from '../assets/js/components/Content.js';
 import releaseData from './_data/releases.js';
 
 import '../assets/css/ContentComponent.scss';
@@ -22,6 +22,9 @@ export default class Lyrics extends Component {
     }
 
     componentDidMount() {
+
+        setPageTitle('Lyrics');
+
         this.handleLyricsApiData();
         setContentContainerHeight();
         window.addEventListener('resize', setContentContainerHeight);

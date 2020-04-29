@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Strapi from 'strapi-sdk-javascript/build/main';
 import DOMPurify from 'dompurify';
 
-import { setContentContainerHeight } from '../assets/js/components/Content.js';
+import { setContentContainerHeight, setPageTitle } from '../assets/js/components/Content.js';
 
 import '../assets/css/ContentComponent.scss';
 import '../assets/css/news.scss';
@@ -19,6 +19,9 @@ export default class News extends Component {
     }
 
     componentDidMount() {
+
+        setPageTitle('News');
+
         this.handleNewsApiData();   
         setContentContainerHeight();
         window.addEventListener('resize', setContentContainerHeight);
