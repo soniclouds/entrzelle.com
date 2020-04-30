@@ -1,3 +1,8 @@
+function getStrapiEndpoint() {
+    // note: this should be refactored to pull a global environment value (not yet implemented)
+    return 'http://64.225.40.59:1337';
+}
+
 function setPageTitle (pageName) {
     // console.log(pageName.toLowerCase);
     // note: this could be refactored
@@ -16,4 +21,4 @@ function setContentContainerHeight() {
 
 }
 
-export { setContentContainerHeight, setPageTitle};
+export { setContentContainerHeight, setPageTitle, getStrapiEndpoint };

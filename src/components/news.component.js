@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import Strapi from 'strapi-sdk-javascript/build/main';
 import DOMPurify from 'dompurify';
 
-import { setContentContainerHeight, setPageTitle } from '../assets/js/components/Content.js';
+import { setContentContainerHeight, setPageTitle, getStrapiEndpoint } from '../assets/js/components/Content.js';
 
 import '../assets/css/ContentComponent.scss';
 import '../assets/css/news.scss';
 
-const strapi = new Strapi('http://localhost:1337');
+const strapi = new Strapi(getStrapiEndpoint());
 
 export default class News extends Component {
 
