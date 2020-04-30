@@ -4,7 +4,8 @@
     margin: 0 auto;
     background: rgba(255,255,255,.84);
     color: black;
-    overflow: scroll;
+    // overflow: scroll;
+    overflow: auto;
 
     .component-content-container--inner {
         ._embed {
