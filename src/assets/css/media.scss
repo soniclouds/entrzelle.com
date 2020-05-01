@@ -183,7 +183,14 @@ div.audio-feed {
         top: 52px;
     }
     .media-toggle-header { 
-        top: 1.5px;
-        font-size: 0.75em;
+        // top: 1.5px;
+        top: 0;
+        font-size: 0.9em;
     }
+    .media-toggle-column.video, .media-toggle-column.audio {
+        button {
+            transform: none;
+        }
+    }
+    
 }
