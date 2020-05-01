@@ -32,7 +32,7 @@ export default class Connect extends Component {
     render() {
         return (
             <div id="connect-component-container">
-                <div id="connect--outer" className="--outer">
+                <div id="connect--outer" className="connect-outer">
 
                     <div className="component-wrapper--cta">
                         <CTA />

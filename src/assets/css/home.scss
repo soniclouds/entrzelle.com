@@ -22,13 +22,13 @@
             height: unset;
             // width: 45%;
     
-            .--inner {
+            .cta-inner {
                 position: relative;
                 right: 0;
                 width: 100%;
                 height: 100%;
 
-                .--inner-inner {
+                .cta-inner-inner {
 
                     // background: none;
                     background: black;
@@ -130,7 +130,7 @@
 @media screen and (max-width: 503px) {
     #home-component {
         .connect-cta-container {
-            .--inner {
+            .cta-inner {
                 .cta-links-container, .cta-email-container {
                     a:before {
                         font-size: 20px !important;
@@ -143,7 +143,7 @@
 @media screen and (max-width: 451px) {
     #home-component {
         .connect-cta-container {
-            .--inner {
+            .cta-inner {
                 .cta-links-container, .cta-email-container {
                     a {
                         padding: 0 4% !important;
@@ -156,7 +156,7 @@
 @media screen and (max-width: 380px) {
     #home-component {
         .connect-cta-container {
-            .--inner {
+            .cta-inner {
                 .cta-links-container, .cta-email-container {
                     a {
                         padding: 0 3% !important;
@@ -169,7 +169,7 @@
 @media screen and (max-width: 240px) {
     #home-component {
         .connect-cta-container {
-            .--inner {
+            .cta-inner {
                 .cta-links-container, .cta-email-container {
                     a {
                         padding: 0 2% !important;

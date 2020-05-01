@@ -15,7 +15,7 @@
         overflow: hidden;
     }
 
-    .--outer {
+    .connect-outer {
         width: 55%;
         margin: 0 auto;
         overflow: scroll;
@@ -42,7 +42,7 @@
     // top: 10%;
     // vertical-align: middle;
 
-    .--inner {
+    .cta-inner {
         // padding: 10px 30px;
         // left: 5%;
         right: 52%;
@@ -64,7 +64,7 @@
         overflow-x: hidden;
         box-sizing: content-box;
 
-        .--inner-inner {
+        .cta-inner-inner {
             background: white;
             // padding: 10px 0;
             padding: 0 0 5%;
@@ -215,28 +215,28 @@
 }
 
 @media screen and (max-width: 1280px) {
-    #connect-component-container .--outer {
+    #connect-component-container .connect-outer {
         // width: 58%;
         width: 100%;
     }
 }
 @media screen and (max-width: 1024px) {
     .connect-cta-container {
-        .--inner {
+        .cta-inner {
             width: 30%;
         }
     }
 }
 @media screen and (max-width: 902px) {
     .connect-cta-container {
-        .--inner {
+        .cta-inner {
             width: 35%;
         }
     }
 }
 @media screen and (max-width: 796px) {
     .connect-cta-container {
-        .--inner {
+        .cta-inner {
             width: 45%;
             .cta-links-header {
                 span {
@@ -247,12 +247,12 @@
     }
 }
 @media screen and (max-width: 736px) {
-    #connect-component-container .--outer {
+    #connect-component-container .connect-outer {
         width: 100%;
     }
 }
 @media screen and (max-width: 575px) {
-    #connect-component-container .--outer {
+    #connect-component-container .connect-outer {
         width: 58%;
     }
     .connect-cta-container, .component-wrapper--fb {
@@ -261,7 +261,7 @@
     }
     .connect-cta-container {
         height: fit-content;
-        .--inner {
+        .cta-inner {
             right: 0;
             width: 100%;
             height: fit-content;
@@ -287,7 +287,7 @@
             .cta-links-header.email-header, .cta-links-header.label-header {
                 display: inline;
             }
-            .cta-email-container .--email-directly, .cta-label-container .--label {
+            .cta-email-container .cta-email-directly, .cta-label-container .cta-label {
                 // display: inline;
                 a {
                     display: inline-block;
@@ -301,7 +301,7 @@
                 text-align: center;
                 // display: inline-block;
             }
-            .--social-links, .--music-links {
+            .cta-social-links, .cta-music-links {
                 width: 50%;
                 text-align: center;
                 padding: 0;
@@ -321,7 +321,7 @@
 // addressing label header text positioning
 @media screen and (max-width: 515px) {
     .connect-cta-container {
-        .--inner {
+        .cta-inner {
             .cta-links-container {
                 a:before {
                     font-size: 20px;
@@ -336,13 +336,13 @@
     }
 }
 @media screen and (max-width: 340px) {
-    #connect-component-container .--outer {
+    #connect-component-container .connect-outer {
         width: 100%;
     }
 }
 @media screen and (max-width: 308px) {
     .connect-cta-container {
-        .--inner {
+        .cta-inner {
             
             .cta-links-header {
                 span {
