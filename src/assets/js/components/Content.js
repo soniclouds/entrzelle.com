@@ -1,6 +1,10 @@
 function getStrapiEndpoint() {
     // note: this should be refactored to pull a global environment value (not yet implemented)
-    return 'http://64.225.40.59:1337';
+    // return 'http://64.225.40.59:1337';
+
+    // UPDATE: using url of newly registered domain (with ssl proxy) for remote strapi app
+    return 'https://cms.entrzelle.com';
+
 }
 
 function setPageTitle (pageName) {
