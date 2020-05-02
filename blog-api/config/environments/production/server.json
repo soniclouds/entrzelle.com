@@ -3,7 +3,10 @@
   "port": 1337,
   "production": true,
   "proxy": {
-    "enabled": false
+    "enabled": true,
+    "host": "cms.entrzelle.com",
+    "port": 443,
+    "ssl": "on"
   },
   "autoReload": {
     "enabled": false
