@@ -1,5 +1,7 @@
 // album covers
 // studio
+import _coverDOAR from '../../assets/img/releases/DOAR.jpg';
+import _coverFHTD from '../../assets/img/releases/FHTD.jpg';
 import _coverTPC from '../../assets/img/releases/TPC.jpg';
 import _coverSTWOF from '../../assets/img/releases/STWOF.jpg';
 import _coverPOTM from '../../assets/img/releases/POTM.jpg';
@@ -22,6 +24,60 @@ import _coverBC13_CK from '../../assets/img/releases/BC13_CK.jpg';
 const releaseData = {
 
     studio: {
+        doar: {
+            id: 'doar',
+            cover: _coverDOAR,
+            title: {
+                short: "Dust On A Razorblade",
+                long: "Dust On A Razorblade (2022)  -  LP"
+            },
+            label: "Alfa Matrix",
+            date: {
+                short: "May 27, 2022",
+                long: "released May 27, 2022 - LP"
+            },
+            url: "https://alfamatrix.bandcamp.com/album/dust-on-a-razorblade",
+            _shareUrl: "https://alfamatrix.bandcamp.com/album/dust-on-a-razorblade?action=share&from=embed",
+            alt: "Dust On A Razorblade - album",
+            releaseInfo: "(2022)  -  LP",
+            credits: {
+                production: [
+                    'all writing, performance, mixing by David Chamberlin',
+                    'mastering by Len Lemeire',
+                    'artwork by Tomoki Hayasaka'
+                ],
+                lyrics: [
+                    "All lyrics by David Chamberlin"
+                ]
+            }
+        },
+        fhtd: {
+            id: 'fhtd',
+            cover: _coverFHTD,
+            title: {
+                short: "Feeling Heavy These Days",
+                long: "Feeling Heavy These Days (2021)  -  EP"
+            },
+            label: "Alfa Matrix",
+            date: {
+                short: "March 4, 2021",
+                long: "released March 4, 2021 - EP"
+            },
+            url: "https://alfamatrix.bandcamp.com/album/feeling-heavy-these-days-ep",
+            _shareUrl: "https://alfamatrix.bandcamp.com/album/feeling-heavy-these-days-ep?action=share&from=embed",
+            alt: "Feeling Heavy These Days - EP",
+            releaseInfo: "(2021)  -  EP",
+            credits: {
+                production: [
+                    'all writing, performance, mixing by David Chamberlin',
+                    'mastering by Sebastian Komor',
+                    'artwork by Tomoki Hayasaka'
+                ],
+                lyrics: [
+                    "All lyrics by David Chamberlin"
+                ]
+            }
+        },
         tpc: {
             id: 'tpc',
             cover: _coverTPC,
