@@ -8,6 +8,10 @@ import promo_band_3 from '../../../assets/img/photos/gallery/full/promo_band_3.j
 import promo_self_1 from '../../../assets/img/photos/gallery/full/promo_self_1.jpg';
 import promo_self_2 from '../../../assets/img/photos/gallery/full/promo_self_2.jpg';
 import promo_self_3 from '../../../assets/img/photos/gallery/full/promo_self_3.jpg';
+import promo_self_4 from '../../../assets/img/photos/gallery/full/promo_self_4.jpg';
+import promo_self_5 from '../../../assets/img/photos/gallery/full/promo_self_5.jpg';
+import promo_self_6 from '../../../assets/img/photos/gallery/full/promo_self_6.jpg';
+import promo_self_7 from '../../../assets/img/photos/gallery/full/promo_self_7.jpg';
 
 // live
 import live_chamber_1 from '../../../assets/img/photos/gallery/full/live_chamber_1.jpg';
@@ -33,6 +37,10 @@ import _promo_band_3 from '../../../assets/img/photos/gallery/thumbs/200/promo_b
 import _promo_self_1 from '../../../assets/img/photos/gallery/thumbs/200/promo_self_1.jpg';
 import _promo_self_2 from '../../../assets/img/photos/gallery/thumbs/200/promo_self_2.jpg';
 import _promo_self_3 from '../../../assets/img/photos/gallery/thumbs/200/promo_self_3.jpg';
+import _promo_self_4 from '../../../assets/img/photos/gallery/thumbs/200/promo_self_4.jpg';
+import _promo_self_5 from '../../../assets/img/photos/gallery/thumbs/200/promo_self_5.jpg';
+import _promo_self_6 from '../../../assets/img/photos/gallery/thumbs/200/promo_self_6.jpg';
+import _promo_self_7 from '../../../assets/img/photos/gallery/thumbs/200/promo_self_7.jpg';
 
 // live
 import _live_chamber_1 from '../../../assets/img/photos/gallery/thumbs/200/live_chamber_1.jpg';
@@ -157,6 +165,42 @@ const galleryPhotos = [
         },
         alt: "Entrzelle promo band photo",
         caption: "photo by Rico J Coria, artwork by Tomoki Hasayaka",
+    },
+    {
+        id: '_promo_4',
+        src: {
+            thumb: _promo_self_4,
+            full: promo_self_4
+        },
+        alt: "Entrzelle promo photo",
+        caption: "digital design by Tomoki Hasayaka",
+    },
+    {
+        id: '_promo_5',
+        src: {
+            thumb: _promo_self_5,
+            full: promo_self_5
+        },
+        alt: "Entrzelle promo photo",
+        caption: "digital design by Tomoki Hasayaka",
+    },
+    {
+        id: '_promo_6',
+        src: {
+            thumb: _promo_self_6,
+            full: promo_self_6
+        },
+        alt: "Entrzelle promo photo",
+        caption: "digital design by Tomoki Hasayaka",
+    },
+    {
+        id: '_promo_7',
+        src: {
+            thumb: _promo_self_7,
+            full: promo_self_7
+        },
+        alt: "Entrzelle promo photo",
+        caption: "digital design by Tomoki Hasayaka",
     },
 
 
