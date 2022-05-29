@@ -57,25 +57,24 @@ import _live_complex_2 from '../../../assets/img/photos/gallery/thumbs/200/live_
 
 
 const galleryPhotos = [
-    {   
-        id: '_promo1',
+    {
+        id: '_promo_6',
         src: {
-            thumb: _promo_band_1,
-            full: promo_band_1
+            thumb: _promo_self_6,
+            full: promo_self_6
         },
-        alt: "Entrzelle promo band photo",
-        caption: "photo by Rico J Coria, artwork by Tomoki Hasayaka",
-        
+        alt: "Entrzelle promo photo",
+        caption: "digital design by Tomoki Hasayaka",
     },
     {
-        id: '_promo2',
+        id: '_promo_7',
         src: {
-            thumb: _promo_band_2,
-            full: promo_band_2
+            thumb: _promo_self_7,
+            full: promo_self_7
         },
-        alt: "Entrzelle promo band photo",
-        caption: "photo by Rico J Coria",
-    },  
+        alt: "Entrzelle promo photo",
+        caption: "digital design by Tomoki Hasayaka",
+    },
     {
         id: '_promo4',
         src: {
@@ -86,6 +85,24 @@ const galleryPhotos = [
         caption: "photo by Ivy Catchpole",
     },
     {
+        id: '_promo_5',
+        src: {
+            thumb: _promo_self_5,
+            full: promo_self_5
+        },
+        alt: "Entrzelle promo photo",
+        caption: "digital design by Tomoki Hasayaka",
+    },
+    {
+        id: '_promo_4',
+        src: {
+            thumb: _promo_self_4,
+            full: promo_self_4
+        },
+        alt: "Entrzelle promo photo",
+        caption: "digital design by Tomoki Hasayaka",
+    },  
+    {
         id: '_promo6',
         src: {
             thumb: _promo_self_3,
@@ -93,6 +110,25 @@ const galleryPhotos = [
         },
         alt: "David Chamberlin promo photo",
         caption: "photo by Etheraum",
+    },
+    {
+        id: '_promo1',
+        src: {
+            thumb: _promo_band_1,
+            full: promo_band_1
+        },
+        alt: "Entrzelle promo band photo",
+        caption: "photo by Rico J Coria, artwork by Tomoki Hasayaka",
+
+    },
+    {
+        id: '_promo2',
+        src: {
+            thumb: _promo_band_2,
+            full: promo_band_2
+        },
+        alt: "Entrzelle promo band photo",
+        caption: "photo by Rico J Coria",
     },
     {
         id: '_live11',
@@ -166,42 +202,8 @@ const galleryPhotos = [
         alt: "Entrzelle promo band photo",
         caption: "photo by Rico J Coria, artwork by Tomoki Hasayaka",
     },
-    {
-        id: '_promo_4',
-        src: {
-            thumb: _promo_self_4,
-            full: promo_self_4
-        },
-        alt: "Entrzelle promo photo",
-        caption: "digital design by Tomoki Hasayaka",
-    },
-    {
-        id: '_promo_5',
-        src: {
-            thumb: _promo_self_5,
-            full: promo_self_5
-        },
-        alt: "Entrzelle promo photo",
-        caption: "digital design by Tomoki Hasayaka",
-    },
-    {
-        id: '_promo_6',
-        src: {
-            thumb: _promo_self_6,
-            full: promo_self_6
-        },
-        alt: "Entrzelle promo photo",
-        caption: "digital design by Tomoki Hasayaka",
-    },
-    {
-        id: '_promo_7',
-        src: {
-            thumb: _promo_self_7,
-            full: promo_self_7
-        },
-        alt: "Entrzelle promo photo",
-        caption: "digital design by Tomoki Hasayaka",
-    },
+    
+    
 
 
 
