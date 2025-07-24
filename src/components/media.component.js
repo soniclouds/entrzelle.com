@@ -131,6 +131,10 @@ export default class Media extends Component {
                             {/* YT EMBED */}
 
                             <div className='video-container yt-embed column-content'>
+                                <iframe title="Dust On A Razorblade - album trailer" className="youtube-player" src="https://www.youtube.com/embed/Z5rVgUywy1k?rel=0&version=3&enablejsapi=1" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                            </div>
+            
+                            <div className='video-container yt-embed column-content'>
                                 <iframe title="Total Progressive Collapse - album trailer" className="youtube-player" src="https://www.youtube.com/embed/lRH7Ztl5QCE?rel=0&version=3&enablejsapi=1" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                             </div>
 
@@ -155,6 +159,9 @@ export default class Media extends Component {
                     
                     <div id="audio-feed-column" className="column-feed audio-feed outer">                        
                         <div className="column-feed-content">
+
+                            <iframe title="Dust On A Razorblade - audio player" className='bandcamp-player' src="https://bandcamp.com/EmbeddedPlayer/album=36966362/size=large/bgcol=000000/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="http://alfamatrix.bandcamp.com/album/https://alfamatrix.bandcamp.com/album/dust-on-a-razorblade">Dust On A Razorblade by ENTRZELLE</a></iframe>
+            
                             <iframe title="Total Progressive Collapse - audio player" className='bandcamp-player' src="https://bandcamp.com/EmbeddedPlayer/album=71792589/size=large/bgcol=000000/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="http://alfamatrix.bandcamp.com/album/total-progressive-collapse-bonus-tracks-version">Total Progressive Collapse (Bonus Tracks Version) by ENTRZELLE</a></iframe>
 
                             <iframe title="Set These Walls On Fire - audio player" className='bandcamp-player' src="https://bandcamp.com/EmbeddedPlayer/album=4162682664/size=large/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="http://alfamatrix.bandcamp.com/album/set-these-walls-on-fire-ep">Set These Walls On Fire EP by ENTRZELLE</a></iframe>
