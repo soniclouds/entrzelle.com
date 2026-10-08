@@ -48,10 +48,10 @@ import _promo_band_3 from '../../../assets/img/photos/gallery/thumbs/200/promo_b
 
 const galleryPhotos = [
     {
-        id: '_promo_1',
+        id: '_promo_1b',
         src: {
-            thumb: _promo_band_1,
-            full: promo_band_1
+            thumb: _promo_band_1b,
+            full: promo_band_1b
         },
         alt: "Entrzelle promo photo",
         // caption: "digital design by Tomoki Hasayaka",
