@@ -50,8 +50,8 @@ const galleryPhotos = [
     {
         id: '_promo_1b',
         src: {
-            thumb: _promo_band_1b,
-            full: promo_band_1b
+            thumb: _promo_band_1,
+            full: promo_band_1
         },
         alt: "Entrzelle promo photo",
         // caption: "digital design by Tomoki Hasayaka",
