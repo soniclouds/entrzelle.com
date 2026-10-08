@@ -15,6 +15,7 @@ export default class Lyrics extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            lyricsDOAR: [],
             lyricsTPC: [],
             lyricsSTWOF: [],
             lyricsPOTM: []
@@ -42,11 +43,15 @@ export default class Lyrics extends Component {
             });
             // then, parse lyrics based on album
             // NOTE: this should be refactored at a later time
-            const _lyricsTPC = [],
+            const _lyricsDOAR = [], 
+                _lyricsTPC = [],
                 _lyricsSTWOF = [],
                 _lyricsPOTM = [];
 
             for (var i = 0; i < lyricsPosts.length; i++) {
+                if (lyricsPosts[i].album === releaseData.studio.doar.title.short) {
+                    _lyricsDOAR.push(lyricsPosts[i]);
+                }
                 if (lyricsPosts[i].album === releaseData.studio.tpc.title.short) {
                     _lyricsTPC.push(lyricsPosts[i]);
                 }
@@ -59,6 +64,7 @@ export default class Lyrics extends Component {
             }
 
             this.setState({
+                lyricsDOAR: _lyricsDOAR,
                 lyricsTPC: _lyricsTPC,
                 lyricsSTWOF: _lyricsSTWOF,
                 lyricsPOTM: _lyricsPOTM
@@ -77,6 +83,37 @@ export default class Lyrics extends Component {
                 <div className="component-content-container--inner">
 
                         <div className="lyrics-content">
+
+                        {/* DOAR */}
+
+                        {/* album info */}
+
+                        <div className="content-title">
+                            <h1>{releaseData.studio.doar.title.short}</h1>
+                            <div>
+                                <h6>{releaseData.studio.doar.releaseInfo}</h6>
+                                <h6>{releaseData.studio.doar.label}</h6>
+                            </div>
+                        </div>
+
+                        {/* lyrics */}
+
+                        {this.state.lyricsDOAR.map(post =>
+
+                            <div key={post.id} className="content-data">
+
+                                {/* note: dangerouslySetInnerHTML is safe here because HTML was previously sanitized by DOMPurify */}
+
+                                <div className="lyrics-detail" >
+                                    <div className="lyrics-song">
+                                        <h6>{post.song}</h6>
+                                    </div>
+                                    <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
+                                </div>
+
+                            </div>
+
+                            )} {/* doar */}
 
                             {/* TPC */}
 
