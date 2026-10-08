@@ -22,26 +22,26 @@ export default class Navigation extends Component {
                         </span> */}
                     <nav id="main-nav" className="desktop">
                         <ul className="">
-                            <li>
+                            {/* <li>
                                 <div>
                                     <Link to="/news" className='nav-link' onClick={toggleConnectModal}>News</Link>
                                 </div>
-                            </li>
+                            </li> */}
                             <li>
                                 <div>
                                     <Link to="/releases" className='nav-link' onClick={toggleConnectModal}>Releases</Link>
                                 </div>
                             </li>
-                            <li>
+                            {/* <li>
                                 <div>
                                     <Link to="/gallery" className='nav-link' onClick={toggleConnectModal}>Gallery</Link>
                                 </div>
-                            </li>
-                            <li>
+                            </li> */}
+                            {/* <li>
                                 <div>
                                     <Link to="/reviews" className='nav-link' onClick={toggleConnectModal}>Reviews</Link>
                                 </div>
-                            </li>
+                            </li> */}
                             <li>
                                 <div>
                                     <Link to="/lyrics" className='nav-link' onClick={toggleConnectModal}>Lyrics</Link>
