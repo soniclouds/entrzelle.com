@@ -1,7 +1,7 @@
 // FULL SIZE
 
 // promo
-import promo_band_1 from '../../../assets/img/photos/gallery/full/promo_band_1.jpg';
+import promo_band_1 from '../../../assets/img/photos/gallery/full/promo_band_1b.jpg';
 import promo_band_2 from '../../../assets/img/photos/gallery/full/promo_band_2.jpg';
 import promo_band_3 from '../../../assets/img/photos/gallery/full/promo_band_3.jpg';
 
@@ -25,7 +25,7 @@ import promo_band_3 from '../../../assets/img/photos/gallery/full/promo_band_3.j
 // THUMBNAILS (200px)
 
 // promo
-import _promo_band_1 from '../../../assets/img/photos/gallery/thumbs/200/promo_band_1.jpg';
+import _promo_band_1 from '../../../assets/img/photos/gallery/thumbs/200/promo_band_1b.jpg';
 import _promo_band_2 from '../../../assets/img/photos/gallery/thumbs/200/promo_band_2.jpg';
 import _promo_band_3 from '../../../assets/img/photos/gallery/thumbs/200/promo_band_3.jpg';
 
