@@ -34,9 +34,9 @@ export default class Home extends Component {
             if (galleryPhotos[i].id.includes('promo')) {
                 // set active for first photo
                 if (i === 0) {
-                    html += '<div class="carousel-item active"><a href="/gallery"><img class="carousel-img" src=' + galleryPhotos[i].src.full + ' alt='+ galleryPhotos[i].alt +'/></a></div>'
+                    html += '<div class="carousel-item active"><img class="carousel-img" src=' + galleryPhotos[i].src.full + ' alt='+ galleryPhotos[i].alt +'/></div>'
                 } else {
-                    html += '<div class="carousel-item"><a href="/gallery"><img class="carousel-img" src=' + galleryPhotos[i].src.full + ' alt=' + galleryPhotos[i].alt +'/></a></div>'
+                    html += '<div class="carousel-item"><img class="carousel-img" src=' + galleryPhotos[i].src.full + ' alt=' + galleryPhotos[i].alt +'/></div>'
                 }
             }
         }
