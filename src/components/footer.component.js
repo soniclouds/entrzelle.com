@@ -11,7 +11,8 @@ export default class Footer extends Component {
         return (
             <div id="footer-component">
                 <div className="copyright">
-                    <span>website by David Chamberlin | &copy; {year} Entrzelle All Rights Reserved</span>
+                    {/* <span>website by David Chamberlin | &copy; {year} Entrzelle All Rights Reserved</span> */}
+                    <span>&copy; {year} Entrzelle All Rights Reserved</span>
                 </div>
             </div>
         )
